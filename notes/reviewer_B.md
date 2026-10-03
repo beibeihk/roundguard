@@ -2,7 +2,7 @@
 
 Review date: 2026-10-03 (Asia/Hong_Kong). Scope: `paper/main.tex`, the four substantive modules under `src/roundguard/`, `tests/test_roundguard.py`, benchmark generation, experiment execution, figure generation, and saved result records. I did not modify the analyzer or experiment runner. At the lead author's request I drafted `paper/evaluation.tex` from the final results, and subsequently repaired the independently discovered oracle defect with regression tests. This report is an independent critique, not evidence of peer-review acceptance or formal software verification.
 
-## Recommendation: major revision before a submission-ready claim
+## Initial recommendation: major revision before a submission-ready claim
 
 The prototype has a defensible restricted contract and a useful exact batch path. The inspected dispatch conditions correctly distinguish independent affine lines, globally covariant modes, nonnegative sign-sensitive lines, and bounded fallback. I found no critical mismatch between those declared premises and the current Fraction/Z3 implementation. The initial review found a reproducible generic-Decimal precision defect, a manifest describing a different scaling truth protocol, and evaluation interpretations requiring careful separation of complete and incomplete runs. These findings triggered substantive corrections recorded below. The project must remain a controlled microbenchmark and restricted algorithm paper unless broader empirical evidence is added. Final full-run and clean-release verification remain the lead author's responsibility.
 
@@ -70,3 +70,49 @@ The inference chain should remain: declared monetary grid and policies -> exact 
 - B5 partial reinspection confirms README, MIT license, paper-license notice, CITATION, reproduction scripts, Docker instructions with an explicit unexecuted-Docker qualification, and refreshed status are now present. Clean extraction/compilation, a clean-clone run, and actual published artifact availability remain to be verified before release.
 - Evaluation narrative revised by Reviewer B: method contracts, completion fairness, fixed-denominator interpretation, source-fragment limits, independent bound-plus-witness truth, AST profile, and generated result macros.
 - No release/acceptance certification is issued by this review.
+
+## Late substantive algorithm revision: parity compression
+
+After further independent review, the original cyclic-residue DP was found to retain more terminal state than the common-mode batch objective requires. For normalized raw lines, write `k_i=R_i(y_i)`, `f_i=y_i-k_i`, `K=sum k_i`, and `F=sum f_i`. The final signed discrepancy is `R_0(K+F)-K`. FLOOR and CEILING depend only on `F`; HALF_EVEN depends on `F` and `K mod 2`. For a fixed parity its terminal map is monotone, so two attained residual endpoints suffice. In the certified nonnegative HALF_UP/DOWN/UP extension, the terminal maps are `floor(F+1/2)`, `floor(F)`, and `ceil(F)`, even when `F` itself is negative. Applying the signed quantizer directly to `F` would be a defect.
+
+I independently checked this argument before implementation and found no counterexample under the established independent-line premises. The implementation now uses exact Fraction residuals and each line's direct sufficient period `den(a_i/2)`; constants do not enlarge that period and no common coefficient denominator is constructed. It retains at most two prefix parity states, or one state for modes whose terminal map does not need parity. Local extrema, XOR composition, separate min/max backpointers, and replay of *both* signed endpoints establish the same witness contract as the old cyclic algorithm. The fixed per-line representative cap is 400; large coefficient denominators with narrow feasible intervals can succeed, while a wide interval with more than 400 representatives declines. Arithmetic-operation complexity after affine normalization is `O(sum_i min(T_i,width_i)+n)` with `O(n)` predecessor records, excluding rational operand bit costs. The theoretical proof is independently handled by Reviewer A.
+
+The old algorithm remains `cyclic_batch`, exposed as `--method cyclic`, and reports `cyclic-dp`. The improved default is `dp_batch`, reporting `parity-dp`. It reports `parity_states`, `active_states`, `local_periods`, `local_representatives`, `transitions`, and separate signed-endpoint witnesses; it intentionally has no shared-denominator/modulus field. Affine preprocessing uses each expression's actual dependencies rather than an `n`-coordinate zero vector for every line.
+
+New tests directly enumerate Fraction values using a separate distance-based quantizer, without calling the analyzer's concrete quantizer. Two Hypothesis suites cover 100 signed covariant cases and 100 certified-nonnegative sign-sensitive cases, comparing *both signed endpoints* and their attaining inputs against direct Cartesian enumeration and the preserved cyclic baseline. Explicit regressions cover odd line counts 1/3/5/7, half ties after odd integer shifts, negative FLOOR operands, positive HALF_UP/UP lines with negative residuals, nonunit input/output quanta, independent constant offsets with coprime large denominators, prime narrow/wide representative caps, shared-input rejection, exact affine cancellation, extra-policy fallback, and the cyclic CLI. All semantic cases in the full 107-test run passed; one error-message regex mismatch in a new name-collision test was corrected and its targeted rerun passed. The lead author performs the final complete run and four-method experiment regeneration.
+
+This review also identified an input-policy preservation issue: `load_rule` could overwrite an explicit policy named `per_line` or `total` when generating batch variants. The lead author repaired model-level generated-name collision rejection, including placement-name collisions. The DP contract checks that its final family consists of exactly `per_line` and `total`; an extra explicit variant falls back to exact SMT and is included in the family spread. The corresponding regression verifies a three-cent result from an extra `x` policy rather than silently analyzing only the two generated policies.
+
+The earlier 216-run numerical snapshot above documents the original cyclic-default review stage. The final revised experiment has four method paths and newly generated timing/completion macros; those records supersede the original runtime counts. The original discrepancy/ground-truth checks remain relevant, while final performance claims must use the revised saved results.
+
+## Final reinspection after the substantive revision
+
+Final implementation/evaluation outcome: the mandatory numerical, oracle, policy-preservation, timeout-interpretation, and benchmark-scope corrections have been checked. No critical implementation or evaluation mismatch remains within the declared restricted contract. This outcome is an internal review gate, not an external acceptance, novelty-firstness finding, or formal verification certificate. Earlier findings and numerical snapshots remain above as an auditable revision history.
+
+I performed read-only inspection of `experiments/denominator_study.py`, `scripts/make_figures.py`, `paper/evaluation.tex`, the generated tables and macros, and the final CSV/certificate records. The final scaling file has 288 rows: 24 cases, four methods, and exactly three repetitions per case/method. The denominator file has 72 rows: six cases with the same four-method/three-repetition structure. No missing or duplicate repetition was found. The final full pytest outcome reported by the lead author is 107 passed; Reviewer A additionally reports independent parity/cyclic comparisons and replay of both signed endpoint witnesses through the saved proof-sanity implementation audit.
+
+The final exact completion counts are:
+
+| Suite | Parity extrema | Cyclic DP | Reduced SMT | Full-grid SMT |
+|---|---:|---:|---:|---:|
+| Scaling, 72 repetitions per method | 72 | 72 | 36 | 22 |
+| Denominator stress, 18 repetitions per method | 18 | 0 | 18 | 18 |
+
+In the scaling suite, incomplete reduced SMT divides into 23 UNKNOWN and 13 sensitive-but-unestablished-maxima results; full-grid SMT divides into 34 UNKNOWN and 16 partial-sensitive results. These numbers match the generated macros and raw records. In the denominator suite both SMT paths establish every optimum. Every cyclic result declines with `Common denominator exceeds DP budget`; this is the prototype's modulus-cap rejection, not a timeout or evidence that SMT or an uncapped cyclic implementation fails on these inputs. The manuscript states this distinction correctly.
+
+For all six denominator certificates I independently read the original JSON, checked unit input/output quanta and HALF_EVEN mode, verified line-to-variable ordering and the exact `x_i/p_i` form, and recomputed local residual extrema over each sufficient `2*p_i` period or shorter feasible interval. This separate audit used a distance-based Fraction quantizer rather than importing the experiment's quotient/remainder quantizer, analyzer, Decimal executor, or parity recurrence. Summed residual extrema plus the half-cent outer error gave an integral upper bound. I checked every saved tick's integer type and original bounds, then independently replayed the aggregate-versus-line discrepancy. All six attain that upper bound:
+
+| Case | Certified maximum, cents | Total local representatives | Hypothetical common-denominator bits |
+|---|---:|---:|---:|
+| `coprime_n4_u1000000000` | 2 | 176 | 18 |
+| `coprime_n4_u20` | 2 | 84 | 18 |
+| `coprime_n8_u1000000000` | 4 | 480 | 39 |
+| `coprime_n8_u20` | 4 | 168 | 39 |
+| `narrow_prime_n4` | 2 | 804 | 10 |
+| `narrow_prime_n8` | 4 | 1608 | 10 |
+
+Certificate local bounds, maxima, denominator lists, witness boxes, and CSV truth columns all agree. The nonterminating-rational stress suite correctly uses an independent integer/Fraction rounding certificate instead of the terminating-only Decimal oracle. This is a valid independent upper-bound-plus-attainment argument. It remains specific to the six declared simple line families; the helper is not claimed as a general-purpose external verifier.
+
+I recomputed every denominator-table row from the CSV, including bit length, representative counts, three-run median DP milliseconds, and exact-completion counts. All six rows match. I also recomputed effectiveness summary errors/medians, scaling completion/status macros, denominator completion macros, and the maximum case-median DP runtime; all match `paper_facts.json`, `result_macros.tex`, and the displayed accuracy/case tables. The four-method figure generator uses the saved runs and marks any cell containing an unfinished optimum, consistent with its caption. `evaluation.tex` contains 288 scaling runs, 72 stress runs, six new certificates, correct scope/cap qualifications, no speedup ratio using unfinished runs, and no suggestion that SMT failed on denominator-stress cases.
+
+The revised empirical conclusion is appropriately limited: exact agreement on 66 small declared programs; 30 independently certified larger cases; controlled evidence for sufficient parity-state compression and local-period enumeration; and descriptive timing on one machine. Small source fragments, simple independent lines, the 400-local-representative cap, one timing environment, and conditional implementation/solver correctness still limit generalization. Final clean-release and actual publication/submission receipts are separate deliverables and are not established by this numerical review alone.

@@ -32,10 +32,21 @@ def main():
  audit={r['citation_key']:r for r in csv.DictReader((ROOT/'literature/reference_audit.csv').open(encoding='utf-8-sig'))}
  assert all(audit[k]['verified'].lower()=='true' and audit[k]['claim_supported'].lower()=='true' for k in cited)
  rows=list(csv.DictReader((ROOT/'results/scaling.csv').open()))
- assert len(rows)==216
+ assert len(rows)==288
  for r in rows:
   if r['complete']=='True': assert F(r['maximum_discrepancy'])==F(next(c['ground_truth'] for c in certs if c['case']==r['case']))
- report=dict(status='CONSISTENCY_AUDIT_PASSED',small_programs=len(expected),small_exact_checks=132,scaling_certificates=len(certs),scaling_runs=len(rows),cited_sources=len(cited),scope='saved artifact consistency; not independent literature completeness, formal verification, or production validation')
+ import sys
+ sys.path.insert(0,str(ROOT))
+ from experiments.denominator_study import certificate,replay
+ denom_certs=json.loads((ROOT/'results/denominator_ground_truth.json').read_text());assert len(denom_certs)==6
+ denom_rows=list(csv.DictReader((ROOT/'results/denominators.csv').open()));assert len(denom_rows)==72
+ for c in denom_certs:
+  rule=load_rule(ROOT/'benchmarks/denominators'/f'{c["case"]}.json');ds,lower,upper,bound=certificate(rule)
+  assert str(lower)==c['local_lower'] and str(upper)==c['local_upper']
+  assert replay(rule,ds,c['counterexample'])==bound==F(c['ground_truth'])
+  for row in denom_rows:
+   if row['case']==c['case'] and row['complete']=='True': assert F(row['maximum_discrepancy'])==bound
+ report=dict(status='CONSISTENCY_AUDIT_PASSED',small_programs=len(expected),small_exact_checks=132,scaling_certificates=len(certs),scaling_runs=len(rows),denominator_certificates=len(denom_certs),denominator_runs=len(denom_rows),cited_sources=len(cited),scope='saved artifact consistency; not independent literature completeness, formal verification, or production validation')
  report['evidence_sha256']={str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in [ROOT/'results/ground_truth.json',ROOT/'results/scaling_ground_truth.json',ROOT/'results/scaling.csv',ROOT/'paper/main.tex',ROOT/'paper/evaluation.tex',ROOT/'paper/references.bib']}
  (ROOT/'results/integrity_audit.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
  print(json.dumps(report,indent=2))

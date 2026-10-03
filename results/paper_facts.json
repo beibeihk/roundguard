@@ -7,7 +7,7 @@
       "false_positives": 0,
       "false_negatives": 0,
       "unknown": 0,
-      "median_seconds": 0.009766449999006
+      "median_seconds": 0.004317599999922095
     },
     "pure_smt": {
       "cases": 66,
@@ -16,7 +16,7 @@
       "false_positives": 0,
       "false_negatives": 0,
       "unknown": 0,
-      "median_seconds": 0.01430255000013858
+      "median_seconds": 0.005921199997828808
     },
     "random32": {
       "cases": 66,
@@ -25,7 +25,7 @@
       "false_positives": 0,
       "false_negatives": 2,
       "unknown": 0,
-      "median_seconds": 0.0028311500027484726
+      "median_seconds": 0.0009981500006688293
     },
     "hypothesis64": {
       "cases": 66,
@@ -34,7 +34,7 @@
       "false_positives": 0,
       "false_negatives": 1,
       "unknown": 0,
-      "median_seconds": 0.11951889999545529
+      "median_seconds": 0.04581529999995837
     },
     "naive_interval": {
       "cases": 66,
@@ -43,22 +43,31 @@
       "false_positives": 15,
       "false_negatives": 0,
       "unknown": 0,
-      "median_seconds": 0.0002825999981723726
+      "median_seconds": 0.00012830000196117908
     }
   },
-  "scaling_runs": 216,
+  "scaling_runs": 288,
   "scaling_complete": {
     "dp": 72,
-    "residue": 35,
-    "smt": 19
+    "cyclic": 72,
+    "residue": 36,
+    "smt": 22
+  },
+  "denominator_runs": 72,
+  "denominator_complete": {
+    "dp": 18,
+    "cyclic": 0,
+    "residue": 18,
+    "smt": 18
   },
   "macros": {
     "DPCompleted": 72,
-    "ResidueCompleted": 35,
-    "SMTCompleted": 19,
-    "AutoMedian": "9.77",
-    "SMTMedian": "14.30",
-    "DPMaxMedian": "101.94",
+    "CyclicCompleted": 72,
+    "ResidueCompleted": 36,
+    "SMTCompleted": 22,
+    "AutoMedian": "4.32",
+    "SMTMedian": "5.92",
+    "DPMaxMedian": "22.31",
     "SmallNodesMin": 6,
     "SmallNodesMax": 28,
     "SmallDepthMin": 3,
@@ -67,27 +76,39 @@
     "SmallVarsMax": 3,
     "DPUnknown": 0,
     "DPPartial": 0,
-    "DPTwoMedian": "1.49",
-    "DPFourMedian": "2.63",
-    "DPEightMedian": "10.28",
-    "DPSixteenMedian": "11.21",
-    "DPThirtyTwoMedian": "38.69",
-    "DPSixtyFourMedian": "101.94",
-    "ResidueUnknown": 25,
-    "ResiduePartial": 12,
-    "ResidueTwoMedian": "32.71",
-    "ResidueFourMedian": "81.83",
-    "ResidueEightMedian": "2024.58",
-    "ResidueSixteenMedian": "1765.17",
-    "ResidueThirtyTwoMedian": "1703.72",
-    "ResidueSixtyFourMedian": "1822.88",
-    "SMTUnknown": 36,
-    "SMTPartial": 17,
-    "SMTTwoMedian": "267.62",
-    "SMTFourMedian": "1953.54",
-    "SMTEightMedian": "1810.83",
-    "SMTSixteenMedian": "1574.38",
-    "SMTThirtyTwoMedian": "1606.18",
-    "SMTSixtyFourMedian": "1677.88"
+    "DPTwoMedian": "1.28",
+    "DPFourMedian": "1.27",
+    "DPEightMedian": "1.87",
+    "DPSixteenMedian": "4.15",
+    "DPThirtyTwoMedian": "22.31",
+    "DPSixtyFourMedian": "19.64",
+    "CyclicUnknown": 0,
+    "CyclicPartial": 0,
+    "CyclicTwoMedian": "1.61",
+    "CyclicFourMedian": "2.25",
+    "CyclicEightMedian": "3.29",
+    "CyclicSixteenMedian": "7.52",
+    "CyclicThirtyTwoMedian": "46.21",
+    "CyclicSixtyFourMedian": "26.67",
+    "ResidueUnknown": 23,
+    "ResiduePartial": 13,
+    "ResidueTwoMedian": "64.46",
+    "ResidueFourMedian": "39.53",
+    "ResidueEightMedian": "503.42",
+    "ResidueSixteenMedian": "2596.85",
+    "ResidueThirtyTwoMedian": "1652.95",
+    "ResidueSixtyFourMedian": "1725.36",
+    "SMTUnknown": 34,
+    "SMTPartial": 16,
+    "SMTTwoMedian": "1512.98",
+    "SMTFourMedian": "1167.25",
+    "SMTEightMedian": "1855.68",
+    "SMTSixteenMedian": "1531.42",
+    "SMTThirtyTwoMedian": "1594.29",
+    "SMTSixtyFourMedian": "1608.80",
+    "DenomDPCompleted": 18,
+    "DenomCyclicCompleted": 0,
+    "DenomResidueCompleted": 18,
+    "DenomSMTCompleted": 18
   }
 }

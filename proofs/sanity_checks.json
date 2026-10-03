@@ -63,6 +63,42 @@
     "includes_all_six_modes_and_identity": true,
     "includes_negative_slopes_and_signed_input_ticks": true
   },
+  "parity_signed_core": {
+    "random_seed": 1003202601,
+    "cases": 160,
+    "brute_force_assignments": 21629,
+    "parity_cyclic_brute_extrema_matched": true,
+    "both_endpoint_witnesses_in_original_domain_and_replayed": true,
+    "independent_mixed_integer_output_choices": true,
+    "nonterminating_rational_coefficients_included": true,
+    "raw_line_nonnegativity_certified": false
+  },
+  "parity_nonnegative_six_modes": {
+    "random_seed": 1003202602,
+    "cases": 160,
+    "brute_force_assignments": 12828,
+    "parity_cyclic_brute_extrema_matched": true,
+    "both_endpoint_witnesses_in_original_domain_and_replayed": true,
+    "independent_mixed_integer_output_choices": true,
+    "nonterminating_rational_coefficients_included": true,
+    "raw_line_nonnegativity_certified": true
+  },
+  "parity_phase_and_signed_residual_regressions": {
+    "cases": [
+      "phase_even",
+      "phase_odd",
+      "homogeneous_phase_even",
+      "homogeneous_phase_odd",
+      "negative_half_up_residual",
+      "negative_up_residual",
+      "negative_down_terminal",
+      "odd_half_even_five",
+      "negative_integer_phase"
+    ],
+    "identity_premise_rejected": true,
+    "uncertified_signed_raw_domain_rejected": true,
+    "all_passed": true
+  },
   "implementation_signed_covariant": {
     "random_seed": 3102026,
     "cases": 80,
@@ -73,7 +109,13 @@
     "signed_input_ticks": true,
     "negative_constants": true,
     "constant_lines": true,
-    "raw_line_nonnegativity_certified": false
+    "raw_line_nonnegativity_certified": false,
+    "algorithms": [
+      "parity-dp",
+      "cyclic-dp"
+    ],
+    "both_parity_signed_endpoint_witnesses_independently_replayed": true,
+    "parity_local_period_and_representative_counts_checked": true
   },
   "implementation_nonnegative_six_modes": {
     "random_seed": 33102026,
@@ -85,7 +127,13 @@
     "signed_input_ticks": true,
     "negative_constants": false,
     "constant_lines": true,
-    "raw_line_nonnegativity_certified": true
+    "raw_line_nonnegativity_certified": true,
+    "algorithms": [
+      "parity-dp",
+      "cyclic-dp"
+    ],
+    "both_parity_signed_endpoint_witnesses_independently_replayed": true,
+    "parity_local_period_and_representative_counts_checked": true
   },
   "quantum_input_guard": [
     {
@@ -96,5 +144,55 @@
       "field": "batch",
       "numeric_decimal": "rejected"
     }
-  ]
+  ],
+  "parity_coprime_and_offset_denominators": {
+    "coprime_large_domains": [
+      {
+        "lines": 4,
+        "joint_cyclic_modulus": 430882,
+        "local_periods": [
+          34,
+          38,
+          46,
+          58
+        ],
+        "representatives": 176,
+        "exact_maximum_absolute_discrepancy": 2,
+        "independent_envelope_and_attained_witness_certificate": true,
+        "implementation_parity_endpoints_and_witnesses_matched": true
+      },
+      {
+        "lines": 8,
+        "joint_cyclic_modulus": 871312776002,
+        "local_periods": [
+          34,
+          38,
+          46,
+          58,
+          62,
+          74,
+          82,
+          86
+        ],
+        "representatives": 480,
+        "exact_maximum_absolute_discrepancy": 4,
+        "independent_envelope_and_attained_witness_certificate": true,
+        "implementation_parity_endpoints_and_witnesses_matched": true
+      }
+    ],
+    "large_offset_denominators": {
+      "offset_denominators": [
+        1009,
+        1013
+      ],
+      "local_periods": [
+        34,
+        38
+      ],
+      "representatives": 12,
+      "brute_force_assignments": 36,
+      "all_extrema_matched": true,
+      "implementation_parity_succeeded_while_cyclic_budget_rejected": true
+    }
+  }
 }

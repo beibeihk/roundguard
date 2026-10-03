@@ -1,0 +1,40 @@
+{
+  "name": "narrow_prime_n4",
+  "group": "denominators",
+  "variables": {
+    "x0": {
+      "type": "Money",
+      "min": 400,
+      "max": 600,
+      "quantum": "1"
+    },
+    "x1": {
+      "type": "Money",
+      "min": 400,
+      "max": 600,
+      "quantum": "1"
+    },
+    "x2": {
+      "type": "Money",
+      "min": 400,
+      "max": 600,
+      "quantum": "1"
+    },
+    "x3": {
+      "type": "Money",
+      "min": 400,
+      "max": 600,
+      "quantum": "1"
+    }
+  },
+  "pattern": "narrow interval, large individual period",
+  "batch": {
+    "lines": [
+      "x0/1009",
+      "x1/1009",
+      "x2/1009",
+      "x3/1009"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

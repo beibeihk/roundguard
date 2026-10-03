@@ -6,7 +6,7 @@
     "false_positives": 0,
     "false_negatives": 0,
     "unknown": 0,
-    "median_seconds": 0.009766449999006
+    "median_seconds": 0.004317599999922095
   },
   "pure_smt": {
     "cases": 66,
@@ -15,7 +15,7 @@
     "false_positives": 0,
     "false_negatives": 0,
     "unknown": 0,
-    "median_seconds": 0.01430255000013858
+    "median_seconds": 0.005921199997828808
   },
   "random32": {
     "cases": 66,
@@ -24,7 +24,7 @@
     "false_positives": 0,
     "false_negatives": 2,
     "unknown": 0,
-    "median_seconds": 0.0028311500027484726
+    "median_seconds": 0.0009981500006688293
   },
   "hypothesis64": {
     "cases": 66,
@@ -33,7 +33,7 @@
     "false_positives": 0,
     "false_negatives": 1,
     "unknown": 0,
-    "median_seconds": 0.11951889999545529
+    "median_seconds": 0.04581529999995837
   },
   "naive_interval": {
     "cases": 66,
@@ -42,6 +42,6 @@
     "false_positives": 15,
     "false_negatives": 0,
     "unknown": 0,
-    "median_seconds": 0.0002825999981723726
+    "median_seconds": 0.00012830000196117908
   }
 }

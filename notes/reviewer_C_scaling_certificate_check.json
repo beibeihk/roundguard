@@ -1,8 +1,10 @@
 {
   "review_date": "2026-10-03",
   "solver_reexecution": false,
+  "review_phase": "final parity release",
   "roundguard_imports": false,
   "scaling_cases": 24,
+  "denominator_cases": 6,
   "witness_and_bound_mismatches": [],
   "universal_strict_gap_cases": 10,
   "effectiveness_assignments": 19940,
@@ -23,17 +25,19 @@
   "auto_dispatch": {
     "smt": 25,
     "residue-smt": 19,
-    "residue-dp": 22
+    "parity-dp": 22
   },
   "cases": [
     {
       "case": "batch_n16_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 8,
       "integral_upper_bound": 8,
       "universal_bound": 8,
@@ -41,12 +45,14 @@
     },
     {
       "case": "batch_n16_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 8,
       "integral_upper_bound": 8,
       "universal_bound": 8,
@@ -54,12 +60,14 @@
     },
     {
       "case": "batch_n16_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 8,
       "integral_upper_bound": 8,
       "universal_bound": 8,
@@ -67,12 +75,14 @@
     },
     {
       "case": "batch_n16_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 7,
       "integral_upper_bound": 7,
       "universal_bound": 8,
@@ -80,10 +90,12 @@
     },
     {
       "case": "batch_n2_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 1,
       "integral_upper_bound": 1,
       "universal_bound": 1,
@@ -91,10 +103,12 @@
     },
     {
       "case": "batch_n2_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 1,
       "integral_upper_bound": 1,
       "universal_bound": 1,
@@ -102,10 +116,12 @@
     },
     {
       "case": "batch_n2_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 1,
       "integral_upper_bound": 1,
       "universal_bound": 1,
@@ -113,10 +129,12 @@
     },
     {
       "case": "batch_n2_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 1,
       "integral_upper_bound": 1,
       "universal_bound": 1,
@@ -124,12 +142,14 @@
     },
     {
       "case": "batch_n32_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 15,
       "integral_upper_bound": 15,
       "universal_bound": 16,
@@ -137,12 +157,14 @@
     },
     {
       "case": "batch_n32_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 15,
       "integral_upper_bound": 15,
       "universal_bound": 16,
@@ -150,12 +172,14 @@
     },
     {
       "case": "batch_n32_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 15,
       "integral_upper_bound": 15,
       "universal_bound": 16,
@@ -163,12 +187,14 @@
     },
     {
       "case": "batch_n32_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 14,
       "integral_upper_bound": 14,
       "universal_bound": 16,
@@ -176,12 +202,14 @@
     },
     {
       "case": "batch_n4_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 2,
       "integral_upper_bound": 2,
       "universal_bound": 2,
@@ -189,12 +217,14 @@
     },
     {
       "case": "batch_n4_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 2,
       "integral_upper_bound": 2,
       "universal_bound": 2,
@@ -202,12 +232,14 @@
     },
     {
       "case": "batch_n4_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 2,
       "integral_upper_bound": 2,
       "universal_bound": 2,
@@ -215,12 +247,14 @@
     },
     {
       "case": "batch_n4_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 2,
       "integral_upper_bound": 2,
       "universal_bound": 2,
@@ -228,12 +262,14 @@
     },
     {
       "case": "batch_n64_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 30,
       "integral_upper_bound": 30,
       "universal_bound": 32,
@@ -241,12 +277,14 @@
     },
     {
       "case": "batch_n64_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 30,
       "integral_upper_bound": 30,
       "universal_bound": 32,
@@ -254,12 +292,14 @@
     },
     {
       "case": "batch_n64_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 30,
       "integral_upper_bound": 30,
       "universal_bound": 32,
@@ -267,12 +307,14 @@
     },
     {
       "case": "batch_n64_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 27,
       "integral_upper_bound": 27,
       "universal_bound": 32,
@@ -280,12 +322,14 @@
     },
     {
       "case": "batch_n8_u10000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 4,
       "integral_upper_bound": 4,
       "universal_bound": 4,
@@ -293,12 +337,14 @@
     },
     {
       "case": "batch_n8_u1000000000",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 4,
       "integral_upper_bound": 4,
       "universal_bound": 4,
@@ -306,12 +352,14 @@
     },
     {
       "case": "batch_n8_u20",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 4,
       "integral_upper_bound": 4,
       "universal_bound": 4,
@@ -319,16 +367,144 @@
     },
     {
       "case": "batch_n8_u3",
+      "family": "scaling",
       "local_periods": [
         4,
         8,
         10,
         20
       ],
+      "local_sign_convention": "rounded-minus-raw",
       "independently_replayed": 3,
       "integral_upper_bound": 3,
       "universal_bound": 4,
       "universal_gap": 1
+    },
+    {
+      "case": "coprime_n4_u1000000000",
+      "family": "denominators",
+      "local_periods": [
+        34,
+        38,
+        46,
+        58
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 2,
+      "integral_upper_bound": 2,
+      "universal_bound": 2,
+      "universal_gap": 0
+    },
+    {
+      "case": "coprime_n4_u20",
+      "family": "denominators",
+      "local_periods": [
+        34,
+        38,
+        46,
+        58
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 2,
+      "integral_upper_bound": 2,
+      "universal_bound": 2,
+      "universal_gap": 0
+    },
+    {
+      "case": "coprime_n8_u1000000000",
+      "family": "denominators",
+      "local_periods": [
+        34,
+        38,
+        46,
+        58,
+        62,
+        74,
+        82,
+        86
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 4,
+      "integral_upper_bound": 4,
+      "universal_bound": 4,
+      "universal_gap": 0
+    },
+    {
+      "case": "coprime_n8_u20",
+      "family": "denominators",
+      "local_periods": [
+        34,
+        38,
+        46,
+        58,
+        62,
+        74,
+        82,
+        86
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 4,
+      "integral_upper_bound": 4,
+      "universal_bound": 4,
+      "universal_gap": 0
+    },
+    {
+      "case": "narrow_prime_n4",
+      "family": "denominators",
+      "local_periods": [
+        2018
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 2,
+      "integral_upper_bound": 2,
+      "universal_bound": 2,
+      "universal_gap": 0
+    },
+    {
+      "case": "narrow_prime_n8",
+      "family": "denominators",
+      "local_periods": [
+        2018
+      ],
+      "local_sign_convention": "raw-minus-rounded",
+      "independently_replayed": 4,
+      "integral_upper_bound": 4,
+      "universal_bound": 4,
+      "universal_gap": 0
     }
-  ]
+  ],
+  "source_sha256": {
+    "results/scaling_ground_truth.json": "00975e0c0ca9c22cbc715adbed3cf10262997de397b75e71f6fe489db9ab90ee",
+    "results/denominator_ground_truth.json": "56e9daec92ab2d3e5786e55b9246bbbf6372fc40546f81114343f3c4478a148c",
+    "benchmarks/scaling/batch_n16_u10000.json": "af382f526fd0cb6fe454c5f38f5ac46d61c5c54ea39295e63c0975c57bc64e45",
+    "benchmarks/scaling/batch_n16_u1000000000.json": "163412be0668909a877513e5a6ab0ddd8739dd1bb5e8e1f72af6249dd85cc341",
+    "benchmarks/scaling/batch_n16_u20.json": "2bce2938abd7b2e94097444e1f140ec63d9cb8e359dcc9ac360d8cd8cacee5e9",
+    "benchmarks/scaling/batch_n16_u3.json": "374ed141019774bff07e807e17d223658ba46b5645e908772e64e6e198bb84fe",
+    "benchmarks/scaling/batch_n2_u10000.json": "c4e57c1a8a73ea25023301a248f78e61219bf600845f3561aab5145689006868",
+    "benchmarks/scaling/batch_n2_u1000000000.json": "fe1d6a6840543620ad597d5b8beeb39c6568d79c071268ce0a864b4cd27c7bf7",
+    "benchmarks/scaling/batch_n2_u20.json": "16899cf950500adae3adcec0e34d6e74cf8e0b98c618076c393da29bba9ae8e0",
+    "benchmarks/scaling/batch_n2_u3.json": "9a0df5b140893fdd7596d0d2f804acf3679b6761e55996b349baf106ce0091c2",
+    "benchmarks/scaling/batch_n32_u10000.json": "d975f6a01ef6ba7deb836eef9214bae1eb5308aacd62334e62942ebea6550063",
+    "benchmarks/scaling/batch_n32_u1000000000.json": "b2b81a0bf582680760b3fb7fee56afe89d74e645c44a1cbf7dbb7386113ec932",
+    "benchmarks/scaling/batch_n32_u20.json": "ee5d19b270b225515c0c47227c7a41ce06a066cdb167f161994ac77e41ec22b0",
+    "benchmarks/scaling/batch_n32_u3.json": "030cca9bc2b414270d5a85a39d4dc80309a6be4ea6279395c439bf09775d8f34",
+    "benchmarks/scaling/batch_n4_u10000.json": "f0f5a3db45449911e7a5ff98bd24f7500d66469ed84199b92335b6132bf4b7d0",
+    "benchmarks/scaling/batch_n4_u1000000000.json": "b10f952f51ec669c22e5d5042560f6a23b9d5989387c2fa0621add934cf3011e",
+    "benchmarks/scaling/batch_n4_u20.json": "8b9a7f3d1a97888b38a9c0b14f810e9b683f13d959a84c2b60a441d4a6462759",
+    "benchmarks/scaling/batch_n4_u3.json": "c2f34e68cdcbb394859b7e352ecc445fab4619682d730c6e60e1506215f77956",
+    "benchmarks/scaling/batch_n64_u10000.json": "87239a2ad740e09f92c2996b4846036fa323d101eb53c04a8223474d48964210",
+    "benchmarks/scaling/batch_n64_u1000000000.json": "8b3e6db36acfed051bfc48d27b8e44dab60bc2e678737b27927dd78c3771f20e",
+    "benchmarks/scaling/batch_n64_u20.json": "15893f9393236fe68f6394a3cad3be304690aa79fe4aa9d23b5c07491f06c6b4",
+    "benchmarks/scaling/batch_n64_u3.json": "b8c74de7f24eb3d6e195d7a915e85b3a5c9ec0b454ba3161c28c2b3b3fa00d9f",
+    "benchmarks/scaling/batch_n8_u10000.json": "9d082141ef277e71c2d43af62e41694b9ad42f71e2f7d4f0962893daf3060e1a",
+    "benchmarks/scaling/batch_n8_u1000000000.json": "29199b0298128f9d7c40ce1cbbdd30c07c6190e49dc6cc75f41f652c74a8827f",
+    "benchmarks/scaling/batch_n8_u20.json": "f04cf35389581baa4822c6da3b4ce0a17c35363ecc650dcda98a353f2fbe9fa7",
+    "benchmarks/scaling/batch_n8_u3.json": "0ad477c58a572345772fce518263b133a4b13a4811109ef023c8fa868eca5ca1",
+    "benchmarks/denominators/coprime_n4_u1000000000.json": "f90bb443dfdf20ec3cc208ddea2b8090dba19e0df54e1faae3af6b40295eb8f2",
+    "benchmarks/denominators/coprime_n4_u20.json": "8f0208ef75a53a057f4242f201910b411bd0467a6070b7fb350ac10f88763848",
+    "benchmarks/denominators/coprime_n8_u1000000000.json": "370938d7c3ef7955262ed72b49ea6c88654b645fb4e064afaacc1ff6ed41c9ea",
+    "benchmarks/denominators/coprime_n8_u20.json": "17b044c3daeae067b966e3ed9b72a92d58d2fd5c1307ba508d8b9f6dd6ab5b8c",
+    "benchmarks/denominators/narrow_prime_n4.json": "dc24adfd904a0e610fa51eaa046b403e60fe6d3d33167f1574dd5c8ced60eabb",
+    "benchmarks/denominators/narrow_prime_n8.json": "d334fef30c38bd57700a8cace4efb7ea89ef5c9a3901d3334ad7fe2569fdfc41"
+  }
 }

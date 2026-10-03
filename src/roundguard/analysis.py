@@ -1,4 +1,4 @@
-"""Structural periods, exact residue convolution, and bounded SMT fallback."""
+"""Structural periods, parity extrema, cyclic ablation, and bounded SMT."""
 from __future__ import annotations
 from fractions import Fraction as F
 from math import gcd,lcm,ceil,prod
@@ -70,30 +70,39 @@ def denominator(e,vs):
     if e.op=="scale": return denominator(e.args[0],vs)*e.value.denominator
     return lcm(*(denominator(n,vs) for n in e.args))
 
-def dp_batch(rule,state_cap=400):
-    """Exact total-minus-lines extrema on independent affine lines only."""
+def _batch_forms(rule):
+    """Validate and normalize the common independent affine batch contract."""
     b=rule.batch
-    if not b or len(rule.variants)!=2: raise NotCertified("DP needs only declared line/total policies")
+    if not b or set(rule.variants)!={"per_line","total"}: raise NotCertified("DP needs only declared line/total policies")
     q=F(b.get("quantum","1")); mode=b.get("mode","HALF_EVEN")
-    lines=[parse(s,{v.name for v in rule.variables}) for s in b["lines"]]
-    forms=[]; used=set(); B=1
+    variables={v.name:v for v in rule.variables}; names=set(variables)
+    lines=[parse(s,names) for s in b["lines"]]
+    forms=[]; used=set()
     for e in lines:
         if any(n.op=="round" for n in walk(e)): raise NotCertified("Raw lines must be affine")
-        c,a=affine(e,rule.variables); c/=q; a={k:v/q for k,v in a.items() if v}
+        dependencies={n.value for n in walk(e) if n.op=="var"}
+        c,a=affine(e,[variables[name] for name in dependencies]); c/=q; a={k:v/q for k,v in a.items() if v}
         if len(a)>1 or used.intersection(a): raise NotCertified("Independent one-variable lines required")
         if mode not in COVARIANT:
             minimum=c
             for name,A in a.items():
-                v=next(v for v in rule.variables if v.name==name)
+                v=variables[name]
                 minimum+=min(A*v.lo,A*v.hi)
             if minimum<0: raise NotCertified("Sign-sensitive DP requires every raw line nonnegative")
-        used.update(a); forms.append((c,a)); B=lcm(B,c.denominator,*(v.denominator for v in a.values()))
+        used.update(a); forms.append((c,a))
+    return q,mode,forms
+
+def cyclic_batch(rule,state_cap=400):
+    """Original cyclic-residue convolution, retained as a method ablation."""
+    q,mode,forms=_batch_forms(rule)
+    variables={v.name:v for v in rule.variables}
+    B=lcm(1,*(f.denominator for c,a in forms for f in [c,*a.values()]))
     M=2*B
     if M>state_cap: raise NotCertified("Common denominator exceeds DP budget")
     tables=[]
     for c,a in forms:
         if a:
-            name,A=next(iter(a.items())); v=next(v for v in rule.variables if v.name==name)
+            name,A=next(iter(a.items())); v=variables[name]
             T=M//gcd(abs(int(B*A)),M); xs=range(v.lo,min(v.hi+1,v.lo+T))
         else: name=None; A=F(0); xs=[0]
         table={}
@@ -138,7 +147,83 @@ def dp_batch(rule,state_cap=400):
     # An independently executed AST replay is mandatory for every reported optimum.
     vals={k:evaluate(e,tick_env(rule,witness)) for k,e in rule.variants.items()}
     if abs(vals['total']-vals['per_line'])!=worst: raise RuntimeError("DP witness replay mismatch")
-    return dict(status="SENSITIVE" if worst else "SAFE",method="residue-dp",maximum_discrepancy=str(worst),minimum_signed=str(mn),maximum_signed=str(mx),counterexample=witness if worst else None,outputs={k:str(v) for k,v in vals.items()},denominator=B,residue_states=M,transitions=transitions,domain_size=rule.size,complete=True)
+    return dict(status="SENSITIVE" if worst else "SAFE",method="cyclic-dp",maximum_discrepancy=str(worst),minimum_signed=str(mn),maximum_signed=str(mx),counterexample=witness if worst else None,outputs={k:str(v) for k,v in vals.items()},denominator=B,residue_states=M,transitions=transitions,domain_size=rule.size,complete=True)
+
+def dp_batch(rule,state_cap=400):
+    """Exact attained residual extrema, with at most two prefix parity states.
+
+    Local representative enumeration is still denominator-sensitive. The cap
+    applies to the actual number of feasible representatives per line, not to
+    a common modulus: no such modulus is needed. A narrow box may be tractable
+    even with a large coefficient denominator. Constants do not enlarge the
+    sufficient local period den(a_i/2).
+    """
+    q,mode,forms=_batch_forms(rule)
+    variables={v.name:v for v in rule.variables}
+    tables=[]; local_samples=0; local_periods=[]
+    parity_needed=mode=="HALF_EVEN"
+    for c,a in forms:
+        if a:
+            name,A=next(iter(a.items())); v=variables[name]
+            T=(A/2).denominator; count=min(T,v.hi-v.lo+1)
+            if count>state_cap: raise NotCertified("Local representative count exceeds parity-DP budget")
+            xs=range(v.lo,v.lo+count)
+        else: name=None; A=F(0); T=1; xs=[0]
+        local_periods.append(T); table={}
+        for x in xs:
+            y=c+A*x; rounded=int(quantize(y,1,mode))
+            residual=y-rounded
+            parity=rounded%2 if parity_needed else 0
+            local_samples+=1
+            if parity not in table: table[parity]=(residual,residual,x,x)
+            else:
+                low,high,xl,xh=table[parity]
+                table[parity]=(min(low,residual),max(high,residual),x if residual<low else xl,x if residual>high else xh)
+        tables.append((name,table))
+    low={0:0}; high={0:0}; trace_low=[]; trace_high=[]; transitions=0
+    for name,table in tables:
+        nl={}; nh={}; pl={}; ph={}
+        for state,out,pointers in [(low,nl,pl),(high,nh,ph)]:
+            islow=state is low
+            for parity,value in state.items():
+                for local_parity,(fl,fh,xl,xh) in table.items():
+                    target=parity^local_parity; candidate=value+(fl if islow else fh)
+                    transitions+=1
+                    if target not in out or (candidate<out[target] if islow else candidate>out[target]):
+                        out[target]=candidate; pointers[target]=(parity,xl if islow else xh)
+        trace_low.append(pl); trace_high.append(ph); low,high=nl,nh
+    def terminal(parity,residual):
+        value=F(residual)
+        if mode=="HALF_EVEN": return quantize(value+parity,1,"HALF_EVEN")-parity
+        # On the certified nonnegative raw domain, use the outer rounding
+        # identity after subtracting the integer K. The residual sum itself
+        # may be negative, so signed HALF_UP/DOWN/UP(value) would be wrong.
+        if mode=="HALF_UP": return quantize(value+F(1,2),1,"FLOOR")
+        return quantize(value,1,"FLOOR" if mode=="DOWN" else "CEILING" if mode=="UP" else mode)
+    mn=min(terminal(p,v)*q for p,v in low.items())
+    mx=max(terminal(p,v)*q for p,v in high.items())
+    pmin=next(p for p,v in low.items() if terminal(p,v)*q==mn)
+    pmax=next(p for p,v in high.items() if terminal(p,v)*q==mx)
+    def reconstruct(parity,traces):
+        witness={}
+        for k in range(len(tables)-1,-1,-1):
+            previous,x=traces[k][parity]; name=tables[k][0]
+            if name is not None: witness[name]=x
+            parity=previous
+        if parity!=0: raise RuntimeError("Broken parity-DP predecessor")
+        for v in rule.variables: witness.setdefault(v.name,v.lo)
+        return witness
+    wmin=reconstruct(pmin,trace_low); wmax=reconstruct(pmax,trace_high)
+    # Replay both signed endpoints, not just the selected absolute maximum.
+    endpoint_outputs=[]
+    for expected,witness in [(mn,wmin),(mx,wmax)]:
+        if any(not v.lo<=witness[v.name]<=v.hi for v in rule.variables): raise RuntimeError("Parity-DP witness outside box")
+        values={k:evaluate(e,tick_env(rule,witness)) for k,e in rule.variants.items()}
+        if values['total']-values['per_line']!=expected: raise RuntimeError("Parity-DP endpoint replay mismatch")
+        endpoint_outputs.append(values)
+    worst=max(abs(mn),abs(mx)); choose_min=abs(mn)>=abs(mx)
+    witness=wmin if choose_min else wmax; vals=endpoint_outputs[0 if choose_min else 1]
+    return dict(status="SENSITIVE" if worst else "SAFE",method="parity-dp",maximum_discrepancy=str(worst),minimum_signed=str(mn),maximum_signed=str(mx),counterexample=witness if worst else None,minimum_counterexample=wmin,maximum_counterexample=wmax,outputs={k:str(v) for k,v in vals.items()},parity_states=2 if parity_needed else 1,active_states=len(low),local_representatives=local_samples,local_periods=local_periods,transitions=transitions,domain_size=rule.size,complete=True)
 
 def smt_analysis(rule,use_period=True,timeout_ms=10000):
     ts=None; reason=None
@@ -193,10 +278,10 @@ def smt_analysis(rule,use_period=True,timeout_ms=10000):
 
 def analyze(rule,method="auto",timeout_ms=10000):
     start=perf_counter(); result=None
-    if method in {"auto","dp"}:
-        try: result=dp_batch(rule)
+    if method in {"auto","dp","cyclic"}:
+        try: result=cyclic_batch(rule) if method=="cyclic" else dp_batch(rule)
         except NotCertified as e:
-            if method=="dp": result=dict(status="UNKNOWN",method="dp",reason=str(e),complete=False)
+            if method in {"dp","cyclic"}: result=dict(status="UNKNOWN",method=method,reason=str(e),complete=False)
     if result is None: result=smt_analysis(rule,use_period=method!="smt",timeout_ms=timeout_ms)
     result.update(name=rule.name,time_seconds=perf_counter()-start)
     return result

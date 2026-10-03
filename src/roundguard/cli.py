@@ -5,7 +5,7 @@ from .analysis import analyze
 def main():
     p=argparse.ArgumentParser(description="Exact monetary rounding-policy analysis on declared integer grids")
     sub=p.add_subparsers(dest="command",required=True)
-    a=sub.add_parser("analyze"); a.add_argument("rule"); a.add_argument("--method",choices=["auto","smt","residue","dp"],default="auto"); a.add_argument("--timeout-ms",type=int,default=10000); a.add_argument("--json",action="store_true")
+    a=sub.add_parser("analyze"); a.add_argument("rule"); a.add_argument("--method",choices=["auto","smt","residue","dp","cyclic"],default="auto"); a.add_argument("--timeout-ms",type=int,default=10000); a.add_argument("--json",action="store_true")
     args=p.parse_args(); r=analyze(load_rule(args.rule),args.method,args.timeout_ms)
     if args.json: print(json.dumps(r,indent=2))
     else:

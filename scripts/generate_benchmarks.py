@@ -55,5 +55,13 @@ def main():
    vs={f'x{i}':v(0,magnitude) for i in range(n)}
    write('scaling',f'batch_n{n}_u{magnitude}',vs,pattern='heterogeneous independent invoice',batch=dict(lines=[f'x{i}/{[2,4,5,10][i%4]}' for i in range(n)],mode='HALF_EVEN'))
  (ROOT/'benchmarks'/'MANIFEST.md').write_text('# Benchmark provenance\n\nSeed: 20261003. 48 synthetic, 12 canonical, 6 rule-derived fragments, 24 scaling cases. Synthetic labels are computed by the independent exhaustive Decimal oracle, not inferred from generator names. Cases include negative inputs, half ties, homogeneous exact aggregation, threshold and cap behavior. Realistic fragments are authored from public rule descriptions and compare explicit alternatives; no copied external code or production-bug claim. Monetary output units are cents unless case quantum states otherwise. All scaling ground truths use independent local Decimal error envelopes, integrality of the final discrepancy, explicit in-box witness checks, and independent Decimal replay of an attaining assignment. The universal nearest-even aggregation bound is reported separately and is not necessarily attainable. The Decimal oracle shares the parsed AST but not the concrete Fraction or symbolic operator implementation.\n',encoding='utf-8')
+ primes=[17,19,23,29,31,37,41,43]
+ for n in [4,8]:
+  for upper in [20,1000000000]:
+   write('denominators',f'coprime_n{n}_u{upper}',{f'x{i}':v(0,upper) for i in range(n)},pattern='coprime denominators',batch=dict(lines=[f'x{i}/{primes[i]}' for i in range(n)],mode='HALF_EVEN'))
+ for n in [4,8]:
+  write('denominators',f'narrow_prime_n{n}',{f'x{i}':v(400,600) for i in range(n)},pattern='narrow interval, large individual period',batch=dict(lines=[f'x{i}/1009' for i in range(n)],mode='HALF_EVEN'))
+ with (ROOT/'benchmarks'/'MANIFEST.md').open('a',encoding='utf-8') as f:
+  f.write('\nSix additional denominator-stress cases use coprime odd denominators or narrow windows for denominator 1009. Their independent certificate uses integer quotient/remainder nearest-even rounding, local residual envelopes, integral upper bounds and witness replay; nonterminating values are never approximated with Decimal.\n')
 if __name__=='__main__': main()
 

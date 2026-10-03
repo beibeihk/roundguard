@@ -1,0 +1,8 @@
+{
+  "status": "VISUALLY_REVIEWED",
+  "pages": 14,
+  "scope": "All pages in rendered contact sheet; full-size inspection of theorem/proof, performance figure, denominator and public-rule tables. Final edits narrowed denominator wording without changing numerical evidence.",
+  "layout_issues_found": [],
+  "automated_build": "Embedded fonts; no unresolved references, missing citations, overfull boxes or fatal errors. Extracted source archive compiled independently.",
+  "not_a_proof_of": "Semantic correctness, originality, arXiv server compilation, external peer review or moderation."
+}

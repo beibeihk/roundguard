@@ -91,14 +91,17 @@ def main():
   scaling_truth.append(dict(case=r.name,ground_truth=str(attained),oracle='Independent Decimal local-error envelope + integral upper bound + attaining Decimal replay',local_lower=str(emin),local_upper=str(emax),integral_upper_bound=str(integral_upper),counterexample=ticks))
   # Three timing repetitions of every actual method; timeout is per solver call,
   # not a total wall-clock budget. Complete and incomplete runs stay separate.
-  for m in ['dp','residue','smt']:
+  cyclic=analyze(r,'cyclic')
+  for m in ['dp','cyclic','residue','smt']:
    for rep in range(3):
     res=analyze(r,m,timeout_ms=1500)
     if res.get('complete') and res['maximum_discrepancy']!=auto['maximum_discrepancy']: raise RuntimeError('Scaling disagreement')
-    scaling.append(dict(case=r.name,method=m,repetition=rep,nvars=len(r.variables),upper=r.variables[0].hi,domain_size=str(r.size),time_seconds=res['time_seconds'],status=res['status'],complete=res.get('complete',False),maximum_discrepancy=res.get('maximum_discrepancy'),dp_truth=auto['maximum_discrepancy'],lower_bound=res.get('lower_bound'),residue_states=auto['residue_states'],transitions=auto['transitions'],universal_bound=str(universal),bound_gap=str(universal-F(auto['maximum_discrepancy']))))
+    scaling.append(dict(case=r.name,method=m,repetition=rep,nvars=len(r.variables),upper=r.variables[0].hi,domain_size=str(r.size),time_seconds=res['time_seconds'],status=res['status'],complete=res.get('complete',False),maximum_discrepancy=res.get('maximum_discrepancy'),exact_truth=auto['maximum_discrepancy'],lower_bound=res.get('lower_bound'),parity_states=auto['parity_states'],local_representatives=auto['local_representatives'],cyclic_states=cyclic['residue_states'],transitions=res.get('transitions'),universal_bound=str(universal),bound_gap=str(universal-F(auto['maximum_discrepancy']))))
    print(f'scale {i+1}/24 {r.name} {m}: {res["status"]} complete={res.get("complete")}',flush=True)
   savecsv(out/'scaling.csv',scaling)
  (out/'scaling_ground_truth.json').write_text(json.dumps(scaling_truth,indent=2),encoding='utf-8')
+ from denominator_study import run as run_denominators
+ run_denominators(ROOT)
  summary={}
  for m in ['auto','pure_smt','random32','hypothesis64','naive_interval']:
   a=[r for r in accuracy if r['method']==m];sens=sum(r['truth']=='SENSITIVE' for r in a)

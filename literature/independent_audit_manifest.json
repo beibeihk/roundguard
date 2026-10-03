@@ -1,16 +1,18 @@
 {
   "review_date": "2026-10-03",
   "main_sha256": "92a28f14db7fd0f1bc99c2229c574659a7192ad41c3485dc0a1c6aa5c5cc62d1",
-  "matrix_rows": 29,
-  "research_papers_or_preprints": 28,
+  "matrix_rows": 33,
+  "research_papers_or_preprints": 32,
   "unpublished_drafts": 1,
-  "core_section_readings": 15,
-  "reference_audit_rows": 35,
+  "core_section_readings": 18,
+  "reference_audit_rows": 39,
   "current_main_citation_keys": 26,
   "current_main_research_citations": 20,
   "missing_audit_keys": [],
   "excluded_fetch": "arxiv1301.5341 was unrelated superconducting-wire paper",
   "pending_review_items": [
+    "Parity revision code and new experiment alignment",
+    "Current parity manuscript citation alignment",
     "Rendered PDF inspection assigned to parent"
   ],
   "evaluation_sha256": "14a09fe14aaceac3e7822447e752b4ca3c9c526ceb5978020db507417c257dfb",
@@ -23,7 +25,7 @@
   "independent_scaling_cases_replayed": 24,
   "scaling_witness_or_bound_mismatches": 0,
   "solver_reexecution": false,
-  "numeric_snapshot": "fresh complete reproduction",
+  "numeric_snapshot": "fresh complete cyclic reproduction; not a parity-release attestation",
   "numeric_source_sha256": {
     "paper/main.tex": "92a28f14db7fd0f1bc99c2229c574659a7192ad41c3485dc0a1c6aa5c5cc62d1",
     "paper/evaluation.tex": "14a09fe14aaceac3e7822447e752b4ca3c9c526ceb5978020db507417c257dfb",
@@ -34,5 +36,6 @@
     "results/scaling.csv": "cfe80540967a7239b8b1f6c34da4b5f297309827f6d450a4d14013b929dbf906",
     "results/scaling_ground_truth.json": "17be2d908e05dd69d77a1f91c7335e1b90f4df589a992c8c76121c95c3c64229",
     "results/summary.json": "9089c256deea7852320ea3d80d8eca8dcf54b370eed12dc41a75890b56b867c9"
-  }
+  },
+  "parity_revision_mathematical_review": "pass under stated premises"
 }

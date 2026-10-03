@@ -2,7 +2,7 @@
 
 **Exact attainable discrepancies in monetary rounding policies.** RoundGuard checks explicitly declared rounding variants on finite integer input grids. It returns SAFE, SENSITIVE with a replayed input, or UNKNOWN. A completed maximum is attained on the supplied grid. A warning does not decide which financial policy is legally correct.
 
-The specialized residue dynamic program handles independent affine line items with a shared quantum and mode. General bounded expressions use Z3, with structural residue reduction where its premises hold. All six decimal rounding conventions are supported; sign-sensitive modes require nonnegative raw lines for the DP. Large denominator moduli, shared line dependencies, and piecewise expressions use the fallback. This is a JSON rule analyzer, not an analyzer for arbitrary Python source.
+The specialized parity-extrema algorithm handles independent affine line items with a shared quantum and mode. It retains at most two states, enumerates feasible local periods, and reconstructs both signed discrepancy endpoints without a common-denominator residue table. General bounded expressions use Z3, with structural residue reduction where its premises hold. All six decimal rounding conventions are supported; sign-sensitive modes require nonnegative raw lines for the specialized path. More than 400 local representatives per line, shared dependencies, and piecewise expressions use the fallback. The exact cyclic-residue implementation is retained as an ablation. This is a JSON rule analyzer, not an analyzer for arbitrary Python source.
 
 ## Install
 
@@ -41,8 +41,9 @@ Seeds determine program generation and testing configuration. Exact oracle label
 ## Benchmark and evidence
 
 - 48 synthetic, 12 canonical, and six public-rule-derived programs, independently checked by exhaustive Decimal evaluation.
-- 24 scaling cases, three repetitions per method. Their maxima have independent local-error upper bounds and Decimal replay of feasible attaining inputs.
-- Full-grid SMT, reduced-grid SMT ablation, random testing, Hypothesis search, and simple independent intervals.
+- 24 scaling cases, four exact methods and three repetitions (288 executions). Their maxima have independent local-error upper bounds and Decimal replay of feasible attaining inputs.
+- Six denominator-stress cases, four methods and three repetitions (72 executions), certified independently with integer quotient/remainder rounding and feasible witness replay.
+- Parity extrema, cyclic residue DP, full-grid SMT, reduced-grid SMT, random testing, Hypothesis search, and simple independent intervals.
 - Ordinary mathematical proofs and bounded executable checks, with explicit classifications in [proofs/theorems.md](proofs/theorems.md).
 - [Literature matrix](literature/related_work_matrix.csv), [citation audit](literature/reference_audit.csv), and [review/revision record](notes/internal_review.md).
 

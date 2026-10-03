@@ -124,9 +124,14 @@ def load_rule(path) -> Rule:
         if len(sites)>10: raise ValueError("Policy enumeration limited to ten independent optional sites")
         for bits in itertools.product([False,True],repeat=len(sites)):
             chosen={s for s,b in zip(sites,bits) if b}
-            variants['placement_'+''.join('1' if b else '0' for b in bits)]=resolve(e,chosen)
+            generated_name='placement_'+''.join('1' if b else '0' for b in bits)
+            if generated_name in variants:
+                raise ValueError("Generated placement name is reserved and collides with an explicit variant: "+generated_name)
+            variants[generated_name]=resolve(e,chosen)
     batch=data.get("batch")
     if batch:
+        if {'per_line','total'} & variants.keys():
+            raise ValueError("Generated batch names are reserved and collide with explicit variants: per_line/total")
         q=exact_field(batch.get("quantum","1")); mode=batch.get("mode","HALF_EVEN")
         if q<=0 or mode not in MODES: raise ValueError("Invalid batch rounding")
         lines=[parse(s,names) for s in batch["lines"]]

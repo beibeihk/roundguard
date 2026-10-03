@@ -1,27 +1,24 @@
 # RoundGuard research status
 
-Started: 2026-10-03 (Asia/Hong_Kong).
+Research date: 2026-10-03 (Asia/Hong_Kong). Version 0.2.0.
 
-## Current question
-Final question: exact attainable discrepancy between prescribed monetary rounding policies on finite amount grids, with a specialized independent-affine-line algorithm. Title: RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies.
+## Final question and scope
+Compute exact attainable discrepancies between declared monetary rounding policies on finite amount grids. Final title: RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies. The specialized theorem covers independent affine line items. General bounded expressions use exact SMT.
 
-## Completed
-- Read the complete user request.
-- Inspected prior project structure, metadata, compilation/package workflow and actual submission receipt.
-- Verified author: Kun Huang; Economics and Management School, Wuhan University; public academic email.
-- Prior arXiv license: perpetual non-exclusive. ORCID absent; do not infer.
-- Created independent project. Prior paper prose will not be reused.
+## Research decisions and novelty gate
+The initial broad static-analysis proposal overlapped Catala date-insensitivity, CUTECat rational monetary encoding and established Chvatal/quasi-affine arithmetic. The final restricted contribution is a sufficient-state theorem for attained discrepancy extrema, feasible witnesses, an implementation and independently certified evaluation. Late review replaced a larger cyclic-residue recurrence with at most two parity states, eliminating a common-denominator state space. General rounding semantics, periodicity, parity optimization and decidability are not claimed new. The gate is a conditional pass for this modest report, not a claim of top-venue novelty. The matrix has 33 records; 28 sources are actually cited and audited in the manuscript.
 
-## Literature gate
-CONDITIONAL PASS for a modest restricted report. The initial broad direction overlapped Catala date-insensitivity, CUTECat rational monetary encoding/counterexamples, and established Chvatal/quasi-affine periodicity. The final contribution is a feasible-extrema formulation, proof, implementation and evaluation using ordinary cyclic min/max-plus DP. General periodicity, monetary semantics, counterexamples and decidability are not claimed new. Stronger venue-level novelty is not established. Matrix:29works; sentence-level audit:26usedsources.
+## Completed research
+Ordinary proofs cover structural reduction, parity-conditioned attained extrema, nonnegative sign-sensitive modes, conditional analyzer correctness and the elementary sharp aggregation envelope. The cyclic proof remains as an ablation. No proof-assistant mechanization is claimed. The implementation includes exact JSON parsing, Fraction/Z3 semantics, six modes, placement enumeration, attaining witnesses and a CLI. All 107 tests pass.
 
-## Core contributions / experiments
-Ordinary proofs: structural reduction, attained batch extrema, nonnegative extension, conditional analyzer correctness and a sharp elementary envelope. No proof-assistant mechanization. Implemented JSON parser, exact Fraction/Z3 semantics, six quantizers, finite placements, witnesses and CLI.88tests passed.66exhaustive programs (50sensitive,16safe) and24scalingcases with216actualtimedruns. All exact small maxima agree; all scaling optima have independent upper bounds and feasible attaining replay certificates. Final original-machine completions:DP72/72,reducedSMT35/72,fullSMT19/72. These counts are time-dependent.64lines attain27cents on narrow windows or30with full local coverage, versus32unrestricted.
+The 66 exhaustive-oracle programs contain 50 sensitive and 16 safe cases; both exact methods match all labels and maxima. The 24 scaling cases have 288 measured runs and independent Decimal envelope/replay certificates. Original-machine exact completions are parity 72/72, cyclic 72/72, reduced SMT 36/72 and full SMT 22/72. Six denominator-stress cases have 72 runs and independent integer-rounding certificates; parity, reduced SMT and full SMT each complete 18/18, while cyclic rejects 18/18 at its declared cap. Timing and timeout outcomes can vary across reruns. The 64-line maximum is 27 cents on narrow windows and 30 cents with full local coverage, against a universal 32-cent envelope.
 
-Three independent adversarial reviews and a major revision are complete. Fixed an actual Decimal precision defect with3regressions; corrected overstrong value-set language and inaccurate oracle provenance. Full reproduction succeeded.13-page manuscript and independently extracted source archive compile; fonts embedded, references resolved, no overfull boxes. All pages visually checked through a contact sheet with full-size theorem/figure/bibliography inspection.
+Three independent adversarial reviewers and two substantive revisions checked theory, provenance and evaluation. Fixed an actual Decimal precision defect and protected explicit policies from generated-name overwrite. The 14-page paper and freshly extracted source archive compile with embedded fonts, resolved references and no overfull boxes. Final visual and clean-clone records are saved separately.
 
-## Unresolved
-Public repository and clean-clone verification are release steps recorded after execution in FINAL_REPORT.md and artifact/clean_clone_report.json. Scope limits: independent lines, common quantum/mode, capped DP modulus, finite boxes, explicit variants, one-machine microbenchmarks, shared parsed AST. Public-rule cases are partial/counterfactual fragments, not production defects. Docker is supplied but untested.
+## Public release and remaining limitations
+Public repository: https://github.com/beibeihk/roundguard . The remote clean-clone README command is checked in artifact/clean_clone_report.json. Limits include independent lines, common quantum/mode in the prototype, at most 400 feasible local representatives per line, finite boxes, explicit policies, one-machine microbenchmarks and a shared parsed AST. Enumeration is pseudo-polynomial; fixed-dimensional ILP offers an unimplemented alternative, so no inherent complexity lower bound is claimed. Public-rule cases are partial or counterfactual fragments, not production defects. Docker is supplied but untested.
 
-## Submission
-NOT SUBMITTED. In-app arXiv browser reached the login page; no authenticated session was available. Chrome connector reuse failed, and automated Chrome launch was rejected by policy. No submission/arXiv ID assigned. Intended primary category:cs.PL; license:arXiv perpetual,non-exclusive matching the previous submission. Source archive and metadata are prepared in arxiv/.
+## Actual arXiv state
+NOT SUBMITTED. The in-app browser reached login with no authenticated session. Chrome connector reuse failed and automated Chrome launch was rejected by policy. No submission ID or arXiv ID exists. Intended primary category: cs.PL; no cross-list. Intended paper license matches the previous submission: arXiv perpetual, non-exclusive. Source and metadata are prepared in arxiv/.
+
+Human action: log in on the preserved arXiv page, then continue the submission workflow.

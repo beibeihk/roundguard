@@ -6,7 +6,7 @@ import pytest,z3
 from hypothesis import given,settings,strategies as st
 from roundguard.model import parse,load_rule,Variable,Rule
 from roundguard.semantics import quantize,symbolic,to_fraction,evaluate,tick_env
-from roundguard.analysis import periods,analyze,dp_batch,NotCertified
+from roundguard.analysis import periods,analyze,dp_batch,cyclic_batch,NotCertified
 from roundguard.oracle import exhaustive,execute,dec,precision
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -47,13 +47,16 @@ def test_dp_against_independent_exhaustive(lo,length,mode,r1,r2):
   rule=load_rule(p);d=dp_batch(rule);o=exhaustive(rule)
   assert d['maximum_discrepancy']==o['maximum_discrepancy']
 
-def test_dp_independence_and_denominator_budget():
+def test_dp_independence_and_denominator_budget(tmp_path):
  rule=load_rule(ROOT/'benchmarks'/'canonical'/'payroll_deduction.json')
  with pytest.raises(NotCertified): dp_batch(rule)
- e=parse('x*rat(1,1009)',{'x'})
- rule=Rule('p',[Variable('x',0,100)],{}, {},dict(lines=['x*rat(1,1009)'],mode='HALF_EVEN'))
- rule.variants={'a':e,'b':e}
- with pytest.raises(NotCertified): dp_batch(rule)
+ p=tmp_path/'prime.json'
+ data=dict(variables={'x':dict(min=0,max=100)},batch=dict(lines=['x*rat(1,1009)'],mode='HALF_EVEN'))
+ p.write_text(json.dumps(data));rule=load_rule(p)
+ with pytest.raises(NotCertified,match='denominator'): cyclic_batch(rule)
+ assert dp_batch(rule)['local_representatives']==101
+ data['variables']['x']['max']=3000;p.write_text(json.dumps(data))
+ with pytest.raises(NotCertified,match='Local representative'): dp_batch(load_rule(p))
 
 @pytest.mark.parametrize('p',sorted((ROOT/'benchmarks'/'synthetic').glob('*.json'))+sorted((ROOT/'benchmarks'/'canonical').glob('*.json'))+sorted((ROOT/'benchmarks'/'realistic').glob('*.json')))
 def test_benchmark_oracle_and_replay(p):

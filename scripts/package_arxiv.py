@@ -2,7 +2,7 @@
 import hashlib,json,shutil,tarfile,uuid
 from pathlib import Path
 from build_paper import ROOT,build
-FILES=['main.tex','evaluation.tex','accuracy_table.tex','cases_table.tex','result_macros.tex','references.bib','main.bbl','figures/scalability.pdf']
+FILES=['main.tex','evaluation.tex','accuracy_table.tex','cases_table.tex','denominator_table.tex','result_macros.tex','references.bib','main.bbl','figures/scalability.pdf']
 def main():
  out=ROOT/'arxiv';out.mkdir(exist_ok=True)
  stage=ROOT/'artifact'/('clean_source_'+uuid.uuid4().hex);stage.mkdir(parents=True)

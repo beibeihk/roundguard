@@ -1,0 +1,146 @@
+[
+  {
+    "case": "coprime_n4_u1000000000",
+    "ground_truth": "2",
+    "local_lower": "-410478/215441",
+    "local_upper": "410478/215441",
+    "integral_upper_bound": "2",
+    "counterexample": {
+      "x3": 44,
+      "x2": 35,
+      "x1": 29,
+      "x0": 26
+    },
+    "denominators": [
+      17,
+      19,
+      23,
+      29
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  },
+  {
+    "case": "coprime_n4_u20",
+    "ground_truth": "2",
+    "local_lower": "-410478/215441",
+    "local_upper": "410478/215441",
+    "integral_upper_bound": "2",
+    "counterexample": {
+      "x3": 15,
+      "x2": 12,
+      "x1": 10,
+      "x0": 9
+    },
+    "denominators": [
+      17,
+      19,
+      23,
+      29
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  },
+  {
+    "case": "coprime_n8_u1000000000",
+    "ground_truth": "4",
+    "local_lower": "-1678072759804/435656388001",
+    "local_upper": "1678072759804/435656388001",
+    "integral_upper_bound": "4",
+    "counterexample": {
+      "x7": 65,
+      "x6": 62,
+      "x5": 56,
+      "x4": 47,
+      "x3": 44,
+      "x2": 35,
+      "x1": 29,
+      "x0": 26
+    },
+    "denominators": [
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  },
+  {
+    "case": "coprime_n8_u20",
+    "ground_truth": "4",
+    "local_lower": "-710604099/247110827",
+    "local_upper": "1667941215897/435656388001",
+    "integral_upper_bound": "4",
+    "counterexample": {
+      "x7": 20,
+      "x6": 20,
+      "x5": 18,
+      "x4": 15,
+      "x3": 14,
+      "x2": 11,
+      "x1": 9,
+      "x0": 8
+    },
+    "denominators": [
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  },
+  {
+    "case": "narrow_prime_n4",
+    "ground_truth": "2",
+    "local_lower": "-2016/1009",
+    "local_upper": "2016/1009",
+    "integral_upper_bound": "2",
+    "counterexample": {
+      "x3": 505,
+      "x2": 505,
+      "x1": 505,
+      "x0": 505
+    },
+    "denominators": [
+      1009,
+      1009,
+      1009,
+      1009
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  },
+  {
+    "case": "narrow_prime_n8",
+    "ground_truth": "4",
+    "local_lower": "-4032/1009",
+    "local_upper": "4032/1009",
+    "integral_upper_bound": "4",
+    "counterexample": {
+      "x7": 505,
+      "x6": 505,
+      "x5": 505,
+      "x4": 505,
+      "x3": 505,
+      "x2": 505,
+      "x1": 505,
+      "x0": 505
+    },
+    "denominators": [
+      1009,
+      1009,
+      1009,
+      1009,
+      1009,
+      1009,
+      1009,
+      1009
+    ],
+    "oracle": "Independent integer quotient/remainder local residual envelope + integral bound + attaining replay"
+  }
+]

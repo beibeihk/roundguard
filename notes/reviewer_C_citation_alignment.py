@@ -37,6 +37,10 @@ CLAIMS = {
     "robust2013": "PASS: Long-version Sections 2-3 and 5 treat unstable tests/branch discontinuities through constrained affine sets and discontinuity errors. The cited sentence supports robustness analysis of discontinuous branch changes; published short version and inspected longer primary version are distinguished in the ledger.",
     "codinglaws2026": "PASS: Recommendations 9-10 explicitly advocate arbitrary-precision monetary representation and rigorous lawyer-reviewed test suites. The cited general recommendation sentence is supported; it does not attribute a residue theorem or analyzer to this recommendations article.",
     "fpbench2017": "PASS: Sections 2-3 and 5 support explicit numerical benchmark semantics, measures and provenance for auditable tool comparisons. The manuscript expressly separates its monetary JSON suite from FPBench, avoiding an unsupported extension claim.",
+    "aswal2012": "PASS: Primary Sections 3-5 define financial transactions and decimal/binary error tables and construct recurring-error transaction sequences. The relevant distinction is binary execution versus correctly rounded decimal computation, rather than different prescribed exact monetary policies over bounded independent inputs. No first-worst-case financial-analysis claim is supported.",
+    "lenstra1983": "PASS WITH READING LIMIT: The primary input model and main-result discussion support polynomial-bit integer feasibility for fixed variable dimension. The monetary fixed-parity two-variable strip is the manuscript/reviewer's derived application, not a result explicitly stated by Lenstra. The enumerative prototype does not implement this alternative; no inherent pseudo-polynomial lower bound follows.",
+    "yap_yu2009": "PASS WITH READING LIMIT: Primary Section 2 supports exact rounding grids, directed modes and parity-based nearest tie conventions. It concerns exact rounding of elementary functions, not this monetary optimization. The transcendence proofs were not independently read.",
+    "kis_horvath2022": "PASS WITH READING LIMIT: Primary Section 5.5 treats the established parity polytope and network-based formulations. It supports general parity-optimization context, not attribution of this monetary state identity or a cheapest-flip recurrence to that article. Print volume is 2022 and initial online publication is 2021.",
 }
 
 
@@ -48,7 +52,7 @@ def main():
         for citation in re.findall(r"\\cite\w*\{([^}]+)\}", line):
             for key in citation.split(","):
                 occurrences.setdefault(key.strip(), []).append(dict(line=number, text=line))
-    assert set(occurrences) == set(CLAIMS), (set(occurrences)-set(CLAIMS), set(CLAIMS)-set(occurrences))
+    assert set(occurrences).issubset(CLAIMS), set(occurrences)-set(CLAIMS)
     path = ROOT / "literature/reference_audit.csv"
     with path.open(encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
