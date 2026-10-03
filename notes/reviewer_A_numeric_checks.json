@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-03",
+  "review": "Reviewer A final reproduction re-audit",
+  "corpus_cases": 66,
+  "exhaustive_assignments": 19940,
+  "groups": {
+    "synthetic/SENSITIVE": 37,
+    "synthetic/SAFE": 11,
+    "canonical/SAFE": 4,
+    "canonical/SENSITIVE": 8,
+    "realistic/SENSITIVE": 5,
+    "realistic/SAFE": 1
+  },
+  "nvars": [
+    1,
+    3
+  ],
+  "policies": [
+    2,
+    4
+  ],
+  "domain_sizes": [
+    21,
+    1600
+  ],
+  "ast_nodes": [
+    6,
+    28,
+    13
+  ],
+  "ast_depth": [
+    3,
+    5,
+    4
+  ],
+  "automatic_dispatch": {
+    "smt": 25,
+    "residue-smt": 19,
+    "residue-dp": 22
+  },
+  "scaling_runs": 216,
+  "completed_scaling": {
+    "dp": 72,
+    "residue": 35,
+    "smt": 19
+  },
+  "unfinished_scaling": {
+    "residue": {
+      "SENSITIVE": 12,
+      "UNKNOWN": 25
+    },
+    "smt": {
+      "UNKNOWN": 36,
+      "SENSITIVE": 17
+    }
+  },
+  "generated_macro_values_verified": {
+    "DPCompleted": "72",
+    "ResidueCompleted": "35",
+    "SMTCompleted": "19",
+    "AutoMedian": "9.77",
+    "SMTMedian": "14.30",
+    "DPMaxMedian": "101.94",
+    "SmallNodesMin": "6",
+    "SmallNodesMax": "28",
+    "SmallDepthMin": "3",
+    "SmallDepthMax": "5",
+    "SmallVarsMin": "1",
+    "SmallVarsMax": "3",
+    "DPUnknown": "0",
+    "DPPartial": "0",
+    "DPTwoMedian": "1.49",
+    "DPFourMedian": "2.63",
+    "DPEightMedian": "10.28",
+    "DPSixteenMedian": "11.21",
+    "DPThirtyTwoMedian": "38.69",
+    "DPSixtyFourMedian": "101.94",
+    "ResidueUnknown": "25",
+    "ResiduePartial": "12",
+    "ResidueTwoMedian": "32.71",
+    "ResidueFourMedian": "81.83",
+    "ResidueEightMedian": "2024.58",
+    "ResidueSixteenMedian": "1765.17",
+    "ResidueThirtyTwoMedian": "1703.72",
+    "ResidueSixtyFourMedian": "1822.88",
+    "SMTUnknown": "36",
+    "SMTPartial": "17",
+    "SMTTwoMedian": "267.62",
+    "SMTFourMedian": "1953.54",
+    "SMTEightMedian": "1810.83",
+    "SMTSixteenMedian": "1574.38",
+    "SMTThirtyTwoMedian": "1606.18",
+    "SMTSixtyFourMedian": "1677.88"
+  },
+  "independently_verified_scaling_certificates": 24,
+  "verification_method": "Direct Fraction affine-line evaluation and independent integer/remainder rounding; original tick bound checks; no analyzer parser/quantizer used for scaling certificate replay",
+  "strict_universal_gap_cases": 10,
+  "strict_decimal_oracle_snapshot": "Final saved labels unchanged; oracle guards reviewed, not a new rerun by this reviewer",
+  "implementation_records_retained": 160,
+  "evidence_sha256": {
+    "results/ground_truth.json": "5e32326f39f2f17c19296782a0097899fc8cdb96025c7496918c61a481b4acb3",
+    "results/scaling_ground_truth.json": "17be2d908e05dd69d77a1f91c7335e1b90f4df589a992c8c76121c95c3c64229",
+    "results/scaling.csv": "cfe80540967a7239b8b1f6c34da4b5f297309827f6d450a4d14013b929dbf906",
+    "paper/main.tex": "92a28f14db7fd0f1bc99c2229c574659a7192ad41c3485dc0a1c6aa5c5cc62d1",
+    "paper/evaluation.tex": "14a09fe14aaceac3e7822447e752b4ca3c9c526ceb5978020db507417c257dfb",
+    "paper/result_macros.tex": "a80d3a245ae9db73dc40115d9f71fc4891de12969d73b812c4b7bf908fa6b35f",
+    "proofs/sanity_checks.json": "a466c93a4d5f9ea4a35e021ef96fd6efdea45f8ba8b0969cb47420582adfe401"
+  },
+  "all_claim_checks_passed": true,
+  "accuracy_summary_recomputed_from_raw_csv": true
+}

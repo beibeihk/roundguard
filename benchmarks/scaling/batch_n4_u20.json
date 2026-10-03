@@ -1,0 +1,40 @@
+{
+  "name": "batch_n4_u20",
+  "group": "scaling",
+  "variables": {
+    "x0": {
+      "type": "Money",
+      "min": 0,
+      "max": 20,
+      "quantum": "1"
+    },
+    "x1": {
+      "type": "Money",
+      "min": 0,
+      "max": 20,
+      "quantum": "1"
+    },
+    "x2": {
+      "type": "Money",
+      "min": 0,
+      "max": 20,
+      "quantum": "1"
+    },
+    "x3": {
+      "type": "Money",
+      "min": 0,
+      "max": 20,
+      "quantum": "1"
+    }
+  },
+  "pattern": "heterogeneous independent invoice",
+  "batch": {
+    "lines": [
+      "x0/2",
+      "x1/4",
+      "x2/5",
+      "x3/10"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

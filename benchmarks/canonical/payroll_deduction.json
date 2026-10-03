@@ -1,0 +1,17 @@
+{
+  "name": "payroll_deduction",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 99,
+      "quantum": "1"
+    }
+  },
+  "pattern": "payroll_deduction",
+  "variants": {
+    "twice": "Q(Q(x*rate(\"0.062\"),1,\"HALF_UP\")+Q(x*rate(\"0.0145\"),1,\"HALF_UP\"),1,\"HALF_UP\")",
+    "combined": "Q(x*rate(\"0.0765\"),1,\"HALF_UP\")"
+  }
+}

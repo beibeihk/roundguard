@@ -1,0 +1,17 @@
+{
+  "name": "threshold_rule",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 490,
+      "max": 510,
+      "quantum": "1"
+    }
+  },
+  "pattern": "threshold_rule",
+  "variants": {
+    "before": "100 if Q(x/10,1,\"HALF_EVEN\") >= 50 else 0",
+    "after": "100 if x/10 >= 50 else 0"
+  }
+}

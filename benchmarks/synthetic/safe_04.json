@@ -1,0 +1,26 @@
+{
+  "name": "safe_04",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    }
+  },
+  "pattern": "insensitive",
+  "batch": {
+    "lines": [
+      "10*x",
+      "10*y"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

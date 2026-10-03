@@ -1,0 +1,19 @@
+{
+  "name": "ssa_benefit",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 100000,
+      "max": 100199,
+      "quantum": "1"
+    }
+  },
+  "source": "https://secure.ssa.gov/POMS.NSF/LNX/0300601020",
+  "source_section": "A.2, D.2",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "variants": {
+    "dime_then_offset_then_dollar": "Q(Q(x*rate(\"1.025\"),10,\"FLOOR\")-1234,100,\"FLOOR\")",
+    "counterfactual_dollar_early": "Q(x*rate(\"1.025\"),100,\"FLOOR\")-1234"
+  }
+}

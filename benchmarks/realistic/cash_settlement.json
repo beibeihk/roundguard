@@ -1,0 +1,29 @@
+{
+  "name": "cash_settlement",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 2000,
+      "max": 2039,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 1000,
+      "max": 1039,
+      "quantum": "1"
+    }
+  },
+  "source": "https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/federal-government-budgets/archived-budget-2012/archived-eliminating-penny-canada-s-coinage-system.html",
+  "source_section": "Final bill after taxes",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "batch": {
+    "lines": [
+      "x",
+      "y"
+    ],
+    "mode": "HALF_EVEN",
+    "quantum": "5"
+  }
+}

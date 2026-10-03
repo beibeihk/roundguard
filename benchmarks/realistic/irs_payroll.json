@@ -1,0 +1,19 @@
+{
+  "name": "irs_payroll",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 100000,
+      "max": 100199,
+      "quantum": "1"
+    }
+  },
+  "source": "https://www.irs.gov/publications/p15",
+  "source_section": "Fractions-of-cents adjustment",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "variants": {
+    "separate_taxes": "Q(x*rate(\"0.062\"),1,\"HALF_UP\")+Q(x*rate(\"0.0145\"),1,\"HALF_UP\")",
+    "counterfactual_combined": "Q(x*rate(\"0.0765\"),1,\"HALF_UP\")"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "rational_money",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 1000,
+      "max": 1199,
+      "quantum": "1"
+    }
+  },
+  "source": "https://github.com/brick/money",
+  "source_section": "RationalMoney intermediate rounding example; independent parametrization",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "variants": {
+    "intermediate": "Q(Q(x*rate(\"1.21\"),1,\"HALF_UP\")*rate(\"0.9\"),1,\"HALF_UP\")",
+    "deferred": "Q(x*rate(\"1.089\"),1,\"HALF_UP\")"
+  }
+}

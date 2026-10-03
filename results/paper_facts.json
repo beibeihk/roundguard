@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "auto": {
+      "cases": 66,
+      "sensitive": 50,
+      "safe": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "unknown": 0,
+      "median_seconds": 0.009766449999006
+    },
+    "pure_smt": {
+      "cases": 66,
+      "sensitive": 50,
+      "safe": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "unknown": 0,
+      "median_seconds": 0.01430255000013858
+    },
+    "random32": {
+      "cases": 66,
+      "sensitive": 50,
+      "safe": 16,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "unknown": 0,
+      "median_seconds": 0.0028311500027484726
+    },
+    "hypothesis64": {
+      "cases": 66,
+      "sensitive": 50,
+      "safe": 16,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "unknown": 0,
+      "median_seconds": 0.11951889999545529
+    },
+    "naive_interval": {
+      "cases": 66,
+      "sensitive": 50,
+      "safe": 16,
+      "false_positives": 15,
+      "false_negatives": 0,
+      "unknown": 0,
+      "median_seconds": 0.0002825999981723726
+    }
+  },
+  "scaling_runs": 216,
+  "scaling_complete": {
+    "dp": 72,
+    "residue": 35,
+    "smt": 19
+  },
+  "macros": {
+    "DPCompleted": 72,
+    "ResidueCompleted": 35,
+    "SMTCompleted": 19,
+    "AutoMedian": "9.77",
+    "SMTMedian": "14.30",
+    "DPMaxMedian": "101.94",
+    "SmallNodesMin": 6,
+    "SmallNodesMax": 28,
+    "SmallDepthMin": 3,
+    "SmallDepthMax": 5,
+    "SmallVarsMin": 1,
+    "SmallVarsMax": 3,
+    "DPUnknown": 0,
+    "DPPartial": 0,
+    "DPTwoMedian": "1.49",
+    "DPFourMedian": "2.63",
+    "DPEightMedian": "10.28",
+    "DPSixteenMedian": "11.21",
+    "DPThirtyTwoMedian": "38.69",
+    "DPSixtyFourMedian": "101.94",
+    "ResidueUnknown": 25,
+    "ResiduePartial": 12,
+    "ResidueTwoMedian": "32.71",
+    "ResidueFourMedian": "81.83",
+    "ResidueEightMedian": "2024.58",
+    "ResidueSixteenMedian": "1765.17",
+    "ResidueThirtyTwoMedian": "1703.72",
+    "ResidueSixtyFourMedian": "1822.88",
+    "SMTUnknown": 36,
+    "SMTPartial": 17,
+    "SMTTwoMedian": "267.62",
+    "SMTFourMedian": "1953.54",
+    "SMTEightMedian": "1810.83",
+    "SMTSixteenMedian": "1574.38",
+    "SMTThirtyTwoMedian": "1606.18",
+    "SMTSixtyFourMedian": "1677.88"
+  }
+}

@@ -1,0 +1,249 @@
+\begin{thebibliography}{26}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Basu et~al.(2019)Basu, Martin, Ryan, and Wang]{basu_et_al2019}
+Amitabh Basu, Kipp Martin, Christopher~Thomas Ryan, and Guanyi Wang.
+\newblock {Mixed-Integer Linear Representability, Disjunctions, and Chv{\'a}tal
+  Functions---Modeling Implications}.
+\newblock \emph{Mathematics of Operations Research}, 44\penalty0 (4):\penalty0
+  1264--1285, 2019.
+\newblock \doi{10.1287/moor.2018.0967}.
+\newblock URL \url{https://arxiv.org/html/1711.07028v1}.
+
+\bibitem[Boldo and Melquiond(2011)]{flocq2011}
+Sylvie Boldo and Guillaume Melquiond.
+\newblock {Flocq: A Unified Library for Proving Floating-Point Algorithms in
+  Coq}.
+\newblock In \emph{20th IEEE Symposium on Computer Arithmetic (ARITH 2011)},
+  pages 243--252, 2011.
+\newblock \doi{10.1109/ARITH.2011.40}.
+\newblock URL \url{https://guillaume.melquiond.fr/doc/11-arith20-article.pdf}.
+
+\bibitem[{Brick contributors}(2026)]{brick_money}
+{Brick contributors}.
+\newblock {brick/money: Money contexts and advanced calculations}.
+\newblock \url{https://github.com/brick/money}, 2026.
+\newblock Accessed 3 October 2026. Mutable documentation accessed 3 October
+  2026; library semantics alone are not evidence for an implemented adapter or
+  a discovered bug.
+
+\bibitem[Bringmann and Cassis(2023)]{bringmann_cassis2023}
+Karl Bringmann and Alejandro Cassis.
+\newblock {Faster 0-1-Knapsack via Near-Convex Min-Plus-Convolution}.
+\newblock In \emph{31st Annual European Symposium on Algorithms -- ESA 2023},
+  pages 24:1--24:16, 2023.
+\newblock \doi{10.4230/LIPIcs.ESA.2023.24}.
+\newblock URL \url{https://arxiv.org/abs/2305.01593}.
+
+\bibitem[{Canada Revenue Agency}(2012)]{cra_cash}
+{Canada Revenue Agency}.
+\newblock {Phasing Out of the Penny: GST/HST Info Sheet GI-131}.
+\newblock
+  \url{https://publications.gc.ca/collections/collection_2012/arc-cra/Rv12-5-131-2012-eng.pdf},
+  2012.
+\newblock Accessed 3 October 2026. Cash and electronic payment differ; this
+  policy is not permission to round individual tax amounts to five cents.
+
+\bibitem[Damouche et~al.(2017)Damouche, Martel, Panchekha, Qiu, Sanchez-Stern,
+  and Tatlock]{fpbench2017}
+Nasrine Damouche, Matthieu Martel, Pavel Panchekha, Chen Qiu, Alexander
+  Sanchez-Stern, and Zachary Tatlock.
+\newblock {Toward a Standard Benchmark Format and Suite for Floating-Point
+  Analysis}.
+\newblock In \emph{Numerical Software Verification -- NSV 2016, Revised
+  Selected Papers}, volume 10152 of \emph{Lecture Notes in Computer Science},
+  pages 63--77, 2017.
+\newblock \doi{10.1007/978-3-319-54292-8_6}.
+\newblock URL
+  \url{https://homes.cs.washington.edu/~ztatlock/pubs/fpbench-damouche-nsv16.pdf}.
+
+\bibitem[Darulova et~al.(2013)Darulova, Kuncak, Majumdar, and
+  Saha]{fixedpoint2013}
+Eva Darulova, Viktor Kuncak, Rupak Majumdar, and Indranil Saha.
+\newblock {Synthesis of fixed-point programs}.
+\newblock In \emph{Proceedings of the 11th ACM International Conference on
+  Embedded Software -- EMSOFT 2013}, pages 22:1--22:10, 2013.
+\newblock \doi{10.1109/EMSOFT.2013.6658600}.
+\newblock URL
+  \url{https://lara.epfl.ch/~kuncak/papers/DarulovaETAL13SynthesisFixedPointPrograms.pdf}.
+
+\bibitem[Darulova et~al.(2018)Darulova, Izycheva, Nasir, Ritter, Becker, and
+  Bastian]{daisy2018}
+Eva Darulova, Anastasiia Izycheva, Fariha Nasir, Fabian Ritter, Heiko Becker,
+  and Robert Bastian.
+\newblock {Daisy - Framework for Analysis and Optimization of Numerical
+  Programs (Tool Paper)}.
+\newblock In \emph{Tools and Algorithms for the Construction and Analysis of
+  Systems -- TACAS 2018}, volume 10805 of \emph{Lecture Notes in Computer
+  Science}, pages 270--287, 2018.
+\newblock \doi{10.1007/978-3-319-89960-2_15}.
+\newblock URL
+  \url{https://link.springer.com/chapter/10.1007/978-3-319-89960-2_15}.
+
+\bibitem[Daumas and Melquiond(2010)]{gappa2010}
+Marc Daumas and Guillaume Melquiond.
+\newblock {Certification of bounds on expressions involving rounded operators}.
+\newblock \emph{ACM Transactions on Mathematical Software}, 37\penalty0
+  (1):\penalty0 2:1--2:20, 2010.
+\newblock \doi{10.1145/1644001.1644003}.
+\newblock URL \url{https://guillaume.melquiond.fr/doc/09-toms.pdf}.
+
+\bibitem[de~Moura and Bj{\o}rner(2008)]{z32008}
+Leonardo de~Moura and Nikolaj Bj{\o}rner.
+\newblock {Z3: An Efficient SMT Solver}.
+\newblock In \emph{Tools and Algorithms for the Construction and Analysis of
+  Systems -- TACAS 2008}, volume 4963 of \emph{Lecture Notes in Computer
+  Science}, pages 337--340, 2008.
+\newblock \doi{10.1007/978-3-540-78800-3_24}.
+\newblock URL
+  \url{https://link.springer.com/content/pdf/10.1007%2F978-3-540-78800-3_24.pdf}.
+
+\bibitem[Goubault and Putot(2011)]{fluctuat2011}
+Eric Goubault and Sylvie Putot.
+\newblock {Static Analysis of Finite Precision Computations}.
+\newblock In \emph{Verification, Model Checking, and Abstract Interpretation --
+  VMCAI 2011}, volume 6538 of \emph{Lecture Notes in Computer Science}, pages
+  232--247, 2011.
+\newblock \doi{10.1007/978-3-642-18275-4_17}.
+\newblock URL
+  \url{https://www.lix.polytechnique.fr/Labo/Sylvie.Putot/Publications/vmcai11.pdf}.
+
+\bibitem[Goubault and Putot(2013)]{robust2013}
+Eric Goubault and Sylvie Putot.
+\newblock {Robustness Analysis of Finite Precision Implementations}.
+\newblock In \emph{Programming Languages and Systems -- APLAS 2013}, volume
+  8301 of \emph{Lecture Notes in Computer Science}, pages 50--57, 2013.
+\newblock \doi{10.1007/978-3-319-03542-0_4}.
+\newblock URL \url{https://arxiv.org/pdf/1309.3910}.
+
+\bibitem[Goutagny et~al.(2025)Goutagny, Fromherz, and Monat]{cutecat2025}
+Pierre Goutagny, Aymeric Fromherz, and Rapha{\"e}l Monat.
+\newblock {CUTECat: Concolic Execution for Computational Law}.
+\newblock In \emph{Programming Languages and Systems -- ESOP 2025}, volume
+  15695 of \emph{Lecture Notes in Computer Science}, pages 31--61, 2025.
+\newblock \doi{10.1007/978-3-031-91121-7_2}.
+\newblock URL
+  \url{https://rmonat.fr/data/pubs/2025/2025-05-03_esop_cutecat.pdf}.
+
+\bibitem[{HM Revenue and Customs}(2026)]{hmrc_vat}
+{HM Revenue and Customs}.
+\newblock {VAT guide (VAT Notice 700)}.
+\newblock \url{https://www.gov.uk/guidance/vat-guide-notice-700}, 2026.
+\newblock Accessed 3 October 2026. Guidance conditions matter; examples do not
+  prove both compared alternatives lawful for every trader. Last update
+  observed 25 June 2026.
+
+\bibitem[{Internal Revenue Service}(2026)]{irs_p15}
+{Internal Revenue Service}.
+\newblock {Publication 15 (2026), (Circular E), Employer’s Tax Guide}.
+\newblock \url{https://www.irs.gov/publications/p15}, 2026.
+\newblock Accessed 3 October 2026. A restricted arithmetic model is not a
+  complete implementation of payroll tax caps, additional taxes, adjustments or
+  filing rules.
+
+\bibitem[Merigoux et~al.(2021)Merigoux, Chataing, and Protzenko]{catala2021}
+Denis Merigoux, Nicolas Chataing, and Jonathan Protzenko.
+\newblock {Catala: a programming language for the law}.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 5\penalty0
+  (ICFP):\penalty0 77:1--77:29, 2021.
+\newblock \doi{10.1145/3473582}.
+\newblock URL \url{https://arxiv.org/abs/2103.03198}.
+
+\bibitem[Monat and Huttner(2026)]{codinglaws2026}
+Rapha{\"e}l Monat and Liane Huttner.
+\newblock {Coding computational laws: 20 recommendations for public
+  administrations}.
+\newblock \emph{International Review of Law, Computers \& Technology}, pages
+  1--17, 2026.
+\newblock \doi{10.1080/13600834.2026.2628389}.
+\newblock URL
+  \url{https://rmonat.fr/data/pubs/2026/2026-02-16_legal_code_recos.pdf}.
+\newblock Published online 16 February 2026; publisher notes a subsequent
+  correction.
+
+\bibitem[Monat et~al.(2024)Monat, Fromherz, and Merigoux]{date2024}
+Rapha{\"e}l Monat, Aymeric Fromherz, and Denis Merigoux.
+\newblock {Formalizing Date Arithmetic and Statically Detecting Ambiguities for
+  the Law}.
+\newblock In \emph{Programming Languages and Systems -- ESOP 2024}, volume
+  14577 of \emph{Lecture Notes in Computer Science}, pages 421--450, 2024.
+\newblock \doi{10.1007/978-3-031-57267-8_16}.
+\newblock URL \url{https://arxiv.org/html/2403.08935v1}.
+
+\bibitem[Panchekha et~al.(2015)Panchekha, Sanchez-Stern, Wilcox, and
+  Tatlock]{herbie2015}
+Pavel Panchekha, Alex Sanchez-Stern, James~R. Wilcox, and Zachary Tatlock.
+\newblock {Automatically Improving Accuracy for Floating Point Expressions}.
+\newblock In \emph{Proceedings of the 36th ACM SIGPLAN Conference on
+  Programming Language Design and Implementation -- PLDI 2015}, pages 1--11,
+  2015.
+\newblock \doi{10.1145/2737924.2737959}.
+\newblock URL
+  \url{https://homes.cs.washington.edu/~ztatlock/pubs/herbie-panchekha-pldi15.pdf}.
+
+\bibitem[Sadakane et~al.(2001)Sadakane, Takki-Chebihi, and
+  Tokuyama]{sadakane2001}
+Kunihiko Sadakane, Nadia Takki-Chebihi, and Takeshi Tokuyama.
+\newblock {Combinatorics and Algorithms on Low-Discrepancy Roundings of a Real
+  Sequence}.
+\newblock In \emph{Automata, Languages and Programming -- ICALP 2001}, volume
+  2076 of \emph{Lecture Notes in Computer Science}, pages 166--177, 2001.
+\newblock \doi{10.1007/3-540-48224-5_14}.
+\newblock URL \url{https://link.springer.com/chapter/10.1007/3-540-48224-5_14}.
+
+\bibitem[Skala(2017)]{skala2017}
+Matthew Skala.
+\newblock {The Well-Rounded Total}.
+\newblock Author manuscript; explicitly not peer-reviewed, 2017.
+\newblock URL \url{https://ansuz.sooke.bc.ca/professional/rounding.pdf}.
+
+\bibitem[{Social Security Administration}(2025)]{ssa_rounding}
+{Social Security Administration}.
+\newblock {POMS RS 00601.020: Rounding of Benefits}.
+\newblock \url{https://secure.ssa.gov/poms.nsf/lnx/0300601020}, 2025.
+\newblock Accessed 3 October 2026. Rules depend on computation type and
+  effective date. A small affine example is not a full SSA benefit calculation.
+
+\bibitem[Solovyev et~al.(2015)Solovyev, Jacobsen, Rakamari{\'c}, and
+  Gopalakrishnan]{fptaylor2015}
+Alexey Solovyev, Charles Jacobsen, Zvonimir Rakamari{\'c}, and Ganesh
+  Gopalakrishnan.
+\newblock {Rigorous Estimation of Floating-Point Round-off Errors with Symbolic
+  Taylor Expansions}.
+\newblock In \emph{FM 2015: Formal Methods}, volume 9109 of \emph{Lecture Notes
+  in Computer Science}, pages 532--550, 2015.
+\newblock \doi{10.1007/978-3-319-19249-9_33}.
+\newblock URL \url{https://soarlab.org/papers/2015_fm_sjrg.pdf}.
+
+\bibitem[Verdoolaege(2010)]{verdoolaege2010}
+Sven Verdoolaege.
+\newblock {isl: An Integer Set Library for the Polyhedral Model}.
+\newblock In \emph{Mathematical Software -- ICMS 2010}, volume 6327 of
+  \emph{Lecture Notes in Computer Science}, pages 299--302, 2010.
+\newblock \doi{10.1007/978-3-642-15582-6_49}.
+\newblock URL \url{https://libisl.sourceforge.io/manual.pdf}.
+
+\bibitem[Williams(2011)]{williams2011}
+H.~P. Williams.
+\newblock {The problem with integer programming}.
+\newblock \emph{IMA Journal of Management Mathematics}, 22\penalty0
+  (3):\penalty0 213--230, 2011.
+\newblock \doi{10.1093/imaman/dpq014}.
+\newblock URL \url{https://personal.lse.ac.uk/williahp/pubs/WP%2010-118.pdf}.
+\newblock Journal issue 2011; author working paper dated 2010.
+
+\bibitem[Woods(2015)]{woods2015}
+Kevin Woods.
+\newblock {Presburger arithmetic, rational generating functions, and
+  quasi-polynomials}.
+\newblock \emph{Journal of Symbolic Logic}, 80\penalty0 (2):\penalty0 433--449,
+  2015.
+\newblock \doi{10.1017/jsl.2015.4}.
+\newblock URL
+  \url{https://www2.oberlin.edu/faculty/kwoods/research/Presburger_full.pdf}.
+
+\end{thebibliography}

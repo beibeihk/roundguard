@@ -1,0 +1,17 @@
+{
+  "name": "percentage_discount",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 39,
+      "quantum": "1"
+    }
+  },
+  "pattern": "percentage_discount",
+  "variants": {
+    "stage": "Q(Q(x*rate(\"0.9\"),1,\"HALF_EVEN\")*rate(\"0.8\"),1,\"HALF_EVEN\")",
+    "end": "Q(x*rate(\"0.72\"),1,\"HALF_EVEN\")"
+  }
+}

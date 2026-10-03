@@ -1,0 +1,27 @@
+{
+  "name": "settlement",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 29,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 0,
+      "max": 29,
+      "quantum": "1"
+    }
+  },
+  "pattern": "settlement",
+  "batch": {
+    "lines": [
+      "x",
+      "y"
+    ],
+    "mode": "HALF_EVEN",
+    "quantum": "5"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ssa_entitlement",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 990,
+      "max": 1010,
+      "quantum": "1"
+    }
+  },
+  "source": "https://secure.ssa.gov/POMS.NSF/LNX/0300601020",
+  "source_section": "D: compare before lower-dollar provision",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "variants": {
+    "compare_before": "50 if x >= 999 else 0",
+    "counterfactual_compare_after": "50 if Q(x,100,\"FLOOR\") >= 999 else 0"
+  }
+}

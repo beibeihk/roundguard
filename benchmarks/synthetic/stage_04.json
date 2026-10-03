@@ -1,0 +1,26 @@
+{
+  "name": "stage_04",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    }
+  },
+  "pattern": "stage",
+  "batch": {
+    "lines": [
+      "x/4",
+      "y/4"
+    ],
+    "mode": "CEILING"
+  }
+}

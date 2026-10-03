@@ -1,0 +1,20 @@
+{
+  "name": "placements",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 15,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 0,
+      "max": 15,
+      "quantum": "1"
+    }
+  },
+  "pattern": "placements",
+  "template": "Q(maybe(x/5,1,\"HALF_EVEN\",\"a\")+maybe(y/5,1,\"HALF_EVEN\",\"b\"),1,\"HALF_EVEN\")"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "stage_07",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    }
+  },
+  "pattern": "stage",
+  "batch": {
+    "lines": [
+      "x/10",
+      "y/10"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

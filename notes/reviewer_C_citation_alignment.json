@@ -1,0 +1,368 @@
+{
+  "review_date": "2026-10-03",
+  "main_sha256": "92a28f14db7fd0f1bc99c2229c574659a7192ad41c3485dc0a1c6aa5c5cc62d1",
+  "used_keys": 26,
+  "unresolved_alignment_items": [],
+  "citations": [
+    {
+      "citation_key": "williams2011",
+      "judgment": "PASS: Author working-paper pp.21-23 show nested Chvatal rounded trees, affine average gradient and explicit shift periodicity. Both foundation citations are appropriately scoped; the manuscript explicitly disclaims new general periodicity.",
+      "occurrences": [
+        {
+          "line": 36,
+          "text": "We develop a specialized exact analysis with four components. First, structural shift certificates give a feasible representative domain for common-drift rounding policies. This instantiates established shift-periodic Chv\\'atal and quasi-affine arithmetic~\\citep{williams2011,basu_et_al2019,verdoolaege2010}; periodicity itself is not claimed as new. Second, an attainable-extrema theorem identifies sufficient cyclic states for line-versus-total comparison and provides witness reconstruction, including a nonnegative extension for sign-sensitive modes. Third, a runnable analyzer dispatches between this dynamic program, residue-reduced SMT, and unreduced bounded SMT. Fourth, an openly specified benchmark records independent oracles, executable diagnostics, and method ablations. The results characterize this restricted analyzer; they do not certify a deployed tax or payroll system."
+        },
+        {
+          "line": 194,
+          "text": "Shift-periodic nested rational ceiling expressions already appear in Williams' account of Chv\\'atal functions~\\citep{williams2011}. Basu et al. formalize affine Chv\\'atal trees and mixed-integer representability~\\citep{basu_et_al2019}. The isl library manipulates exact integer sets and quasi-affine expressions~\\citep{verdoolaege2010}; Presburger functions and counting have broader structural treatments~\\citep{woods2015}. RoundGuard specializes these foundations to feasible representatives for prescribed monetary policies. It does not offer a new decidability result or a general competitor to integer-set libraries."
+        }
+      ],
+      "reading_depth": "Core sections; working-paper PDF pages 21-23",
+      "supported_claim": "Uses integer monoids and nested-rounding Chvátal functions including directed-tree representations. Explicitly states shift periodicity and illustrates affine average gradient of a nested rounding tree."
+    },
+    {
+      "citation_key": "basu_et_al2019",
+      "judgment": "PASS: Definition 2.2 and Section 3 formalize rational affine Chvatal binary trees and mixed-integer representability/elimination. These support the foundation and Related work statements, without asserting the proposed heterogeneous-mode invoice DP is present in that source.",
+      "occurrences": [
+        {
+          "line": 36,
+          "text": "We develop a specialized exact analysis with four components. First, structural shift certificates give a feasible representative domain for common-drift rounding policies. This instantiates established shift-periodic Chv\\'atal and quasi-affine arithmetic~\\citep{williams2011,basu_et_al2019,verdoolaege2010}; periodicity itself is not claimed as new. Second, an attainable-extrema theorem identifies sufficient cyclic states for line-versus-total comparison and provides witness reconstruction, including a nonnegative extension for sign-sensitive modes. Third, a runnable analyzer dispatches between this dynamic program, residue-reduced SMT, and unreduced bounded SMT. Fourth, an openly specified benchmark records independent oracles, executable diagnostics, and method ablations. The results characterize this restricted analyzer; they do not certify a deployed tax or payroll system."
+        },
+        {
+          "line": 194,
+          "text": "Shift-periodic nested rational ceiling expressions already appear in Williams' account of Chv\\'atal functions~\\citep{williams2011}. Basu et al. formalize affine Chv\\'atal trees and mixed-integer representability~\\citep{basu_et_al2019}. The isl library manipulates exact integer sets and quasi-affine expressions~\\citep{verdoolaege2010}; Presburger functions and counting have broader structural treatments~\\citep{woods2015}. RoundGuard specializes these foundations to feasible representatives for prescribed monetary policies. It does not offer a new decidability result or a general competitor to integer-set libraries."
+        }
+      ],
+      "reading_depth": "Core Definition 2.2 and Section 3 elimination proofs",
+      "supported_claim": "Binary trees of rational affine leaves, positive scaling, addition, ceiling; sequential elimination with auxiliary integer variables. Gives exact algebraic representation and projection closure without requiring disjunctions."
+    },
+    {
+      "citation_key": "verdoolaege2010",
+      "judgment": "PASS WITH READING LIMIT: Conference abstract plus official manual Section 1.4.13 support exact integer-set infrastructure and quasi-affine expressions with integer division. These support the two library/foundation descriptions; the current manual is distinct from a full reading of the 2010 conference paper.",
+      "occurrences": [
+        {
+          "line": 36,
+          "text": "We develop a specialized exact analysis with four components. First, structural shift certificates give a feasible representative domain for common-drift rounding policies. This instantiates established shift-periodic Chv\\'atal and quasi-affine arithmetic~\\citep{williams2011,basu_et_al2019,verdoolaege2010}; periodicity itself is not claimed as new. Second, an attainable-extrema theorem identifies sufficient cyclic states for line-versus-total comparison and provides witness reconstruction, including a nonnegative extension for sign-sensitive modes. Third, a runnable analyzer dispatches between this dynamic program, residue-reduced SMT, and unreduced bounded SMT. Fourth, an openly specified benchmark records independent oracles, executable diagnostics, and method ablations. The results characterize this restricted analyzer; they do not certify a deployed tax or payroll system."
+        },
+        {
+          "line": 194,
+          "text": "Shift-periodic nested rational ceiling expressions already appear in Williams' account of Chv\\'atal functions~\\citep{williams2011}. Basu et al. formalize affine Chv\\'atal trees and mixed-integer representability~\\citep{basu_et_al2019}. The isl library manipulates exact integer sets and quasi-affine expressions~\\citep{verdoolaege2010}; Presburger functions and counting have broader structural treatments~\\citep{woods2015}. RoundGuard specializes these foundations to feasible representatives for prescribed monetary policies. It does not offer a new decidability result or a general competitor to integer-set libraries."
+        }
+      ],
+      "reading_depth": "Publisher paper abstract; official manual core Section 1.4.13 (manual is not the conference paper)",
+      "supported_claim": "Arbitrary-precision integer arithmetic, integer-set operations, and quasi-affine expressions with constant integer division. Reusable infrastructure for exact polyhedral and Presburger-style analysis."
+    },
+    {
+      "citation_key": "woods2015",
+      "judgment": "PASS WITH READING LIMIT: Abstract and foundational definitions support the broad structural treatment of Presburger integer sets/functions, generating functions and counting. The single cited sentence is general and does not rely on unread proof details or attribute the invoice algorithm to this paper.",
+      "occurrences": [
+        {
+          "line": 194,
+          "text": "Shift-periodic nested rational ceiling expressions already appear in Williams' account of Chv\\'atal functions~\\citep{williams2011}. Basu et al. formalize affine Chv\\'atal trees and mixed-integer representability~\\citep{basu_et_al2019}. The isl library manipulates exact integer sets and quasi-affine expressions~\\citep{verdoolaege2010}; Presburger functions and counting have broader structural treatments~\\citep{woods2015}. RoundGuard specializes these foundations to feasible representatives for prescribed monetary policies. It does not offer a new decidability result or a general competitor to integer-set libraries."
+        }
+      ],
+      "reading_depth": "Abstract and foundational definitions",
+      "supported_claim": "Logical and geometric characterizations of integer sets using linear inequalities and quantifiers. Provides equivalent representations and discusses their complexity."
+    },
+    {
+      "citation_key": "catala2021",
+      "judgment": "PASS: Sections 4.2, 4.5 and 5 support executable legal specifications, default semantics and F*-proved core compiler transformations. The wording 'semantics and verified compilation' is a source description; it does not certify all backends or this artifact.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 200,
+          "text": "Catala's semantics and verified compilation address translating computational law~\\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench."
+        }
+      ],
+      "reading_depth": "Core Sections 4.2, 4.5 and 5: default calculus, F* compiler proof and implementation",
+      "supported_claim": "Default logic and a compiler whose core transformations are proved in F*. Evaluates US tax and French benefit encodings and reports an official implementation bug."
+    },
+    {
+      "citation_key": "date2024",
+      "judgment": "PASS: The paired-rounding relational analysis and semantic properties support insensitivity to alternative calendar rounding in qualifying cases and its relational formulation. The manuscript accurately presents this as prior art rather than a monetary extrema algorithm.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 200,
+          "text": "Catala's semantics and verified compilation address translating computational law~\\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench."
+        }
+      ],
+      "reading_depth": "Core semantics, paired analysis, sync definition, case study",
+      "supported_claim": "F* semantic properties and relational abstract interpretation of paired rounding modes. Proves rounding-insensitivity in some cases and finds date ambiguities in housing benefits."
+    },
+    {
+      "citation_key": "cutecat2025",
+      "judgment": "PASS: Sections 2-4 support exact rational monetary values, sign-aware nearest ties-away Z3 encoding, concolic tests and a reported Python backend rounding discrepancy. The manuscript's fallback/motivation attribution is supported; no Catala integration or global-optimum result is attributed to CUTECat.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 200,
+          "text": "Catala's semantics and verified compilation address translating computational law~\\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench."
+        }
+      ],
+      "reading_depth": "Core Sections 2-4; rounding and backend discrepancy passages",
+      "supported_claim": "Concrete plus SMT symbolic execution; exact rational values; sign-branch floor encoding of nearest ties-away rounding. Scales to Catala laws and reports a Python backend rounding inconsistency that was fixed upstream."
+    },
+    {
+      "citation_key": "daisy2018",
+      "judgment": "PASS: Tool paper Section 3 supports finite-precision/fixed-point analysis and sound error-estimation/optimization descriptions in introduction and Related work. Conservative real-semantics accuracy analysis is correctly distinguished from attained monetary-policy discrepancy.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core Section 3 fixed-point and optimization-based analysis",
+      "supported_claim": "Dataflow/affine/interval analysis, subdivision, and optimization approaches for floating and fixed point. Modular implementation covering error estimation and accuracy optimization."
+    },
+    {
+      "citation_key": "fptaylor2015",
+      "judgment": "PASS: Section 3 and certificate passages support rigorous roundoff bounds via symbolic Taylor error modeling and rigorous optimization. The Related work describes bounds/certificates without claiming that FPTaylor supplies exact monetary-grid extrema.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core Section 3 objective and abstract error model; proof certificate passages",
+      "supported_claim": "Symbolic Taylor expansion of error variables plus rigorous global optimization and HOL Light certificates. Tighter sound bounds on many benchmarks and released reproducible tool."
+    },
+    {
+      "citation_key": "fluctuat2011",
+      "judgment": "PASS: Primary text explicitly includes implemented fixed-point analysis and absolute rounding-error abstraction (Section 2), as well as finite-precision error analysis. It supports both cited source-description sentences; it does not imply exact attainable optima or a RoundGuard proof.",
+      "occurrences": [
+        {
+          "line": 32,
+          "text": "The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\\citep{fptaylor2015}. Catala gives executable legal specifications~\\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here."
+        },
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Publisher abstract and author-hosted primary text",
+      "supported_claim": "Interval and affine-set/zonotopic abstract domains tracking error propagation and provenance. Implemented Fluctuat analyses for accuracy, sensitivity, and test generation."
+    },
+    {
+      "citation_key": "fixedpoint2013",
+      "judgment": "PASS WITH READING LIMIT: Primary abstract/problem formulation support fixed-point synthesis and accuracy analysis. Only that limited source-description claim is cited; SSL-limited PDF access is not represented as a full-paper reading.",
+      "occurrences": [
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Primary abstract, problem formulation, hardness, related work",
+      "supported_claim": "Expression rewriting and genetic programming with affine-arithmetic error analysis. Shows NP-hardness for a synthesis decision problem and demonstrates improved controller expressions."
+    },
+    {
+      "citation_key": "sadakane2001",
+      "judgment": "PASS WITH READING LIMIT: Publisher abstract and accessible Sections 3-4 excerpt support compact rounding-state graphs and optimization for fixed real sequences. The manuscript correctly distinguishes choosing outputs for fixed data from searching inputs under fixed policies.",
+      "occurrences": [
+        {
+          "line": 196,
+          "text": "The cyclic extrema recurrence belongs to the established min/max-plus dynamic-programming pattern. Work on near-convex min-plus convolution accelerates structured knapsack instances~\\citep{bringmann_cassis2023}; our residue tables need not satisfy those additional premises, and the prototype uses direct sparse convolution. Low-discrepancy sequence rounding also uses compact state graphs and optimization~\\citep{sadakane2001}. It chooses rounded outputs for a fixed sequence, whereas our batch formulation fixes rounding policies and optimizes over feasible amount grids. This distinction limits the claimed application-specific contribution."
+        }
+      ],
+      "reading_depth": "Publisher abstract; accessible proceedings excerpt of Sections 3-4",
+      "supported_claim": "Compact state graphs and Viterbi-style dynamic optimization over feasible roundings. Enumerates global roundings and builds optimal compact representations for weaker discrepancy conditions."
+    },
+    {
+      "citation_key": "codinglaws2026",
+      "judgment": "PASS: Recommendations 9-10 explicitly advocate arbitrary-precision monetary representation and rigorous lawyer-reviewed test suites. The cited general recommendation sentence is supported; it does not attribute a residue theorem or analyzer to this recommendations article.",
+      "occurrences": [
+        {
+          "line": 200,
+          "text": "Catala's semantics and verified compilation address translating computational law~\\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench."
+        }
+      ],
+      "reading_depth": "Primary full text; Recommendations 9-10",
+      "supported_claim": "Synthesis of computational-law implementation experience and interdisciplinary recommendations. Addresses representation, legal interpretation, deterministic behavior, testing, maintenance, and longevity."
+    },
+    {
+      "citation_key": "bringmann_cassis2023",
+      "judgment": "PASS WITH READING LIMIT: Primary publisher contribution summary supports near-convex min-plus convolution for structured 0-1 knapsack. The manuscript explicitly notes those extra premises need not hold for cyclic residue tables, avoiding an unsupported complexity transfer.",
+      "occurrences": [
+        {
+          "line": 196,
+          "text": "The cyclic extrema recurrence belongs to the established min/max-plus dynamic-programming pattern. Work on near-convex min-plus convolution accelerates structured knapsack instances~\\citep{bringmann_cassis2023}; our residue tables need not satisfy those additional premises, and the prototype uses direct sparse convolution. Low-discrepancy sequence rounding also uses compact state graphs and optimization~\\citep{sadakane2001}. It chooses rounded outputs for a fixed sequence, whereas our batch formulation fixes rounding policies and optimizes over feasible amount grids. This distinction limits the claimed application-specific contribution."
+        }
+      ],
+      "reading_depth": "Publisher abstract and contribution summary",
+      "supported_claim": "Near-convex min-plus convolution and improved dependence on maximum item weight/profit. Faster exact knapsack algorithms in relevant parameter regimes."
+    },
+    {
+      "citation_key": "skala2017",
+      "judgment": "PASS: Author PDF introduction supports financial line-versus-total motivation; Section 2 Problem 1/Lemma 2 fixes labels and seeks consistent rounded totals; Section 3 Problem 3/Theorem 4 optimizes maximum node error. The closing author note explicitly disclaims peer review. The objective distinction and rejection as a same-task runtime baseline are valid reviewer inferences.",
+      "occurrences": [
+        {
+          "line": 192,
+          "text": "Skala's non-peer-reviewed preliminary draft studies consistent rounding of financial totals~\\citep{skala2017}. It gives algorithms to choose rounded labels for a fixed totals forest, including minimax node-error optimization. Its line-versus-total motivation is directly adjacent to ours. RoundGuard instead fixes the policies and optimizes their discrepancy over permitted input grids; the different objective makes Skala's algorithms unsuitable as same-task runtime baselines."
+        }
+      ],
+      "reading_depth": "Primary abstract, problem statement, algorithm claims, disclosure of draft status",
+      "supported_claim": "Algorithms for forest-structured totals and minimax rounding; general consistency hardness. Linear-time feasible rounding and O(n log n) minimax algorithm for forests."
+    },
+    {
+      "citation_key": "herbie2015",
+      "judgment": "PASS: Sections 4.1-4.3 explicitly use sampled high-precision accuracy estimates, error localization and expression rewriting. The manuscript's description correctly distinguishes heuristic search from guaranteed worst-case policy extrema.",
+      "occurrences": [
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core Sections 4.1-4.3: sampling, rewriting loop, error localization",
+      "supported_claim": "Samples bit patterns, estimates error using high precision, localizes error, applies algebraic rewrites and series expansion, then combines input regimes. Demonstrates automatic accuracy improvement without requiring a numerical expert to choose the rewrites."
+    },
+    {
+      "citation_key": "robust2013",
+      "judgment": "PASS: Long-version Sections 2-3 and 5 treat unstable tests/branch discontinuities through constrained affine sets and discontinuity errors. The cited sentence supports robustness analysis of discontinuous branch changes; published short version and inspected longer primary version are distinguished in the ledger.",
+      "occurrences": [
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core long-version Sections 2-3 and 5: constrained affine sets, unstable tests, experiments",
+      "supported_claim": "Extends affine-set abstract interpretation with a labeled discontinuity-error component and constraints for unstable branches. Makes error analysis sound in the presence of unstable tests and implements it in Fluctuat."
+    },
+    {
+      "citation_key": "flocq2011",
+      "judgment": "PASS: Section III generic formats/rounding predicates support foundational arithmetic proofs in Coq. The manuscript does not claim its own proof is mechanized or automatically follows from Flocq.",
+      "occurrences": [
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core Section III: directed and nearest rounding predicates, generic formats",
+      "supported_claim": "Defines total monotone rounding predicates and proves generic arithmetic properties, separating tie-breaking assumptions. A reusable mechanized library for proving properties of floating-point algorithms."
+    },
+    {
+      "citation_key": "z32008",
+      "judgment": "PASS: The four-page tool paper identifies Z3 and its SMT architecture, supporting the solver citation. The manuscript's own integer/rational/tie/parity encoding requires its separate proof and implementation evidence; this source alone does not validate that encoding or current optimization APIs.",
+      "occurrences": [
+        {
+          "line": 163,
+          "text": "We encode integer input ticks, rational arithmetic, floor casts, tie comparisons, and integer parity in Z3~\\citep{z32008}. An expression has a statically fixed rational output denominator: addition takes an lcm, constant scaling multiplies denominator bounds, and a quantizer returns an integer times its quantum. Therefore multiplying a discrepancy by a common denominator gives an integer objective."
+        }
+      ],
+      "reading_depth": "Core four-page tool paper: clients and solver architecture",
+      "supported_claim": "DPLL-based Boolean search, congruence closure, satellite theory solvers and quantifier instantiation. Reusable decision infrastructure for verification and test-generation clients."
+    },
+    {
+      "citation_key": "gappa2010",
+      "judgment": "PASS: Sections 2-3 support explicit rounded operators, interval/rewriting bounds and proof-assistant-checkable certificates. The cited sentence describes sound numerical analysis/certificates, without equating certified enclosures with attained monetary extrema.",
+      "occurrences": [
+        {
+          "line": 198,
+          "text": "Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula."
+        }
+      ],
+      "reading_depth": "Core Sections 2-3: explicit rounding input language, rewriting and bound certification",
+      "supported_claim": "Interval arithmetic, forward error analysis, rewriting and formal proof generation for fixed- and floating-point arithmetic. Produces proof-assistant-checkable numerical bound certificates."
+    },
+    {
+      "citation_key": "fpbench2017",
+      "judgment": "PASS: Sections 2-3 and 5 support explicit numerical benchmark semantics, measures and provenance for auditable tool comparisons. The manuscript expressly separates its monetary JSON suite from FPBench, avoiding an unsupported extension claim.",
+      "occurrences": [
+        {
+          "line": 200,
+          "text": "Catala's semantics and verified compilation address translating computational law~\\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench."
+        }
+      ],
+      "reading_depth": "Core Sections 2-3 and 5: semantics, error measures, benchmark provenance",
+      "supported_claim": "FPCore/FPImp semantics, explicit metadata and standardized axes separating sound maximum error from sampled average error. Enables fair comparisons and composition of complementary floating-point tools."
+    },
+    {
+      "citation_key": "hmrc_vat",
+      "judgment": "PASS: Sections 17.5-17.6 support the introduction's line/final VAT stages and the fragment's tenth-penny line and final-penny motivation. Trader conditions and the chosen 20% rate/window remain explicit benchmark assumptions; the citation does not certify either alternative's legal applicability.",
+      "occurrences": [
+        {
+          "line": 30,
+          "text": "Rounding stages are observable parts of a monetary rule. The UK HM Revenue \\& Customs (HMRC) invoice guidance distinguishes line calculations from rounding the final value-added tax (VAT) total~\\citep{hmrc_vat}. The US Internal Revenue Service (IRS) describes adjustments arising when payroll taxes are rounded during individual payroll computations~\\citep{irs_p15}. US Social Security Administration (SSA) guidance prescribes different cent, dime, and dollar stages, and explicitly requires certain entitlement comparisons before lower-dollar rounding~\\citep{ssa_rounding}. These examples concern specified discrete outcomes, not merely the numerical approximation of a real-valued formula."
+        },
+        {
+          "line": 187,
+          "text": "The HMRC fragment compares line VAT rounded down to tenths of a penny, followed by final penny rounding, with final-only penny rounding~\\citep{hmrc_vat}. The two-line 20\\% rate and narrow amount windows are benchmark assumptions, not an assertion that every policy applies to every trader. Payroll uses the separate 6.2\\% and 1.45\\% employee-side rates appearing in the IRS fractions-of-cents discussion and compares them with a deliberately combined-rate calculation~\\citep{irs_p15}. It ignores wage caps, Additional Medicare Tax, and reporting adjustments. Shared wages make this a coupled expression, handled by SMT rather than independent-line DP."
+        }
+      ],
+      "reading_depth": "Primary guidance Sections 17.5, 17.5.1, 17.5.2 and 17.6",
+      "supported_claim": "Invoice traders and retailers have distinct permitted rounding rules; line and final invoice quantization are explicitly described."
+    },
+    {
+      "citation_key": "irs_p15",
+      "judgment": "PASS: Section 13 supports individual-payroll rounding differences and fractions-of-cents adjustments, with separate 6.2% and 1.45% employee-side rates. The manuscript labels the combined-rate comparison counterfactual and omits caps/additional taxes/reporting adjustments; no claim of a complete payroll calculator is supported.",
+      "occurrences": [
+        {
+          "line": 30,
+          "text": "Rounding stages are observable parts of a monetary rule. The UK HM Revenue \\& Customs (HMRC) invoice guidance distinguishes line calculations from rounding the final value-added tax (VAT) total~\\citep{hmrc_vat}. The US Internal Revenue Service (IRS) describes adjustments arising when payroll taxes are rounded during individual payroll computations~\\citep{irs_p15}. US Social Security Administration (SSA) guidance prescribes different cent, dime, and dollar stages, and explicitly requires certain entitlement comparisons before lower-dollar rounding~\\citep{ssa_rounding}. These examples concern specified discrete outcomes, not merely the numerical approximation of a real-valued formula."
+        },
+        {
+          "line": 187,
+          "text": "The HMRC fragment compares line VAT rounded down to tenths of a penny, followed by final penny rounding, with final-only penny rounding~\\citep{hmrc_vat}. The two-line 20\\% rate and narrow amount windows are benchmark assumptions, not an assertion that every policy applies to every trader. Payroll uses the separate 6.2\\% and 1.45\\% employee-side rates appearing in the IRS fractions-of-cents discussion and compares them with a deliberately combined-rate calculation~\\citep{irs_p15}. It ignores wage caps, Additional Medicare Tax, and reporting adjustments. Shared wages make this a coupled expression, handled by SMT rather than independent-line DP."
+        }
+      ],
+      "reading_depth": "Primary guidance Section 13: fractions-of-cents adjustment",
+      "supported_claim": "Payroll withholding rounded per employee can differ from a tax computed on aggregate wages; the guidance describes fractions-of-cents adjustments."
+    },
+    {
+      "citation_key": "ssa_rounding",
+      "judgment": "PASS: POMS RS00601.020 Sections A-D support distinct cent/dime/dollar stages and certain entitlement comparisons before lower-dollar rounding. The manuscript distinguishes illustrative factors/offsets/thresholds from an implemented statutory benefit formula.",
+      "occurrences": [
+        {
+          "line": 30,
+          "text": "Rounding stages are observable parts of a monetary rule. The UK HM Revenue \\& Customs (HMRC) invoice guidance distinguishes line calculations from rounding the final value-added tax (VAT) total~\\citep{hmrc_vat}. The US Internal Revenue Service (IRS) describes adjustments arising when payroll taxes are rounded during individual payroll computations~\\citep{irs_p15}. US Social Security Administration (SSA) guidance prescribes different cent, dime, and dollar stages, and explicitly requires certain entitlement comparisons before lower-dollar rounding~\\citep{ssa_rounding}. These examples concern specified discrete outcomes, not merely the numerical approximation of a real-valued formula."
+        },
+        {
+          "line": 189,
+          "text": "The benefit fragments isolate the SSA's prescribed dime/dollar stages and the order of entitlement comparison~\\citep{ssa_rounding}; the chosen adjustment factor, offset, and entitlement threshold are illustrative inputs, not a full statutory benefit formula. Cash settlement compares final nickel rounding with an intentionally early per-component alternative motivated by Canadian guidance to round the final bill after taxes~\\citep{cra_cash}. The software fragment compares an intermediate-rounded rational calculation with deferred rounding, motivated by Brick Money's documented RationalMoney workflow~\\citep{brick_money}. Its rates are independently chosen, and no external implementation is copied."
+        }
+      ],
+      "reading_depth": "Primary POMS policy Sections A-D",
+      "supported_claim": "Benefit calculations use dime, cent, truncated and lower-dollar rules at distinct stages; intermediate computations are not generally rounded."
+    },
+    {
+      "citation_key": "cra_cash",
+      "judgment": "PASS: Official GI-131 states cash nickel rounding after taxes and unchanged GST/HST calculations. The manuscript properly labels early per-component rounding as an intentionally compared alternative, not Canadian policy.",
+      "occurrences": [
+        {
+          "line": 189,
+          "text": "The benefit fragments isolate the SSA's prescribed dime/dollar stages and the order of entitlement comparison~\\citep{ssa_rounding}; the chosen adjustment factor, offset, and entitlement threshold are illustrative inputs, not a full statutory benefit formula. Cash settlement compares final nickel rounding with an intentionally early per-component alternative motivated by Canadian guidance to round the final bill after taxes~\\citep{cra_cash}. The software fragment compares an intermediate-rounded rational calculation with deferred rounding, motivated by Brick Money's documented RationalMoney workflow~\\citep{brick_money}. Its rates are independently chosen, and no external implementation is copied."
+        }
+      ],
+      "reading_depth": "Primary government info-sheet: cash rounding and GST/HST treatment",
+      "supported_claim": "Cash-payment rounding to five cents follows tax calculation; phasing out the penny does not change calculation/reporting of GST/HST."
+    },
+    {
+      "citation_key": "brick_money",
+      "judgment": "PASS: Maintained README RationalMoney and context sections support exact rational intermediates/deferred rounding and consequences of early rounding. The manuscript declares independently chosen rates and no copied external implementation; no Brick bug or tested adapter is claimed.",
+      "occurrences": [
+        {
+          "line": 189,
+          "text": "The benefit fragments isolate the SSA's prescribed dime/dollar stages and the order of entitlement comparison~\\citep{ssa_rounding}; the chosen adjustment factor, offset, and entitlement threshold are illustrative inputs, not a full statutory benefit formula. Cash settlement compares final nickel rounding with an intentionally early per-component alternative motivated by Canadian guidance to round the final bill after taxes~\\citep{cra_cash}. The software fragment compares an intermediate-rounded rational calculation with deferred rounding, motivated by Brick Money's documented RationalMoney workflow~\\citep{brick_money}. Its rates are independently chosen, and no external implementation is copied."
+        }
+      ],
+      "reading_depth": "Primary maintained README: CashContext, RationalMoney and currency conversion",
+      "supported_claim": "The library supports cash quantum contexts and exact rational intermediates, and documents that early rounding may change results."
+    }
+  ]
+}

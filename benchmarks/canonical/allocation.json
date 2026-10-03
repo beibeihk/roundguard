@@ -1,0 +1,17 @@
+{
+  "name": "allocation",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 60,
+      "quantum": "1"
+    }
+  },
+  "pattern": "allocation",
+  "variants": {
+    "parts": "Q(x*rate(\"0.4\"),1,\"HALF_EVEN\")+Q(x*rate(\"0.6\"),1,\"HALF_EVEN\")",
+    "whole": "x"
+  }
+}

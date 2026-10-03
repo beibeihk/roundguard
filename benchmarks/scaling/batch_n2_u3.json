@@ -1,0 +1,26 @@
+{
+  "name": "batch_n2_u3",
+  "group": "scaling",
+  "variables": {
+    "x0": {
+      "type": "Money",
+      "min": 0,
+      "max": 3,
+      "quantum": "1"
+    },
+    "x1": {
+      "type": "Money",
+      "min": 0,
+      "max": 3,
+      "quantum": "1"
+    }
+  },
+  "pattern": "heterogeneous independent invoice",
+  "batch": {
+    "lines": [
+      "x0/2",
+      "x1/4"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

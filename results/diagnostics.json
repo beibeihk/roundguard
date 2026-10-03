@@ -1,0 +1,5236 @@
+[
+  {
+    "case": "mode_00",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -7
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_00",
+      "time_seconds": 0.025827399993431754
+    }
+  },
+  {
+    "case": "mode_00",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 8
+      },
+      "outputs": {
+        "a": "2",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_00",
+      "time_seconds": 0.009416900000360329
+    }
+  },
+  {
+    "case": "mode_00",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -12
+      },
+      "time_seconds": 0.00044070000149076805,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_00",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.13471230000141077,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_00",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.0001956999985850416
+    }
+  },
+  {
+    "case": "mode_01",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3
+      },
+      "outputs": {
+        "a": "0",
+        "b": "-1"
+      },
+      "complete": true,
+      "name": "mode_01",
+      "time_seconds": 0.011374599998816848
+    }
+  },
+  {
+    "case": "mode_01",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3
+      },
+      "outputs": {
+        "a": "0",
+        "b": "-1"
+      },
+      "complete": true,
+      "name": "mode_01",
+      "time_seconds": 0.010913600002822932
+    }
+  },
+  {
+    "case": "mode_01",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 7
+      },
+      "time_seconds": 0.0008243999982369132,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_01",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2
+      },
+      "time_seconds": 0.07206840000435477,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_01",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "6",
+      "time_seconds": 0.0002473999993526377
+    }
+  },
+  {
+    "case": "mode_02",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 5
+      },
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 5,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -9
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_02",
+      "time_seconds": 0.00974549999955343
+    }
+  },
+  {
+    "case": "mode_02",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 6
+      },
+      "outputs": {
+        "a": "2",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_02",
+      "time_seconds": 0.011745499999960884
+    }
+  },
+  {
+    "case": "mode_02",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -12
+      },
+      "time_seconds": 0.000513300001330208,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_02",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1
+      },
+      "time_seconds": 0.09712739999667974,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_02",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "6",
+      "time_seconds": 0.0002789999998640269
+    }
+  },
+  {
+    "case": "mode_03",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1
+      },
+      "outputs": {
+        "a": "0",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_03",
+      "time_seconds": 0.01435979999951087
+    }
+  },
+  {
+    "case": "mode_03",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1
+      },
+      "outputs": {
+        "a": "0",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_03",
+      "time_seconds": 0.016608899997663684
+    }
+  },
+  {
+    "case": "mode_03",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -9
+      },
+      "time_seconds": 0.003718499996466562,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_03",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1
+      },
+      "time_seconds": 0.08466789999511093,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_03",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "12",
+      "time_seconds": 0.0003037999995285645
+    }
+  },
+  {
+    "case": "mode_04",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -9
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_04",
+      "time_seconds": 0.012989800001378171
+    }
+  },
+  {
+    "case": "mode_04",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -9
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_04",
+      "time_seconds": 0.014147499998216517
+    }
+  },
+  {
+    "case": "mode_04",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -12
+      },
+      "time_seconds": 0.00041760000021895394,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_04",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.10592550000001211,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_04",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.00018549999367678538
+    }
+  },
+  {
+    "case": "mode_05",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10
+      },
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 10,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -9
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_05",
+      "time_seconds": 0.011649200001556892
+    }
+  },
+  {
+    "case": "mode_05",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 6
+      },
+      "outputs": {
+        "a": "2",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_05",
+      "time_seconds": 0.01156009999976959
+    }
+  },
+  {
+    "case": "mode_05",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 7
+      },
+      "time_seconds": 0.000647599998046644,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_05",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1
+      },
+      "time_seconds": 0.052751199997146614,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_05",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.00017520000255899504
+    }
+  },
+  {
+    "case": "mode_06",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "0",
+        "b": "-1"
+      },
+      "complete": true,
+      "name": "mode_06",
+      "time_seconds": 0.010955500001728069
+    }
+  },
+  {
+    "case": "mode_06",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "0",
+        "b": "-1"
+      },
+      "complete": true,
+      "name": "mode_06",
+      "time_seconds": 0.013536400001612492
+    }
+  },
+  {
+    "case": "mode_06",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -2
+      },
+      "time_seconds": 0.0023042000029818155,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_06",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.10362709999753861,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_06",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "6",
+      "time_seconds": 0.0002680999969015829
+    }
+  },
+  {
+    "case": "mode_07",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1
+      },
+      "outputs": {
+        "a": "1",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "mode_07",
+      "time_seconds": 0.06673660000524251
+    }
+  },
+  {
+    "case": "mode_07",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1
+      },
+      "outputs": {
+        "a": "1",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "mode_07",
+      "time_seconds": 0.04679089999990538
+    }
+  },
+  {
+    "case": "mode_07",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -12
+      },
+      "time_seconds": 0.0007404999996651895,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_07",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1
+      },
+      "time_seconds": 0.141213399998378,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_07",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "3",
+      "time_seconds": 0.00026059999800054356
+    }
+  },
+  {
+    "case": "mode_08",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 8
+      },
+      "outputs": {
+        "a": "1",
+        "b": "2"
+      },
+      "complete": true,
+      "name": "mode_08",
+      "time_seconds": 0.012805200000002515
+    }
+  },
+  {
+    "case": "mode_08",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -8
+      },
+      "outputs": {
+        "a": "-1",
+        "b": "-2"
+      },
+      "complete": true,
+      "name": "mode_08",
+      "time_seconds": 0.013080400000035297
+    }
+  },
+  {
+    "case": "mode_08",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -8
+      },
+      "time_seconds": 0.002413800000795163,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_08",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 3
+      },
+      "time_seconds": 0.060845800006063655,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_08",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "4",
+      "time_seconds": 0.00017460000526625663
+    }
+  },
+  {
+    "case": "mode_09",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 2
+      },
+      "outputs": {
+        "a": "0",
+        "b": "1"
+      },
+      "complete": true,
+      "name": "mode_09",
+      "time_seconds": 0.011240800005907658
+    }
+  },
+  {
+    "case": "mode_09",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 25,
+      "reduced_size": 25,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 7
+      },
+      "outputs": {
+        "a": "1",
+        "b": "2"
+      },
+      "complete": true,
+      "name": "mode_09",
+      "time_seconds": 0.01139609999518143
+    }
+  },
+  {
+    "case": "mode_09",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -12
+      },
+      "time_seconds": 0.0003949000019929372,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_09",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1
+      },
+      "time_seconds": 0.06499049999547424,
+      "complete": false
+    }
+  },
+  {
+    "case": "mode_09",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.00022599999647354707
+    }
+  },
+  {
+    "case": "safe_00",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-12",
+        "total": "-12"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_00",
+      "time_seconds": 0.0005893000052310526
+    }
+  },
+  {
+    "case": "safe_00",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_00",
+      "time_seconds": 0.008461500001430977
+    }
+  },
+  {
+    "case": "safe_00",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.01768830000219168,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_00",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.8914272000038181,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_00",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "36",
+      "time_seconds": 0.0007655000008526258
+    }
+  },
+  {
+    "case": "safe_01",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-12",
+        "total": "-12"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_01",
+      "time_seconds": 0.000629900001513306
+    }
+  },
+  {
+    "case": "safe_01",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_01",
+      "time_seconds": 0.01306509999994887
+    }
+  },
+  {
+    "case": "safe_01",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.018686300005356316,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_01",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.16321769999922253,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_01",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "36",
+      "time_seconds": 0.00031660000240663067
+    }
+  },
+  {
+    "case": "safe_02",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-30",
+        "total": "-30"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 12,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_02",
+      "time_seconds": 0.0009250000002793968
+    }
+  },
+  {
+    "case": "safe_02",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_02",
+      "time_seconds": 0.02659420000418322
+    }
+  },
+  {
+    "case": "safe_02",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.020707099996798206,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_02",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.25869329999841284,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_02",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "90",
+      "time_seconds": 0.0003699999942909926
+    }
+  },
+  {
+    "case": "safe_03",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-24",
+        "total": "-24"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_03",
+      "time_seconds": 0.0005701999980374239
+    }
+  },
+  {
+    "case": "safe_03",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_03",
+      "time_seconds": 0.009766499999386724
+    }
+  },
+  {
+    "case": "safe_03",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.013082899997243658,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_03",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.1636750000034226,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_03",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "72",
+      "time_seconds": 0.00029569999605882913
+    }
+  },
+  {
+    "case": "safe_04",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-60",
+        "total": "-60"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_04",
+      "time_seconds": 0.0006233000021893531
+    }
+  },
+  {
+    "case": "safe_04",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_04",
+      "time_seconds": 0.010782199999084696
+    }
+  },
+  {
+    "case": "safe_04",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.017897400000947528,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_04",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.21817979999468662,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_04",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "180",
+      "time_seconds": 0.00036750000435858965
+    }
+  },
+  {
+    "case": "safe_05",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-30",
+        "total": "-30"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 12,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_05",
+      "time_seconds": 0.004888700001174584
+    }
+  },
+  {
+    "case": "safe_05",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_05",
+      "time_seconds": 0.011386700003640726
+    }
+  },
+  {
+    "case": "safe_05",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.01906810000218684,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_05",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.1915694999988773,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_05",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "90",
+      "time_seconds": 0.0002750999992713332
+    }
+  },
+  {
+    "case": "safe_06",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-12",
+        "total": "-12"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_06",
+      "time_seconds": 0.0006453000023611821
+    }
+  },
+  {
+    "case": "safe_06",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_06",
+      "time_seconds": 0.012794899994332809
+    }
+  },
+  {
+    "case": "safe_06",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.02217959999688901,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_06",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.15348509999603266,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_06",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "36",
+      "time_seconds": 0.00047029999404912814
+    }
+  },
+  {
+    "case": "safe_07",
+    "method": "auto",
+    "result": {
+      "status": "SAFE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "0",
+      "minimum_signed": "0",
+      "maximum_signed": "0",
+      "counterexample": null,
+      "outputs": {
+        "per_line": "-60",
+        "total": "-60"
+      },
+      "denominator": 1,
+      "residue_states": 2,
+      "transitions": 4,
+      "domain_size": 100,
+      "complete": true,
+      "name": "safe_07",
+      "time_seconds": 0.0009430999998585321
+    }
+  },
+  {
+    "case": "safe_07",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "safe_07",
+      "time_seconds": 0.022129999997559935
+    }
+  },
+  {
+    "case": "safe_07",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.026072900000144728,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_07",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.18129030000272905,
+      "complete": false
+    }
+  },
+  {
+    "case": "safe_07",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "180",
+      "time_seconds": 0.000312700001813937
+    }
+  },
+  {
+    "case": "stage_00",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": -2,
+        "x": -2
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "-1"
+      },
+      "denominator": 5,
+      "residue_states": 10,
+      "transitions": 220,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_00",
+      "time_seconds": 0.001705399998172652
+    }
+  },
+  {
+    "case": "stage_00",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 6,
+        "y": 2
+      },
+      "outputs": {
+        "per_line": "1",
+        "total": "2"
+      },
+      "complete": true,
+      "name": "stage_00",
+      "time_seconds": 0.02220379999926081
+    }
+  },
+  {
+    "case": "stage_00",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.0005795000033685938,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_00",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 2
+      },
+      "time_seconds": 0.25042629999370547,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_00",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "4",
+      "time_seconds": 0.0005386000048019923
+    }
+  },
+  {
+    "case": "stage_01",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-3"
+      },
+      "denominator": 2,
+      "residue_states": 4,
+      "transitions": 40,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_01",
+      "time_seconds": 0.0013766000047326088
+    }
+  },
+  {
+    "case": "stage_01",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3,
+        "y": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-3"
+      },
+      "complete": true,
+      "name": "stage_01",
+      "time_seconds": 0.09004609999828972
+    }
+  },
+  {
+    "case": "stage_01",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 5
+      },
+      "time_seconds": 0.0038337000005412847,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_01",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.16948799999954645,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_01",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "9",
+      "time_seconds": 0.0003634000022429973
+    }
+  },
+  {
+    "case": "stage_02",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "0",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-1"
+      },
+      "denominator": 10,
+      "residue_states": 20,
+      "transitions": 220,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_02",
+      "time_seconds": 0.002926300003309734
+    }
+  },
+  {
+    "case": "stage_02",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3,
+        "y": -1
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-1"
+      },
+      "complete": true,
+      "name": "stage_02",
+      "time_seconds": 0.011440099995525088
+    }
+  },
+  {
+    "case": "stage_02",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.0007401000038953498,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_02",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": -1
+      },
+      "time_seconds": 0.1229373999958625,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_02",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "3",
+      "time_seconds": 0.00028619999648071826
+    }
+  },
+  {
+    "case": "stage_03",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-3"
+      },
+      "denominator": 2,
+      "residue_states": 4,
+      "transitions": 40,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_03",
+      "time_seconds": 0.0005317999966791831
+    }
+  },
+  {
+    "case": "stage_03",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3,
+        "y": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-3"
+      },
+      "complete": true,
+      "name": "stage_03",
+      "time_seconds": 0.04359140000451589
+    }
+  },
+  {
+    "case": "stage_03",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 5
+      },
+      "time_seconds": 0.0023402000006171875,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_03",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.11355069999990519,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_03",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "9",
+      "time_seconds": 0.00044019999768352136
+    }
+  },
+  {
+    "case": "stage_04",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "-1"
+      },
+      "denominator": 4,
+      "residue_states": 8,
+      "transitions": 144,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_04",
+      "time_seconds": 0.0023905999987618998
+    }
+  },
+  {
+    "case": "stage_04",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3,
+        "y": 5
+      },
+      "outputs": {
+        "per_line": "2",
+        "total": "1"
+      },
+      "complete": true,
+      "name": "stage_04",
+      "time_seconds": 0.01946019999741111
+    }
+  },
+  {
+    "case": "stage_04",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.000596199999563396,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_04",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.13407220000226516,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_04",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.0004337999998824671
+    }
+  },
+  {
+    "case": "stage_05",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-3"
+      },
+      "denominator": 2,
+      "residue_states": 4,
+      "transitions": 40,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_05",
+      "time_seconds": 0.0012197999967611395
+    }
+  },
+  {
+    "case": "stage_05",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 3,
+        "y": -3
+      },
+      "outputs": {
+        "per_line": "1",
+        "total": "0"
+      },
+      "complete": true,
+      "name": "stage_05",
+      "time_seconds": 0.06344440000248142
+    }
+  },
+  {
+    "case": "stage_05",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 5
+      },
+      "time_seconds": 0.0033111000011558644,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_05",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.1380312999972375,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_05",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "9",
+      "time_seconds": 0.0003169999981764704
+    }
+  },
+  {
+    "case": "stage_06",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "-1"
+      },
+      "denominator": 4,
+      "residue_states": 8,
+      "transitions": 144,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_06",
+      "time_seconds": 0.0013612000038847327
+    }
+  },
+  {
+    "case": "stage_06",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 5,
+        "y": -3
+      },
+      "outputs": {
+        "per_line": "2",
+        "total": "1"
+      },
+      "complete": true,
+      "name": "stage_06",
+      "time_seconds": 0.02198599999974249
+    }
+  },
+  {
+    "case": "stage_06",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.000853999998071231,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_06",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.09953739999764366,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_06",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.0003372999999555759
+    }
+  },
+  {
+    "case": "stage_07",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "-1"
+      },
+      "denominator": 10,
+      "residue_states": 20,
+      "transitions": 220,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_07",
+      "time_seconds": 0.0018759000013233162
+    }
+  },
+  {
+    "case": "stage_07",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 5,
+        "y": 1
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "1"
+      },
+      "complete": true,
+      "name": "stage_07",
+      "time_seconds": 0.023830199999792967
+    }
+  },
+  {
+    "case": "stage_07",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.0006369999973685481,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_07",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 5
+      },
+      "time_seconds": 0.28896319999330444,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_07",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "3",
+      "time_seconds": 0.00041510000301059335
+    }
+  },
+  {
+    "case": "stage_08",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "0",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": 3,
+        "x": -1
+      },
+      "outputs": {
+        "per_line": "-1",
+        "total": "0"
+      },
+      "denominator": 4,
+      "residue_states": 8,
+      "transitions": 144,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_08",
+      "time_seconds": 0.001775400000042282
+    }
+  },
+  {
+    "case": "stage_08",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": -3,
+        "y": -1
+      },
+      "outputs": {
+        "per_line": "-2",
+        "total": "-1"
+      },
+      "complete": true,
+      "name": "stage_08",
+      "time_seconds": 0.014457600002060644
+    }
+  },
+  {
+    "case": "stage_08",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -2,
+        "y": 6
+      },
+      "time_seconds": 0.002541399997426197,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_08",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": -1
+      },
+      "time_seconds": 0.13769049999973504,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_08",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.00028639999800361693
+    }
+  },
+  {
+    "case": "stage_09",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "0",
+      "counterexample": {
+        "y": -3,
+        "x": -3
+      },
+      "outputs": {
+        "per_line": "0",
+        "total": "-1"
+      },
+      "denominator": 5,
+      "residue_states": 10,
+      "transitions": 220,
+      "domain_size": 100,
+      "complete": true,
+      "name": "stage_09",
+      "time_seconds": 0.001320099996519275
+    }
+  },
+  {
+    "case": "stage_09",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1,
+        "y": -1
+      },
+      "outputs": {
+        "per_line": "1",
+        "total": "0"
+      },
+      "complete": true,
+      "name": "stage_09",
+      "time_seconds": 0.017631800001254305
+    }
+  },
+  {
+    "case": "stage_09",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 6
+      },
+      "time_seconds": 0.0006009000062476844,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_09",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 1
+      },
+      "time_seconds": 0.08394229999976233,
+      "complete": false
+    }
+  },
+  {
+    "case": "stage_09",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "5",
+      "time_seconds": 0.00032079999800771475
+    }
+  },
+  {
+    "case": "threshold_00",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_00",
+      "time_seconds": 0.008697500001289882
+    }
+  },
+  {
+    "case": "threshold_00",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_00",
+      "time_seconds": 0.007627699997101445
+    }
+  },
+  {
+    "case": "threshold_00",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.012806799997633789,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_00",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.049503900001582224,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_00",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.0001823999991756864
+    }
+  },
+  {
+    "case": "threshold_01",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -7
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_01",
+      "time_seconds": 0.012787699997716118
+    }
+  },
+  {
+    "case": "threshold_01",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -6
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_01",
+      "time_seconds": 0.011108500002592336
+    }
+  },
+  {
+    "case": "threshold_01",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.004656099998101126,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_01",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.11049130000174046,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_01",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.00026950000028591603
+    }
+  },
+  {
+    "case": "threshold_02",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -7
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_02",
+      "time_seconds": 0.012564800003019627
+    }
+  },
+  {
+    "case": "threshold_02",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -6
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_02",
+      "time_seconds": 0.012136400000599679
+    }
+  },
+  {
+    "case": "threshold_02",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.0032521999964956194,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_02",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.10900669999682577,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_02",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.0002886000002035871
+    }
+  },
+  {
+    "case": "threshold_03",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 3
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_03",
+      "time_seconds": 0.010993200005032122
+    }
+  },
+  {
+    "case": "threshold_03",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 3
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_03",
+      "time_seconds": 0.009038000003783964
+    }
+  },
+  {
+    "case": "threshold_03",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.014531500004522968,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_03",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 3
+      },
+      "time_seconds": 0.0827147000018158,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_03",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.00021410000044852495
+    }
+  },
+  {
+    "case": "threshold_04",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_04",
+      "time_seconds": 0.01314490000368096
+    }
+  },
+  {
+    "case": "threshold_04",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_04",
+      "time_seconds": 0.010193599999183789
+    }
+  },
+  {
+    "case": "threshold_04",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.002588299998024013,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_04",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.03683350000210339,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_04",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.0002043999993475154
+    }
+  },
+  {
+    "case": "threshold_05",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_05",
+      "time_seconds": 0.007732700003543869
+    }
+  },
+  {
+    "case": "threshold_05",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -1
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_05",
+      "time_seconds": 0.010119300000951625
+    }
+  },
+  {
+    "case": "threshold_05",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.0026255999982822686,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_05",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -1
+      },
+      "time_seconds": 0.04494200000044657,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_05",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.0002195999986724928
+    }
+  },
+  {
+    "case": "threshold_06",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_06",
+      "time_seconds": 0.00837860000319779
+    }
+  },
+  {
+    "case": "threshold_06",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_06",
+      "time_seconds": 0.007071100000757724
+    }
+  },
+  {
+    "case": "threshold_06",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.013544199995521922,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_06",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.03568929999892134,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_06",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.000163800003065262
+    }
+  },
+  {
+    "case": "threshold_07",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_07",
+      "time_seconds": 0.008739800003240816
+    }
+  },
+  {
+    "case": "threshold_07",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "threshold_07",
+      "time_seconds": 0.010170199995627627
+    }
+  },
+  {
+    "case": "threshold_07",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.017820299995946698,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_07",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.037568699997791555,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_07",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.0002032999982475303
+    }
+  },
+  {
+    "case": "threshold_08",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 3
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_08",
+      "time_seconds": 0.01213629999983823
+    }
+  },
+  {
+    "case": "threshold_08",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 3
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_08",
+      "time_seconds": 0.009713199993711896
+    }
+  },
+  {
+    "case": "threshold_08",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.014522199999191798,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_08",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 3
+      },
+      "time_seconds": 0.07790780000505038,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_08",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.000189200000022538
+    }
+  },
+  {
+    "case": "threshold_09",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -6
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_09",
+      "time_seconds": 0.009787399998458568
+    }
+  },
+  {
+    "case": "threshold_09",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": -6
+      },
+      "outputs": {
+        "a": "100",
+        "b": "0"
+      },
+      "complete": true,
+      "name": "threshold_09",
+      "time_seconds": 0.009415799999260344
+    }
+  },
+  {
+    "case": "threshold_09",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.0021286999981384724,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_09",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -6
+      },
+      "time_seconds": 0.07187359999807086,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_09",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.00022300000273389742
+    }
+  },
+  {
+    "case": "tree_00",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 3,
+        "y": -1,
+        "z": -1
+      },
+      "outputs": {
+        "left": "0",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_00",
+      "time_seconds": 0.06455329999880632
+    }
+  },
+  {
+    "case": "tree_00",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 3,
+        "y": -1,
+        "z": -1
+      },
+      "outputs": {
+        "left": "0",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_00",
+      "time_seconds": 0.06254349999653641
+    }
+  },
+  {
+    "case": "tree_00",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.006158500000310596,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_00",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.20237320000160253,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_00",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.0003744000059668906
+    }
+  },
+  {
+    "case": "tree_01",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 64,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -3,
+        "y": -2,
+        "z": -1
+      },
+      "outputs": {
+        "left": "-4",
+        "right": "-8"
+      },
+      "complete": true,
+      "name": "tree_01",
+      "time_seconds": 0.12599640000553336
+    }
+  },
+  {
+    "case": "tree_01",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": 3,
+        "y": -2,
+        "z": -3
+      },
+      "outputs": {
+        "left": "-4",
+        "right": "0"
+      },
+      "complete": true,
+      "name": "tree_01",
+      "time_seconds": 0.7486853000009432
+    }
+  },
+  {
+    "case": "tree_01",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2,
+        "y": -1,
+        "z": 4
+      },
+      "time_seconds": 0.0009322999976575375,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_01",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "time_seconds": 0.2183264000050258,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_01",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "26",
+      "time_seconds": 0.00032220000139204785
+    }
+  },
+  {
+    "case": "tree_02",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 6,
+        "y": -1,
+        "z": 3
+      },
+      "outputs": {
+        "left": "10",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_02",
+      "time_seconds": 0.044705799999064766
+    }
+  },
+  {
+    "case": "tree_02",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 6,
+        "y": 2,
+        "z": 0
+      },
+      "outputs": {
+        "left": "10",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_02",
+      "time_seconds": 0.033322499999485444
+    }
+  },
+  {
+    "case": "tree_02",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.0029749000023002736,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_02",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.1262455999967642,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_02",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.0002930999980890192
+    }
+  },
+  {
+    "case": "tree_03",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 6,
+        "y": -1,
+        "z": -2
+      },
+      "outputs": {
+        "left": "5",
+        "right": "0"
+      },
+      "complete": true,
+      "name": "tree_03",
+      "time_seconds": 0.042716700001619756
+    }
+  },
+  {
+    "case": "tree_03",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": -3,
+        "y": 6,
+        "z": 3
+      },
+      "outputs": {
+        "left": "10",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_03",
+      "time_seconds": 0.038562800000363495
+    }
+  },
+  {
+    "case": "tree_03",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.0036481999995885417,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_03",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.15646859999833396,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_03",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.0003386000025784597
+    }
+  },
+  {
+    "case": "tree_04",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 64,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -3,
+        "y": -2,
+        "z": -1
+      },
+      "outputs": {
+        "left": "-4",
+        "right": "-8"
+      },
+      "complete": true,
+      "name": "tree_04",
+      "time_seconds": 0.15868040000350447
+    }
+  },
+  {
+    "case": "tree_04",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -3,
+        "y": 6,
+        "z": 3
+      },
+      "outputs": {
+        "left": "8",
+        "right": "4"
+      },
+      "complete": true,
+      "name": "tree_04",
+      "time_seconds": 0.5114249000034761
+    }
+  },
+  {
+    "case": "tree_04",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2,
+        "y": -1,
+        "z": 4
+      },
+      "time_seconds": 0.0009310000023106113,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_04",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "time_seconds": 0.11610039999504806,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_04",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "26",
+      "time_seconds": 0.00021120000019436702
+    }
+  },
+  {
+    "case": "tree_05",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": -3,
+        "y": -2,
+        "z": -1
+      },
+      "outputs": {
+        "left": "-5",
+        "right": "-10"
+      },
+      "complete": true,
+      "name": "tree_05",
+      "time_seconds": 0.07645449999836273
+    }
+  },
+  {
+    "case": "tree_05",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 3,
+        "y": 4,
+        "z": -3
+      },
+      "outputs": {
+        "left": "0",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_05",
+      "time_seconds": 0.07489060000079917
+    }
+  },
+  {
+    "case": "tree_05",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.004203600001346786,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_05",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.19274000000586966,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_05",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.0005880000026081689
+    }
+  },
+  {
+    "case": "tree_06",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": -2,
+        "y": 1,
+        "z": -3
+      },
+      "outputs": {
+        "left": "-5",
+        "right": "0"
+      },
+      "complete": true,
+      "name": "tree_06",
+      "time_seconds": 0.03811829999904148
+    }
+  },
+  {
+    "case": "tree_06",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": -2,
+        "y": 6,
+        "z": -3
+      },
+      "outputs": {
+        "left": "0",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_06",
+      "time_seconds": 0.04353990000527119
+    }
+  },
+  {
+    "case": "tree_06",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.004143500002101064,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_06",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.13543899999785936,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_06",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.00020940000104019418
+    }
+  },
+  {
+    "case": "tree_07",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10,
+        "z": 10
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 3,
+        "y": 6,
+        "z": 2
+      },
+      "outputs": {
+        "left": "10",
+        "right": "15"
+      },
+      "complete": true,
+      "name": "tree_07",
+      "time_seconds": 0.05956809999770485
+    }
+  },
+  {
+    "case": "tree_07",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 3,
+        "y": -1,
+        "z": 2
+      },
+      "outputs": {
+        "left": "0",
+        "right": "5"
+      },
+      "complete": true,
+      "name": "tree_07",
+      "time_seconds": 0.05190559999755351
+    }
+  },
+  {
+    "case": "tree_07",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": -3,
+        "y": 1,
+        "z": -1
+      },
+      "time_seconds": 0.0038464000026579015,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_07",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "time_seconds": 0.18009309999615652,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_07",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "25",
+      "time_seconds": 0.00033769999572541565
+    }
+  },
+  {
+    "case": "tree_08",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 64,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -1,
+        "y": -2,
+        "z": -3
+      },
+      "outputs": {
+        "left": "-8",
+        "right": "-4"
+      },
+      "complete": true,
+      "name": "tree_08",
+      "time_seconds": 0.14610840000386816
+    }
+  },
+  {
+    "case": "tree_08",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -1,
+        "y": -2,
+        "z": 5
+      },
+      "outputs": {
+        "left": "0",
+        "right": "4"
+      },
+      "complete": true,
+      "name": "tree_08",
+      "time_seconds": 0.3580447999993339
+    }
+  },
+  {
+    "case": "tree_08",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2,
+        "y": -1,
+        "z": 4
+      },
+      "time_seconds": 0.0007339000003412366,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_08",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "time_seconds": 0.18930689999979222,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_08",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "26",
+      "time_seconds": 0.0003253999966545962
+    }
+  },
+  {
+    "case": "tree_09",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 64,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -1,
+        "y": -2,
+        "z": -3
+      },
+      "outputs": {
+        "left": "-8",
+        "right": "-4"
+      },
+      "complete": true,
+      "name": "tree_09",
+      "time_seconds": 0.20702530000562547
+    }
+  },
+  {
+    "case": "tree_09",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "4",
+      "counterexample": {
+        "x": -1,
+        "y": -2,
+        "z": -3
+      },
+      "outputs": {
+        "left": "-8",
+        "right": "-4"
+      },
+      "complete": true,
+      "name": "tree_09",
+      "time_seconds": 0.503999799999292
+    }
+  },
+  {
+    "case": "tree_09",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2,
+        "y": -1,
+        "z": 4
+      },
+      "time_seconds": 0.0006420000063371845,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_09",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "time_seconds": 0.15397439999651397,
+      "complete": false
+    }
+  },
+  {
+    "case": "tree_09",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "26",
+      "time_seconds": 0.00028759999986505136
+    }
+  },
+  {
+    "case": "allocation",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10
+      },
+      "period_rejection": null,
+      "domain_size": 61,
+      "reduced_size": 10,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "allocation",
+      "time_seconds": 0.008836700006213505
+    }
+  },
+  {
+    "case": "allocation",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 61,
+      "reduced_size": 61,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "allocation",
+      "time_seconds": 0.009521799998765346
+    }
+  },
+  {
+    "case": "allocation",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.006405400003131945,
+      "complete": false
+    }
+  },
+  {
+    "case": "allocation",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.11474360000283923,
+      "complete": false
+    }
+  },
+  {
+    "case": "allocation",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "60",
+      "time_seconds": 0.0002009999952861108
+    }
+  },
+  {
+    "case": "benefit_calculation",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10000
+      },
+      "period_rejection": null,
+      "domain_size": 40,
+      "reduced_size": 40,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "benefit_calculation",
+      "time_seconds": 0.006246400000236463
+    }
+  },
+  {
+    "case": "benefit_calculation",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 40,
+      "reduced_size": 40,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "benefit_calculation",
+      "time_seconds": 0.005376199995225761
+    }
+  },
+  {
+    "case": "benefit_calculation",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.021360999999160413,
+      "complete": false
+    }
+  },
+  {
+    "case": "benefit_calculation",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.06277289999707136,
+      "complete": false
+    }
+  },
+  {
+    "case": "benefit_calculation",
+    "method": "naive_interval",
+    "result": {
+      "status": "SAFE",
+      "upper_bound": "0",
+      "time_seconds": 0.00023430000146618113
+    }
+  },
+  {
+    "case": "capped_contribution",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 41,
+      "reduced_size": 41,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "capped_contribution",
+      "time_seconds": 0.01926130000356352
+    }
+  },
+  {
+    "case": "capped_contribution",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 41,
+      "reduced_size": 41,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "capped_contribution",
+      "time_seconds": 0.02427180000086082
+    }
+  },
+  {
+    "case": "capped_contribution",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.010219600000709761,
+      "complete": false
+    }
+  },
+  {
+    "case": "capped_contribution",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.06265569999959553,
+      "complete": false
+    }
+  },
+  {
+    "case": "capped_contribution",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "3",
+      "time_seconds": 0.00021749999723397195
+    }
+  },
+  {
+    "case": "currency_conversion",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 2
+      },
+      "outputs": {
+        "stage": "3",
+        "end": "2"
+      },
+      "complete": true,
+      "name": "currency_conversion",
+      "time_seconds": 0.6613168999974732
+    }
+  },
+  {
+    "case": "currency_conversion",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 19
+      },
+      "outputs": {
+        "stage": "24",
+        "end": "23"
+      },
+      "complete": true,
+      "name": "currency_conversion",
+      "time_seconds": 0.019392300004255958
+    }
+  },
+  {
+    "case": "currency_conversion",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 49
+      },
+      "time_seconds": 0.002886300004320219,
+      "complete": false
+    }
+  },
+  {
+    "case": "currency_conversion",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.0815163000006578,
+      "complete": false
+    }
+  },
+  {
+    "case": "currency_conversion",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "122",
+      "time_seconds": 0.00027740000223275274
+    }
+  },
+  {
+    "case": "homogeneous_tree",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 8,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "homogeneous_tree",
+      "time_seconds": 0.00718320000305539
+    }
+  },
+  {
+    "case": "homogeneous_tree",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1000,
+      "reduced_size": 1000,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "homogeneous_tree",
+      "time_seconds": 0.007668899997952394
+    }
+  },
+  {
+    "case": "homogeneous_tree",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.00925479999568779,
+      "complete": false
+    }
+  },
+  {
+    "case": "homogeneous_tree",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.10994300000311341,
+      "complete": false
+    }
+  },
+  {
+    "case": "homogeneous_tree",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "27",
+      "time_seconds": 0.0001782000035746023
+    }
+  },
+  {
+    "case": "payroll_deduction",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 99
+      },
+      "outputs": {
+        "twice": "7",
+        "combined": "8"
+      },
+      "complete": true,
+      "name": "payroll_deduction",
+      "time_seconds": 0.01165680000121938
+    }
+  },
+  {
+    "case": "payroll_deduction",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 100,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 41
+      },
+      "outputs": {
+        "twice": "4",
+        "combined": "3"
+      },
+      "complete": true,
+      "name": "payroll_deduction",
+      "time_seconds": 0.020124199996644165
+    }
+  },
+  {
+    "case": "payroll_deduction",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 43
+      },
+      "time_seconds": 0.0017067000007955357,
+      "complete": false
+    }
+  },
+  {
+    "case": "payroll_deduction",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 7
+      },
+      "time_seconds": 0.15130330000101821,
+      "complete": false
+    }
+  },
+  {
+    "case": "payroll_deduction",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "8",
+      "time_seconds": 0.0003121999980066903
+    }
+  },
+  {
+    "case": "percentage_discount",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 100
+      },
+      "period_rejection": null,
+      "domain_size": 40,
+      "reduced_size": 40,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 5
+      },
+      "outputs": {
+        "stage": "3",
+        "end": "4"
+      },
+      "complete": true,
+      "name": "percentage_discount",
+      "time_seconds": 0.043977900000754744
+    }
+  },
+  {
+    "case": "percentage_discount",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 40,
+      "reduced_size": 40,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 16
+      },
+      "outputs": {
+        "stage": "11",
+        "end": "12"
+      },
+      "complete": true,
+      "name": "percentage_discount",
+      "time_seconds": 0.031872500003373716
+    }
+  },
+  {
+    "case": "percentage_discount",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 24
+      },
+      "time_seconds": 0.002776000001176726,
+      "complete": false
+    }
+  },
+  {
+    "case": "percentage_discount",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2
+      },
+      "time_seconds": 0.06244460000016261,
+      "complete": false
+    }
+  },
+  {
+    "case": "percentage_discount",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "28",
+      "time_seconds": 0.0003370000049471855
+    }
+  },
+  {
+    "case": "placements",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 10,
+        "y": 10
+      },
+      "period_rejection": null,
+      "domain_size": 256,
+      "reduced_size": 100,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1,
+        "y": 2
+      },
+      "outputs": {
+        "placement_00": "1",
+        "placement_01": "0",
+        "placement_10": "0",
+        "placement_11": "0"
+      },
+      "complete": true,
+      "name": "placements",
+      "time_seconds": 0.09165719999873545
+    }
+  },
+  {
+    "case": "placements",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 256,
+      "reduced_size": 256,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 13,
+        "y": 9
+      },
+      "outputs": {
+        "placement_00": "4",
+        "placement_01": "5",
+        "placement_10": "5",
+        "placement_11": "5"
+      },
+      "complete": true,
+      "name": "placements",
+      "time_seconds": 0.08470610000222223
+    }
+  },
+  {
+    "case": "placements",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 2
+      },
+      "time_seconds": 0.01640420000330778,
+      "complete": false
+    }
+  },
+  {
+    "case": "placements",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 2
+      },
+      "time_seconds": 0.1892223000031663,
+      "complete": false
+    }
+  },
+  {
+    "case": "placements",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "6",
+      "time_seconds": 0.0007030999986454844
+    }
+  },
+  {
+    "case": "settlement",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "5",
+      "minimum_signed": "-5",
+      "maximum_signed": "5",
+      "counterexample": {
+        "y": 8,
+        "x": 3
+      },
+      "outputs": {
+        "per_line": "15",
+        "total": "10"
+      },
+      "denominator": 5,
+      "residue_states": 10,
+      "transitions": 220,
+      "domain_size": 900,
+      "complete": true,
+      "name": "settlement",
+      "time_seconds": 0.0016915000014705583
+    }
+  },
+  {
+    "case": "settlement",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 900,
+      "reduced_size": 900,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 12,
+        "y": 7
+      },
+      "outputs": {
+        "per_line": "15",
+        "total": "20"
+      },
+      "complete": true,
+      "name": "settlement",
+      "time_seconds": 0.03406410000025062
+    }
+  },
+  {
+    "case": "settlement",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 28,
+        "y": 24
+      },
+      "time_seconds": 0.004126100000576116,
+      "complete": false
+    }
+  },
+  {
+    "case": "settlement",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 22
+      },
+      "time_seconds": 0.14651579999917885,
+      "complete": false
+    }
+  },
+  {
+    "case": "settlement",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "60",
+      "time_seconds": 0.00027039999986300245
+    }
+  },
+  {
+    "case": "tax_per_line",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "-1",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": 8,
+        "x": 3
+      },
+      "outputs": {
+        "per_line": "3",
+        "total": "2"
+      },
+      "denominator": 5,
+      "residue_states": 10,
+      "transitions": 220,
+      "domain_size": 400,
+      "complete": true,
+      "name": "tax_per_line",
+      "time_seconds": 0.0018902000010712072
+    }
+  },
+  {
+    "case": "tax_per_line",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 400,
+      "reduced_size": 400,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 19,
+        "y": 18
+      },
+      "outputs": {
+        "per_line": "8",
+        "total": "7"
+      },
+      "complete": true,
+      "name": "tax_per_line",
+      "time_seconds": 0.021498100002645515
+    }
+  },
+  {
+    "case": "tax_per_line",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 3,
+        "y": 19
+      },
+      "time_seconds": 0.0014815000031376258,
+      "complete": false
+    }
+  },
+  {
+    "case": "tax_per_line",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1,
+        "y": 7
+      },
+      "time_seconds": 0.19592840000404976,
+      "complete": false
+    }
+  },
+  {
+    "case": "tax_per_line",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "8",
+      "time_seconds": 0.00021050000214017928
+    }
+  },
+  {
+    "case": "threshold_rule",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 499
+      },
+      "outputs": {
+        "before": "100",
+        "after": "0"
+      },
+      "complete": true,
+      "name": "threshold_rule",
+      "time_seconds": 0.00684210000326857
+    }
+  },
+  {
+    "case": "threshold_rule",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "100",
+      "counterexample": {
+        "x": 495
+      },
+      "outputs": {
+        "before": "100",
+        "after": "0"
+      },
+      "complete": true,
+      "name": "threshold_rule",
+      "time_seconds": 0.0070167999947443604
+    }
+  },
+  {
+    "case": "threshold_rule",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 499
+      },
+      "time_seconds": 0.0031978999977582134,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_rule",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 495
+      },
+      "time_seconds": 0.05149420000088867,
+      "complete": false
+    }
+  },
+  {
+    "case": "threshold_rule",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "100",
+      "time_seconds": 0.00019809999503195286
+    }
+  },
+  {
+    "case": "vat",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "1",
+      "minimum_signed": "0",
+      "maximum_signed": "1",
+      "counterexample": {
+        "y": 28,
+        "x": 3
+      },
+      "outputs": {
+        "per_line": "1",
+        "total": "2"
+      },
+      "denominator": 20,
+      "residue_states": 40,
+      "transitions": 620,
+      "domain_size": 900,
+      "complete": true,
+      "name": "vat",
+      "time_seconds": 0.002385100000537932
+    }
+  },
+  {
+    "case": "vat",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 900,
+      "reduced_size": 900,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 13,
+        "y": 28
+      },
+      "outputs": {
+        "per_line": "3",
+        "total": "4"
+      },
+      "complete": true,
+      "name": "vat",
+      "time_seconds": 0.012569500002427958
+    }
+  },
+  {
+    "case": "vat",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 4,
+        "y": 26
+      },
+      "time_seconds": 0.0016842000040924177,
+      "complete": false
+    }
+  },
+  {
+    "case": "vat",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 22,
+        "y": 12
+      },
+      "time_seconds": 0.15907270000025164,
+      "complete": false
+    }
+  },
+  {
+    "case": "vat",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "7",
+      "time_seconds": 0.00021279999782564119
+    }
+  },
+  {
+    "case": "cash_settlement",
+    "method": "auto",
+    "result": {
+      "status": "SENSITIVE",
+      "method": "residue-dp",
+      "maximum_discrepancy": "5",
+      "minimum_signed": "-5",
+      "maximum_signed": "5",
+      "counterexample": {
+        "y": 1008,
+        "x": 2003
+      },
+      "outputs": {
+        "per_line": "3015",
+        "total": "3010"
+      },
+      "denominator": 5,
+      "residue_states": 10,
+      "transitions": 220,
+      "domain_size": 1600,
+      "complete": true,
+      "name": "cash_settlement",
+      "time_seconds": 0.0017576000027474947
+    }
+  },
+  {
+    "case": "cash_settlement",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1600,
+      "reduced_size": 1600,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "5",
+      "counterexample": {
+        "x": 2032,
+        "y": 1001
+      },
+      "outputs": {
+        "per_line": "3030",
+        "total": "3035"
+      },
+      "complete": true,
+      "name": "cash_settlement",
+      "time_seconds": 0.03100369999447139
+    }
+  },
+  {
+    "case": "cash_settlement",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2018,
+        "y": 1033
+      },
+      "time_seconds": 0.0018042000010609627,
+      "complete": false
+    }
+  },
+  {
+    "case": "cash_settlement",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 2021,
+        "y": 1002
+      },
+      "time_seconds": 0.07685119999950984,
+      "complete": false
+    }
+  },
+  {
+    "case": "cash_settlement",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "80",
+      "time_seconds": 0.00023890000011306256
+    }
+  },
+  {
+    "case": "hmrc_invoice",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 5,
+        "y": 5
+      },
+      "period_rejection": null,
+      "domain_size": 1600,
+      "reduced_size": 25,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "hmrc_invoice",
+      "time_seconds": 0.006801600000471808
+    }
+  },
+  {
+    "case": "hmrc_invoice",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 1600,
+      "reduced_size": 1600,
+      "status": "SAFE",
+      "maximum_discrepancy": "0",
+      "counterexample": null,
+      "complete": true,
+      "name": "hmrc_invoice",
+      "time_seconds": 0.005399300003773533
+    }
+  },
+  {
+    "case": "hmrc_invoice",
+    "method": "random32",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.024582900005043484,
+      "complete": false
+    }
+  },
+  {
+    "case": "hmrc_invoice",
+    "method": "hypothesis64",
+    "result": {
+      "status": "NO_WITNESS",
+      "counterexample": null,
+      "time_seconds": 0.2453174999973271,
+      "complete": false
+    }
+  },
+  {
+    "case": "hmrc_invoice",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "15",
+      "time_seconds": 0.0003471000018180348
+    }
+  },
+  {
+    "case": "irs_payroll",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 100103
+      },
+      "outputs": {
+        "separate_taxes": "7657",
+        "counterfactual_combined": "7658"
+      },
+      "complete": true,
+      "name": "irs_payroll",
+      "time_seconds": 0.01936760000535287
+    }
+  },
+  {
+    "case": "irs_payroll",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 100169
+      },
+      "outputs": {
+        "separate_taxes": "7662",
+        "counterfactual_combined": "7663"
+      },
+      "complete": true,
+      "name": "irs_payroll",
+      "time_seconds": 0.023615600002813153
+    }
+  },
+  {
+    "case": "irs_payroll",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 100007
+      },
+      "time_seconds": 0.0005846999993082136,
+      "complete": false
+    }
+  },
+  {
+    "case": "irs_payroll",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 100173
+      },
+      "time_seconds": 0.06928350000089267,
+      "complete": false
+    }
+  },
+  {
+    "case": "irs_payroll",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "15",
+      "time_seconds": 0.00038610000046901405
+    }
+  },
+  {
+    "case": "rational_money",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Mode lacks global translation covariance",
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1007
+      },
+      "outputs": {
+        "intermediate": "1096",
+        "deferred": "1097"
+      },
+      "complete": true,
+      "name": "rational_money",
+      "time_seconds": 0.01727039999968838
+    }
+  },
+  {
+    "case": "rational_money",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "1",
+      "counterexample": {
+        "x": 1003
+      },
+      "outputs": {
+        "intermediate": "1093",
+        "deferred": "1092"
+      },
+      "complete": true,
+      "name": "rational_money",
+      "time_seconds": 0.017708400002447888
+    }
+  },
+  {
+    "case": "rational_money",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1007
+      },
+      "time_seconds": 0.0006709000008413568,
+      "complete": false
+    }
+  },
+  {
+    "case": "rational_money",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 1174
+      },
+      "time_seconds": 0.04000390000146581,
+      "complete": false
+    }
+  },
+  {
+    "case": "rational_money",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "217",
+      "time_seconds": 0.000320099999953527
+    }
+  },
+  {
+    "case": "ssa_benefit",
+    "method": "auto",
+    "result": {
+      "method": "residue-smt",
+      "periods": {
+        "x": 4000
+      },
+      "period_rejection": null,
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "66",
+      "counterexample": {
+        "x": 100010
+      },
+      "outputs": {
+        "dime_then_offset_then_dollar": "101200",
+        "counterfactual_dollar_early": "101266"
+      },
+      "complete": true,
+      "name": "ssa_benefit",
+      "time_seconds": 0.017201900001964532
+    }
+  },
+  {
+    "case": "ssa_benefit",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 200,
+      "reduced_size": 200,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "66",
+      "counterexample": {
+        "x": 100000
+      },
+      "outputs": {
+        "dime_then_offset_then_dollar": "101200",
+        "counterfactual_dollar_early": "101266"
+      },
+      "complete": true,
+      "name": "ssa_benefit",
+      "time_seconds": 0.010354800004279241
+    }
+  },
+  {
+    "case": "ssa_benefit",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 100007
+      },
+      "time_seconds": 0.000600500003201887,
+      "complete": false
+    }
+  },
+  {
+    "case": "ssa_benefit",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 100000
+      },
+      "time_seconds": 0.7183194999961415,
+      "complete": false
+    }
+  },
+  {
+    "case": "ssa_benefit",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "266",
+      "time_seconds": 0.00020039999799337238
+    }
+  },
+  {
+    "case": "ssa_entitlement",
+    "method": "auto",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": "Non-affine erasure",
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "50",
+      "counterexample": {
+        "x": 999
+      },
+      "outputs": {
+        "compare_before": "50",
+        "counterfactual_compare_after": "0"
+      },
+      "complete": true,
+      "name": "ssa_entitlement",
+      "time_seconds": 0.004161699995165691
+    }
+  },
+  {
+    "case": "ssa_entitlement",
+    "method": "pure_smt",
+    "result": {
+      "method": "smt",
+      "periods": null,
+      "period_rejection": null,
+      "domain_size": 21,
+      "reduced_size": 21,
+      "status": "SENSITIVE",
+      "maximum_discrepancy": "50",
+      "counterexample": {
+        "x": 999
+      },
+      "outputs": {
+        "compare_before": "50",
+        "counterfactual_compare_after": "0"
+      },
+      "complete": true,
+      "name": "ssa_entitlement",
+      "time_seconds": 0.003785499997320585
+    }
+  },
+  {
+    "case": "ssa_entitlement",
+    "method": "random32",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 999
+      },
+      "time_seconds": 0.0013058999975328334,
+      "complete": false
+    }
+  },
+  {
+    "case": "ssa_entitlement",
+    "method": "hypothesis64",
+    "result": {
+      "status": "SENSITIVE",
+      "counterexample": {
+        "x": 999
+      },
+      "time_seconds": 0.032168000005185604,
+      "complete": false
+    }
+  },
+  {
+    "case": "ssa_entitlement",
+    "method": "naive_interval",
+    "result": {
+      "status": "WARNING",
+      "upper_bound": "50",
+      "time_seconds": 9.850000060396269e-05
+    }
+  }
+]

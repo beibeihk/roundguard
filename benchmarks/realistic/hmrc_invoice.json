@@ -1,0 +1,25 @@
+{
+  "name": "hmrc_invoice",
+  "group": "realistic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 10000,
+      "max": 10039,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 5000,
+      "max": 5039,
+      "quantum": "1"
+    }
+  },
+  "source": "https://www.gov.uk/guidance/vat-guide-notice-700",
+  "source_section": "17.5 / 17.5.1",
+  "scope": "Illustrative rounding fragment; comparison policy may be deliberately counterfactual; no production defect claim.",
+  "variants": {
+    "line_tenth_then_penny": "Q(Q(x/5,\"0.1\",\"FLOOR\")+Q(y/5,\"0.1\",\"FLOOR\"),1,\"FLOOR\")",
+    "total_penny": "Q((x+y)/5,1,\"FLOOR\")"
+  }
+}

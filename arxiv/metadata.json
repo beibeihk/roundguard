@@ -1,0 +1,18 @@
+{
+  "title": "RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies",
+  "authors": "Kun Huang",
+  "affiliation": "Economics and Management School, Wuhan University",
+  "email": "huangkun123huang@163.com",
+  "abstract": "Exact decimal arithmetic does not determine when a monetary calculation should be rounded. A line-item rule and its aggregate counterpart can produce different payable amounts even when both use exact rational intermediates. Universal rounding bounds do not tell a developer whether their endpoints are attainable on the permitted amount grids. We present RoundGuard, an exact analyzer for explicitly declared monetary rounding policies. For rational affine expressions with translation-compatible quantizers, it computes structural shifts and compares policies on feasible residue representatives. For independent affine line items, a cyclic residue dynamic program (DP) computes attainable signed discrepancy extrema and reconstructs inputs achieving them, without enumerating the Cartesian input grid. Its operation count is pseudo-polynomial in a common denominator; sign-sensitive modes require a proved nonnegative-line condition or an unreduced satisfiability-modulo-theories (SMT) fallback. A JavaScript Object Notation (JSON) rule interface supports six rounding modes, finite placement families, and bounded piecewise expressions. Independent exhaustive decimal evaluation checks the analyzer on synthetic, canonical, and public-rule-derived fragments. Scaling experiments compare the dynamic program with full-grid SMT and a residue-reduced SMT ablation. The contribution is a specialized analysis of feasible monetary discrepancies built on established shift-periodic arithmetic and min/max-plus dynamic programming, rather than a new general theory of rounding.",
+  "comments": "13 pages, 1 figure, 2 tables. Code and reproducible artifact: https://github.com/beibeihk/roundguard",
+  "primary_category": "cs.PL",
+  "cross_list": [],
+  "license": "arXiv.org perpetual, non-exclusive license",
+  "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  "doi": "",
+  "journal_reference": "",
+  "submission_id": null,
+  "arxiv_id": null,
+  "submission_state": "not_submitted_login_required",
+  "source_archive": "arxiv_submission.tar.gz"
+}

@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-03",
+  "status": "BOUNDED_SANITY_CHECKS_ONLY",
+  "proof_assistant_checked": false,
+  "half_even_aggregation": [
+    {
+      "n": 1,
+      "tuples": 7,
+      "observed_maximum": 0,
+      "formula": 0
+    },
+    {
+      "n": 2,
+      "tuples": 49,
+      "observed_maximum": 1,
+      "formula": 1
+    },
+    {
+      "n": 3,
+      "tuples": 343,
+      "observed_maximum": 2,
+      "formula": 2
+    },
+    {
+      "n": 4,
+      "tuples": 2401,
+      "observed_maximum": 2,
+      "formula": 2
+    },
+    {
+      "n": 5,
+      "tuples": 16807,
+      "observed_maximum": 2,
+      "formula": 2
+    },
+    {
+      "n": 6,
+      "tuples": 117649,
+      "observed_maximum": 3,
+      "formula": 3
+    }
+  ],
+  "residue_dp": {
+    "random_seed": 20261003,
+    "cases": 120,
+    "brute_force_assignments": 27380,
+    "all_extrema_matched": true,
+    "dimensions": "1 through 4",
+    "modes": [
+      "FLOOR",
+      "CEILING",
+      "HALF_EVEN",
+      "IDENTITY"
+    ],
+    "includes_negative_coefficients_and_signed_inputs": true
+  },
+  "nonnegative_residue_dp": {
+    "random_seed": 6102026,
+    "cases": 120,
+    "brute_force_assignments": 31036,
+    "all_extrema_matched": true,
+    "raw_line_nonnegativity_certified": true,
+    "includes_all_six_modes_and_identity": true,
+    "includes_negative_slopes_and_signed_input_ticks": true
+  },
+  "implementation_signed_covariant": {
+    "random_seed": 3102026,
+    "cases": 80,
+    "direct_assignments": 5533,
+    "all_signed_extrema_matched": true,
+    "nonunit_input_and_output_quantum": true,
+    "negative_slopes": true,
+    "signed_input_ticks": true,
+    "negative_constants": true,
+    "constant_lines": true,
+    "raw_line_nonnegativity_certified": false
+  },
+  "implementation_nonnegative_six_modes": {
+    "random_seed": 33102026,
+    "cases": 80,
+    "direct_assignments": 4975,
+    "all_signed_extrema_matched": true,
+    "nonunit_input_and_output_quantum": true,
+    "negative_slopes": true,
+    "signed_input_ticks": true,
+    "negative_constants": false,
+    "constant_lines": true,
+    "raw_line_nonnegativity_certified": true
+  },
+  "quantum_input_guard": [
+    {
+      "field": "input",
+      "numeric_decimal": "rejected"
+    },
+    {
+      "field": "batch",
+      "numeric_decimal": "rejected"
+    }
+  ]
+}

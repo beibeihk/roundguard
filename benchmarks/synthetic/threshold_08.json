@@ -1,0 +1,17 @@
+{
+  "name": "threshold_08",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -10,
+      "max": 10,
+      "quantum": "1"
+    }
+  },
+  "pattern": "threshold",
+  "variants": {
+    "a": "100 if Q(x/5,1,\"HALF_EVEN\") >= 1 else 0",
+    "b": "100 if x/5 >= 1 else 0"
+  }
+}

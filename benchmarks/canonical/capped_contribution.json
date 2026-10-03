@@ -1,0 +1,17 @@
+{
+  "name": "capped_contribution",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 180,
+      "max": 220,
+      "quantum": "1"
+    }
+  },
+  "pattern": "capped_contribution",
+  "variants": {
+    "stage": "min(Q(x*rate(\"0.125\"),1,\"HALF_EVEN\"),25)",
+    "end": "Q(min(x*rate(\"0.125\"),25),1,\"HALF_EVEN\")"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "review_date": "2026-10-03",
+  "review_phase": "fresh complete reproduction",
+  "solver_reexecution_by_reviewer": false,
+  "auto": {
+    "rows": 66,
+    "status_and_maximum_mismatches": []
+  },
+  "pure_smt": {
+    "rows": 66,
+    "status_and_maximum_mismatches": []
+  },
+  "scaling": {
+    "unique_cases": 24,
+    "rows": 216,
+    "methods": {
+      "dp": {
+        "SENSITIVE:complete=True": 72
+      },
+      "residue": {
+        "SENSITIVE:complete=False": 12,
+        "UNKNOWN:complete=False": 25,
+        "SENSITIVE:complete=True": 35
+      },
+      "smt": {
+        "UNKNOWN:complete=False": 36,
+        "SENSITIVE:complete=False": 17,
+        "SENSITIVE:complete=True": 19
+      }
+    },
+    "completed_maximum_mismatches": []
+  },
+  "paper_macro_checks": [
+    {
+      "macro": "DPCompleted",
+      "value": 72
+    },
+    {
+      "macro": "DPUnknown",
+      "value": 0
+    },
+    {
+      "macro": "DPPartial",
+      "value": 0
+    },
+    {
+      "macro": "ResidueCompleted",
+      "value": 35
+    },
+    {
+      "macro": "ResidueUnknown",
+      "value": 25
+    },
+    {
+      "macro": "ResiduePartial",
+      "value": 12
+    },
+    {
+      "macro": "SMTCompleted",
+      "value": 19
+    },
+    {
+      "macro": "SMTUnknown",
+      "value": 36
+    },
+    {
+      "macro": "SMTPartial",
+      "value": 17
+    },
+    {
+      "macro": "AutoMedian",
+      "value": "9.77"
+    },
+    {
+      "macro": "SMTMedian",
+      "value": "14.30"
+    },
+    {
+      "macro": "ResidueFourMedian",
+      "value": "81.83"
+    },
+    {
+      "macro": "SMTFourMedian",
+      "value": "1953.54"
+    }
+  ],
+  "source_sha256": {
+    "paper/main.tex": "92a28f14db7fd0f1bc99c2229c574659a7192ad41c3485dc0a1c6aa5c5cc62d1",
+    "paper/evaluation.tex": "14a09fe14aaceac3e7822447e752b4ca3c9c526ceb5978020db507417c257dfb",
+    "paper/result_macros.tex": "a80d3a245ae9db73dc40115d9f71fc4891de12969d73b812c4b7bf908fa6b35f",
+    "paper/accuracy_table.tex": "d9ebb6454b3c3783dc70ee02b3d41d910f108e187fa36500762b6d9ca4f8880c",
+    "results/ground_truth.json": "5e32326f39f2f17c19296782a0097899fc8cdb96025c7496918c61a481b4acb3",
+    "results/diagnostics.json": "79f9275525b346eda72870cdb562328c64cb776ef1a3bd28f3dc5cda95b98551",
+    "results/scaling.csv": "cfe80540967a7239b8b1f6c34da4b5f297309827f6d450a4d14013b929dbf906",
+    "results/scaling_ground_truth.json": "17be2d908e05dd69d77a1f91c7335e1b90f4df589a992c8c76121c95c3c64229",
+    "results/summary.json": "9089c256deea7852320ea3d80d8eca8dcf54b370eed12dc41a75890b56b867c9"
+  }
+}

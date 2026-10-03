@@ -1,0 +1,26 @@
+{
+  "name": "vat",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 29,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 0,
+      "max": 29,
+      "quantum": "1"
+    }
+  },
+  "pattern": "vat",
+  "batch": {
+    "lines": [
+      "x/5",
+      "y/20"
+    ],
+    "mode": "FLOOR"
+  }
+}

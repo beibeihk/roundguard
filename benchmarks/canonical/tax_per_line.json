@@ -1,0 +1,26 @@
+{
+  "name": "tax_per_line",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 19,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": 0,
+      "max": 19,
+      "quantum": "1"
+    }
+  },
+  "pattern": "tax_per_line",
+  "batch": {
+    "lines": [
+      "x/5",
+      "y/5"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

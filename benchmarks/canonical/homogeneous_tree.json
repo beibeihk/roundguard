@@ -1,0 +1,29 @@
+{
+  "name": "homogeneous_tree",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "z": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    }
+  },
+  "pattern": "homogeneous_tree",
+  "variants": {
+    "a": "Q(Q(x+y,1,\"HALF_EVEN\")+z,1,\"HALF_EVEN\")",
+    "b": "Q(x+Q(y+z,1,\"HALF_EVEN\"),1,\"HALF_EVEN\")"
+  }
+}

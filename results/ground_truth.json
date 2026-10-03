@@ -1,0 +1,731 @@
+[
+  {
+    "file": "benchmarks/synthetic/mode_00.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -12
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_01.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -11
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_02.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -12
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_03.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -9
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_04.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -12
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_05.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -9
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_06.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -11
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_07.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -12
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_08.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -9
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/mode_09.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -12
+    },
+    "evaluations": 25,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_00.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_01.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_02.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_03.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_04.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_05.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_06.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/safe_07.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_00.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_01.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_02.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_03.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_04.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_05.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_06.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_07.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_08.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -1
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/stage_09.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": -3,
+      "y": -3
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_00.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_01.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": -7
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_02.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": -7
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_03.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": 3
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_04.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": -1
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_05.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": -1
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_06.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_07.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_08.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": 3
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/threshold_09.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": -7
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_00.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_01.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "4",
+    "counterexample": {
+      "x": -3,
+      "y": -2,
+      "z": -1
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_02.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_03.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_04.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "4",
+    "counterexample": {
+      "x": -3,
+      "y": -2,
+      "z": -1
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_05.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_06.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_07.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": -3,
+      "y": -3,
+      "z": -2
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_08.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "4",
+    "counterexample": {
+      "x": -3,
+      "y": -2,
+      "z": -1
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/synthetic/tree_09.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "4",
+    "counterexample": {
+      "x": -3,
+      "y": -2,
+      "z": -1
+    },
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/allocation.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 61,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/benefit_calculation.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 40,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/capped_contribution.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 41,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/currency_conversion.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 2
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/homogeneous_tree.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 1000,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/payroll_deduction.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 7
+    },
+    "evaluations": 100,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/percentage_discount.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 2
+    },
+    "evaluations": 40,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/placements.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 1,
+      "y": 2
+    },
+    "evaluations": 256,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/settlement.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": 1,
+      "y": 2
+    },
+    "evaluations": 900,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/tax_per_line.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 1,
+      "y": 2
+    },
+    "evaluations": 400,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/threshold_rule.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "100",
+    "counterexample": {
+      "x": 495
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/canonical/vat.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 1,
+      "y": 16
+    },
+    "evaluations": 900,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/cash_settlement.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "5",
+    "counterexample": {
+      "x": 2001,
+      "y": 1002
+    },
+    "evaluations": 1600,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/hmrc_invoice.json",
+    "status": "SAFE",
+    "maximum_discrepancy": "0",
+    "counterexample": null,
+    "evaluations": 1600,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/irs_payroll.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 100007
+    },
+    "evaluations": 200,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/rational_money.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "1",
+    "counterexample": {
+      "x": 1003
+    },
+    "evaluations": 200,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/ssa_benefit.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "66",
+    "counterexample": {
+      "x": 100000
+    },
+    "evaluations": 200,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  },
+  {
+    "file": "benchmarks/realistic/ssa_entitlement.json",
+    "status": "SENSITIVE",
+    "maximum_discrepancy": "50",
+    "counterexample": {
+      "x": 999
+    },
+    "evaluations": 21,
+    "oracle": "independent Decimal exhaustive",
+    "seed": 20261003
+  }
+]

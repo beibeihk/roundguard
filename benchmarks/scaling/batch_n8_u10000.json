@@ -1,0 +1,68 @@
+{
+  "name": "batch_n8_u10000",
+  "group": "scaling",
+  "variables": {
+    "x0": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x1": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x2": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x3": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x4": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x5": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x6": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    },
+    "x7": {
+      "type": "Money",
+      "min": 0,
+      "max": 10000,
+      "quantum": "1"
+    }
+  },
+  "pattern": "heterogeneous independent invoice",
+  "batch": {
+    "lines": [
+      "x0/2",
+      "x1/4",
+      "x2/5",
+      "x3/10",
+      "x4/2",
+      "x5/4",
+      "x6/5",
+      "x7/10"
+    ],
+    "mode": "HALF_EVEN"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "mode_06",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -12,
+      "max": 12,
+      "quantum": "1"
+    }
+  },
+  "pattern": "mode",
+  "variants": {
+    "a": "Q(x/4,1,\"DOWN\")",
+    "b": "Q(x/4,1,\"FLOOR\")"
+  }
+}

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the RoundGuard manuscript and artifact."
+title: "RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies"
+type: software
+version: 0.1.0
+date-released: 2026-10-03
+authors:
+  - family-names: Huang
+    given-names: Kun
+    affiliation: "Economics and Management School, Wuhan University"
+repository-code: "https://github.com/beibeihk/roundguard"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies"
+  authors:
+    - family-names: Huang
+      given-names: Kun
+  year: 2026
+  url: "https://github.com/beibeihk/roundguard/blob/main/paper/main.pdf"

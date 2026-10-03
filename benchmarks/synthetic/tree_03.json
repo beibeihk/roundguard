@@ -1,0 +1,29 @@
+{
+  "name": "tree_03",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "y": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    },
+    "z": {
+      "type": "Money",
+      "min": -3,
+      "max": 6,
+      "quantum": "1"
+    }
+  },
+  "pattern": "aggregation",
+  "variants": {
+    "left": "Q(Q(x+y,5,\"HALF_EVEN\")+z,5,\"HALF_EVEN\")",
+    "right": "Q(x+Q(y+z,5,\"HALF_EVEN\"),5,\"HALF_EVEN\")"
+  }
+}

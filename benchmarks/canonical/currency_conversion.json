@@ -1,0 +1,17 @@
+{
+  "name": "currency_conversion",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 0,
+      "max": 99,
+      "quantum": "1"
+    }
+  },
+  "pattern": "currency_conversion",
+  "variants": {
+    "stage": "Q(Q(x*rate(\"1.2345\"),\"0.1\",\"HALF_UP\"),1,\"HALF_UP\")",
+    "end": "Q(x*rate(\"1.2345\"),1,\"HALF_UP\")"
+  }
+}

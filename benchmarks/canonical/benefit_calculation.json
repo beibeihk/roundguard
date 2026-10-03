@@ -1,0 +1,17 @@
+{
+  "name": "benefit_calculation",
+  "group": "canonical",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": 100,
+      "max": 139,
+      "quantum": "1"
+    }
+  },
+  "pattern": "benefit_calculation",
+  "variants": {
+    "before": "Q(Q(x*rate(\"0.73\"),10,\"FLOOR\")-3,100,\"FLOOR\")",
+    "after": "Q(x*rate(\"0.73\")-3,100,\"FLOOR\")"
+  }
+}

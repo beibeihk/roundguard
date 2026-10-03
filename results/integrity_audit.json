@@ -1,0 +1,17 @@
+{
+  "status": "CONSISTENCY_AUDIT_PASSED",
+  "small_programs": 66,
+  "small_exact_checks": 132,
+  "scaling_certificates": 24,
+  "scaling_runs": 216,
+  "cited_sources": 26,
+  "scope": "saved artifact consistency; not independent literature completeness, formal verification, or production validation",
+  "evidence_sha256": {
+    "results/ground_truth.json": "0187071afefa327ab3d18fff2dfb86c1629224e8690f5cefa470eb95963eefb1",
+    "results/scaling_ground_truth.json": "e155afff689546ed58576504ac9368d06254059c5a19c2ef36377af8d9d35565",
+    "results/scaling.csv": "d8162e4a4cf22e0ccf562130bfc21690bc5463b8caae1cace90f1d4cec72e955",
+    "paper/main.tex": "6037cd67ab756f26f8600aac8d8ca42ad3cceda25f780de41cfedd6d9c5ca2e8",
+    "paper/evaluation.tex": "8b55ae16320621dc1108373a0389abce3d95e8c4e85be840d39e24078f0b7388",
+    "paper/references.bib": "cb592086f135e369e18f666917fb3b26ca0357a269be0cff207c970cd586e852"
+  }
+}

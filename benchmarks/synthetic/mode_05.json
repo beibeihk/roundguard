@@ -1,0 +1,17 @@
+{
+  "name": "mode_05",
+  "group": "synthetic",
+  "variables": {
+    "x": {
+      "type": "Money",
+      "min": -12,
+      "max": 12,
+      "quantum": "1"
+    }
+  },
+  "pattern": "mode",
+  "variants": {
+    "a": "Q(x/5,1,\"CEILING\")",
+    "b": "Q(x/5,1,\"HALF_EVEN\")"
+  }
+}

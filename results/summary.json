@@ -1,0 +1,47 @@
+{
+  "auto": {
+    "cases": 66,
+    "sensitive": 50,
+    "safe": 16,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "unknown": 0,
+    "median_seconds": 0.009766449999006
+  },
+  "pure_smt": {
+    "cases": 66,
+    "sensitive": 50,
+    "safe": 16,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "unknown": 0,
+    "median_seconds": 0.01430255000013858
+  },
+  "random32": {
+    "cases": 66,
+    "sensitive": 50,
+    "safe": 16,
+    "false_positives": 0,
+    "false_negatives": 2,
+    "unknown": 0,
+    "median_seconds": 0.0028311500027484726
+  },
+  "hypothesis64": {
+    "cases": 66,
+    "sensitive": 50,
+    "safe": 16,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "unknown": 0,
+    "median_seconds": 0.11951889999545529
+  },
+  "naive_interval": {
+    "cases": 66,
+    "sensitive": 50,
+    "safe": 16,
+    "false_positives": 15,
+    "false_negatives": 0,
+    "unknown": 0,
+    "median_seconds": 0.0002825999981723726
+  }
+}

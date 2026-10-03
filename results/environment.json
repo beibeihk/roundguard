@@ -1,0 +1,17 @@
+{
+  "seed": 20261003,
+  "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "packages": {
+    "roundguard": "0.1.0",
+    "z3-solver": "4.15.3.0",
+    "pytest": "8.4.2",
+    "hypothesis": "6.140.2",
+    "matplotlib": "3.10.6",
+    "numpy": "2.3.3"
+  },
+  "z3": "4.15.3",
+  "repetitions": 3,
+  "solver_timeout_ms_per_call": 1500
+}

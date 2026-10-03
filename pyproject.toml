@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roundguard"
+version = "0.1.0"
+description = "Exact discrepancy analysis for rational monetary rounding policies"
+requires-python = ">=3.11"
+dependencies = ["z3-solver==4.15.3.0"]
+license = "MIT"
+authors = [{name="Kun Huang", email="huangkun123huang@163.com"}]
+
+[project.optional-dependencies]
+reproduce = ["pytest==8.4.2", "hypothesis==6.140.2", "numpy==2.3.3", "matplotlib==3.10.6", "pypdf==6.1.1", "requests==2.32.5", "python-docx==1.2.0"]
+
+[project.scripts]
+roundguard = "roundguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,231 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,booktabs,tabularx,listings,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks,pdfauthor={Kun Huang},pdftitle={RoundGuard: Exact Attainable Discrepancies in Monetary Rounding Policies}]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\he}{\mathsf{he}}
+\newcommand{\den}{\mathsf{den}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb Q}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single}
+\title{RoundGuard: Exact Attainable Discrepancies\\in Monetary Rounding Policies}
+\author{Kun Huang\\\small Economics and Management School, Wuhan University\\\small \texttt{huangkun123huang@163.com}}
+\date{}
+\input{result_macros.tex}
+\begin{document}
+\maketitle
+\begin{abstract}
+Exact decimal arithmetic does not determine when a monetary calculation should be rounded. A line-item rule and its aggregate counterpart can produce different payable amounts even when both use exact rational intermediates. Universal rounding bounds do not tell a developer whether their endpoints are attainable on the permitted amount grids. We present RoundGuard, an exact analyzer for explicitly declared monetary rounding policies. For rational affine expressions with translation-compatible quantizers, it computes structural shifts and compares policies on feasible residue representatives. For independent affine line items, a cyclic residue dynamic program (DP) computes attainable signed discrepancy extrema and reconstructs inputs achieving them, without enumerating the Cartesian input grid. Its operation count is pseudo-polynomial in a common denominator; sign-sensitive modes require a proved nonnegative-line condition or an unreduced satisfiability-modulo-theories (SMT) fallback. A JavaScript Object Notation (JSON) rule interface supports six rounding modes, finite placement families, and bounded piecewise expressions. Independent exhaustive decimal evaluation checks the analyzer on synthetic, canonical, and public-rule-derived fragments. Scaling experiments compare the dynamic program with full-grid SMT and a residue-reduced SMT ablation. The contribution is a specialized analysis of feasible monetary discrepancies built on established shift-periodic arithmetic and min/max-plus dynamic programming, rather than a new general theory of rounding.
+\end{abstract}
+
+\section{Introduction}
+Rounding stages are observable parts of a monetary rule. The UK HM Revenue \& Customs (HMRC) invoice guidance distinguishes line calculations from rounding the final value-added tax (VAT) total~\citep{hmrc_vat}. The US Internal Revenue Service (IRS) describes adjustments arising when payroll taxes are rounded during individual payroll computations~\citep{irs_p15}. US Social Security Administration (SSA) guidance prescribes different cent, dime, and dollar stages, and explicitly requires certain entitlement comparisons before lower-dollar rounding~\citep{ssa_rounding}. These examples concern specified discrete outcomes, not merely the numerical approximation of a real-valued formula.
+
+The arithmetic foundation is already substantial. Fluctuat and Daisy analyze finite-precision computations, including fixed-point arithmetic~\citep{fluctuat2011,daisy2018}; FPTaylor derives rigorous roundoff bounds~\citep{fptaylor2015}. Catala gives executable legal specifications~\citep{catala2021}. Its date analysis proves insensitivity to alternative calendar rounding conventions~\citep{date2024}, while CUTECat encodes rational monetary rounding in Z3 and reports backend discrepancies~\citep{cutecat2025}. Therefore neither monetary rounding semantics nor counterexample generation alone constitutes the research gap addressed here.
+
+Our narrower question is: \emph{what discrepancy can actually occur between declared monetary rounding policies on specified finite amount grids?} A universal bound treats operands as arbitrary rationals. A program's rates and permitted tick values can make extremal residuals impossible. Exhaustive evaluation is definitive but its input product grows with both the amount ranges and the number of lines. Generic exact integer reasoning can express the problem, but does not automatically exploit independent line structure.
+
+We develop a specialized exact analysis with four components. First, structural shift certificates give a feasible representative domain for common-drift rounding policies. This instantiates established shift-periodic Chv\'atal and quasi-affine arithmetic~\citep{williams2011,basu_et_al2019,verdoolaege2010}; periodicity itself is not claimed as new. Second, an attainable-extrema theorem identifies sufficient cyclic states for line-versus-total comparison and provides witness reconstruction, including a nonnegative extension for sign-sensitive modes. Third, a runnable analyzer dispatches between this dynamic program, residue-reduced SMT, and unreduced bounded SMT. Fourth, an openly specified benchmark records independent oracles, executable diagnostics, and method ablations. The results characterize this restricted analyzer; they do not certify a deployed tax or payroll system.
+
+\section{Examples and the analysis contract}
+Amounts in the examples are measured in cents. Let $\Q_{q,m}$ round a rational to the zero-anchored grid $q\Z$ using mode $m$. With two raw line taxes $y_1=y_2=1/2$, nearest-even line rounding produces zero, whereas nearest-even total rounding produces one cent:
+\[
+ P_{\mathrm{line}}=\he(1/2)+\he(1/2)=0,
+ \qquad P_{\mathrm{total}}=\he(1)=1.
+\]
+The distinction persists without binary floating-point arithmetic. Conversely, reassociating addition of values already on one exact monetary grid does not create rounding errors: every sum remains on that grid. RoundGuard includes this insensitive case rather than treating any rounded addition as a warning.
+
+An input grid matters. The sharp nearest-even aggregation bound for an even number $n$ of arbitrary rational operands is $nq/2$. However, a line $y=x/5$ with integer $x$ cannot have a half-integer normalized value. Several such lines can prevent the universal extreme. A useful diagnostic must distinguish an unattainable envelope from a discrepancy reached by a valid input. The batch analysis retains feasible residues and returns an attaining assignment.
+
+The user supplies a nonempty finite box of integer ticks, exact input quanta, and a finite family $\mathcal P$ of expression variants. The observation is the final rational amount, or a rational-valued branch result. We ask whether
+\[
+  \forall x\in X\;\forall P,Q\in\mathcal P,\quad P(x)=Q(x),
+ \qquad
+  \Delta(\mathcal P,X)=\max_{x\in X}\bigl(\max_{P\in\mathcal P}P(x)-\min_{P\in\mathcal P}P(x)\bigr).
+\]
+Completeness is relative to the supplied box and declared policy family. Optional sites enumerate round/no-round placements explicitly; RoundGuard does not infer whether a placement is legally admissible. A sensitive result does not select the correct policy or justify an automatic repair.
+
+\section{Language and exact semantics}
+The certified core consists of finite expressions
+\[
+\begin{gathered}
+e ::= c\mid x_i\mid e+e\mid e-e\mid r e\mid \Q_{q,m}(e),\\
+c,r\in\R,\quad q\in\R_{>0},\quad m\in\{\mathrm{FLOOR},\mathrm{CEILING},\mathrm{HALF\_EVEN}\}.
+\end{gathered}
+\]
+An input is $s_i x_i$, where $x_i\in\Z$ and the declared positive rational $s_i$ is its quantum. Coefficients below are measured with respect to integer ticks, so they already include $s_i$. The interface labels grids as Money, Integer, Decimal, or Rate; Integer has unit quantum. These labels document input representation, rather than implement a currency or dimensional type system. Rates used in multiplication are exact constants. Products of two inputs, input-dependent divisors or quanta, overflow, and loops are unsupported.
+
+For a normalized argument $t=y/q$, FLOOR and CEILING choose $\lfloor t\rfloor$ and $\lceil t\rceil$. HALF\_EVEN chooses a nearest integer, resolving a tie toward the even candidate. HALF\_UP follows the conventional decimal convention of nearest with ties away from zero. DOWN truncates toward zero; UP rounds away from zero. Multiplying the selected integer by $q$ gives the result. Rational constants are integers or strings such as \texttt{"0.062"} and \texttt{"1/3"}; JSON floating-point quanta and Python floating literals are rejected.
+
+The implementation also supports \texttt{min}, \texttt{max}, and numeric conditionals with ordered comparisons. These are encoded exactly in bounded SMT but lie outside the general shift certificate. The following fragment generates the line and total variants automatically:
+\begin{lstlisting}
+{"variables": {"x": {"min": 0, "max": 19},
+               "y": {"min": 0, "max": 19}},
+ "batch": {"lines": ["x/5", "y/5"],
+           "quantum": "1", "mode": "HALF_EVEN"}}
+\end{lstlisting}
+Expressions are parsed through Python's syntax tree, not executed as Python. Attribute access, arbitrary function calls, and nonlinear arithmetic are rejected. A JSON template can contain \texttt{maybe(e,q,m,site)}; shared site names make a correlated on/off decision, and distinct names enumerate independent choices. At most ten sites are enumerated. This is a finite policy interface rather than a source analyzer for arbitrary Python or Catala programs.
+
+\section{Structural shifts and exact box reduction}
+Erase each quantizer to obtain $\bar e(x)=b_e+\sum_i a_{e,i}x_i$. FLOOR and CEILING commute with integer grid shifts; nearest-even commutes with even grid shifts:
+\begin{equation}\label{eq:translation}
+ \Q_{q,m}(y+p_m kq)=\Q_{q,m}(y)+p_m kq,
+ \qquad p_m=\begin{cases}1&m\in\{\mathrm{FLOOR},\mathrm{CEILING}\},\\2&m=\mathrm{HALF\_EVEN}.\end{cases}
+\end{equation}
+Both statements hold for negative $k$. An odd shift does not suffice for nearest-even: $\he(1/2)=0$ and $\he(3/2)=2$.
+
+For every coordinate, inspect all quantizer nodes $v=\Q_{q_v,m_v}(u_v)$ in the family and define
+\begin{equation}\label{eq:period}
+ T_i=\mathop{\mathrm{lcm}}_v\den\!\left(\frac{a_{u_v,i}}{p_{m_v}q_v}\right).
+\end{equation}
+The denominator is reduced, and the empty lcm is one. These shifts are sufficient, not necessarily minimal.
+
+\begin{proposition}[Common-drift reduction]\label{prop:period}
+For a family in the certified core, every expression satisfies
+$e(x+T_i\mathbf e_i)=e(x)+a_{e,i}T_i$.
+If the variants have equal erased slope vectors, their pairwise differences are periodic with these coordinate periods. On $X=\prod_i\{L_i,\ldots,U_i\}$, all discrepancy values occur on
+\[
+ H=\prod_i\{L_i,\ldots,L_i+\min(T_i,U_i-L_i+1)-1\}.
+\]
+Every witness found on $H$ is feasible on $X$.
+\end{proposition}
+\begin{proof}
+Constants and variables have their stated affine drift. Addition, subtraction, and constant scaling preserve it. At a quantizer, induction gives child drift $a_{u,i}T_i$. Equation~\eqref{eq:period} makes that drift a permitted multiple in~\eqref{eq:translation}; quantization preserves it. Subtracting two equal-slope drift identities yields periodic discrepancy. Map any coordinate to $L_i+((x_i-L_i)\bmod T_i)$. If the original width is smaller than $T_i$, this is the original coordinate; otherwise it lies in the first period. The mapped input lies in $H$, differs by period multiples, and preserves each discrepancy. Since $H\subseteq X$, the attainable value sets coincide.
+\end{proof}
+
+This proposition operationalizes known shift-periodic arithmetic, with explicit mixed-mode parity and feasible box representatives. It is not an efficiency guarantee for a general graph: $|H|$ can be a large product, and coefficient denominators can make $T_i$ large. Unequal slopes trigger unreduced SMT. HALF\_UP, DOWN, and UP also trigger that fallback: they do not have global signed translation covariance. For example, HALF\_UP maps $-1/2$ to $-1$ and $3/2$ to $2$, violating even-shift covariance across zero. Nonnegative inputs alone would be insufficient if a negative intermediate expression were permitted.
+
+\section{Attainable extrema for independent lines}
+The specialized batch path avoids the Cartesian product of line residues. Normalize a common quantum $q$ to one and let
+\[
+ y_i=a_i x_i+c_i,\quad x_i\in\{L_i,\ldots,U_i\},\qquad
+ P_{\mathrm{total}}=R_0\!\left(\sum_i y_i\right),\quad
+ P_{\mathrm{line}}=\sum_i R_i(y_i).
+\]
+Each line has its own independent tick input. Constant lines are allowed. In the theorem, $R_i$ and $R_0$ may be FLOOR, CEILING, or HALF\_EVEN. The implementation uses a fixed common mode for a batch. It rejects repeated line-input dependencies rather than treating them as independent.
+
+Choose an integer $B>0$ clearing the denominators of all normalized $a_i,c_i$. Put $A_i=Ba_i$, $C_i=Bc_i$, $z_i=A_ix_i+C_i$, $M=2B$, and
+\[
+ d_i=B R_i(y_i)-z_i,\qquad h(r)=B R_0(r/B)-r\quad(0\le r<M).
+\]
+The local pair $(z_i\bmod M,d_i)$ is invariant under the sufficient shift
+\[
+ T_i=\frac{M}{\gcd(|A_i|,M)}\le M,
+ \qquad\gcd(0,M)=M.
+\]
+Indeed, that shift changes $z_i$ by a multiple of $2B$ and $y_i$ by an even integer. Enumerating the first $\min(T_i,U_i-L_i+1)$ feasible ticks therefore obtains every local pair. For each attainable residue $t$, store the minimum $\ell_i(t)$ and maximum $u_i(t)$ of $d_i$, together with local witnesses. Absent residues remain unreachable. The interval endpoints do not imply that every intervening error is attainable.
+
+Initialize only $V_0^-(0)=V_0^+(0)=0$. With cyclic residue indices, update
+\begin{align}
+ V_k^-(r)&=\min_{s+t\equiv r\; (M)}\bigl(V_{k-1}^-(s)+\ell_k(t)\bigr),\label{eq:dpmin}\\
+ V_k^+(r)&=\max_{s+t\equiv r\; (M)}\bigl(V_{k-1}^+(s)+u_k(t)\bigr),\label{eq:dpmax}
+\end{align}
+using reachable states only. This is ordinary cyclic min/max-plus convolution; the application-specific point is that these two endpoints per residue suffice for attainable monetary discrepancy extrema.
+
+\begin{theorem}[Exact batch discrepancy]\label{thm:dp}
+Under the independent affine-line premises, the exact signed extrema of $P_{\mathrm{total}}-P_{\mathrm{line}}$ are
+\begin{align*}
+ \delta_{\min}&=\min_{r\ \mathrm{reachable}}\frac{h(r)-V_n^+(r)}{B},&
+ \delta_{\max}&=\max_{r\ \mathrm{reachable}}\frac{h(r)-V_n^-(r)}{B}.
+\end{align*}
+Both endpoints are attained by reconstructible in-box inputs. Equivalence holds exactly when both are zero. The largest absolute discrepancy is $\max(-\delta_{\min},\delta_{\max})$. Original monetary units multiply the extrema by $q$.
+\end{theorem}
+\begin{proof}
+Induct on the prefix length. Every feasible prefix assignment decomposes into a feasible previous prefix and a feasible local choice. Conversely every such pair combines because the input domains are independent. At fixed residues, the least or greatest additive error is the sum of the corresponding attained endpoints. Minimizing or maximizing over residue decompositions proves~\eqref{eq:dpmin}--\eqref{eq:dpmax}, including attainment.
+
+For a full assignment write $S=\sum_i z_i$, $D=\sum_i d_i$, and $r=S\bmod M$. Then
+\[
+ B(P_{\mathrm{total}}-P_{\mathrm{line}})
+ =B R_0(S/B)-S-D=h(r)-D.
+\]
+The last identity follows because $S/B-r/B$ is an even integer. At a fixed residue the objective decreases with $D$, so the two attained error endpoints suffice. Taking extrema over reachable residues proves the formulas. Store the predecessor residue and chosen local tick at every retained endpoint. Following those pointers recovers an assignment made entirely of feasible local witnesses, attaining the selected final endpoint.
+\end{proof}
+
+Local construction costs $O(nM)$ arithmetic operations, and dense convolution costs $O(nM^2)$. Two prefix value arrays require $O(M)$ working storage. Per-layer backpointers require $O(nM)$ records; witness reconstruction costs $O(n)$. Sparse implementation work is proportional to the reachable-prefix and local-residue products. These are arithmetic-operation bounds, excluding coefficient preprocessing and operand bit costs. They are pseudo-polynomial in $B$, which is an lcm and can grow exponentially in the binary input description. The prototype declines the DP path when $M>400$.
+
+\begin{proposition}[Nonnegative sign-sensitive extension]\label{prop:positive}
+Theorem~\ref{thm:dp} also holds for HALF\_UP, DOWN, and UP when every raw normalized affine line is nonnegative throughout its declared interval.
+\end{proposition}
+\begin{proof}
+On nonnegative arguments these modes equal $\lfloor t+1/2\rfloor$, $\lfloor t\rfloor$, and $\lceil t\rceil$, respectively. Integer translation preserves their errors whenever both arguments remain nonnegative. All local representatives lie inside their original domains. Each raw line, the actual total $S/B$, and the normalized representative total $r/B$ are nonnegative. Thus every local-pair and outer-error identity used in Theorem~\ref{thm:dp} remains valid; the independent convolution proof is unchanged.
+\end{proof}
+The implementation checks both affine endpoint values of every raw line, not only the signs of the inputs. Otherwise it falls back. Neither this proposition nor the general box reduction discards cross-line feasibility constraints. A fixed grand total or a shared discount input requires another encoding; the current batch interface does not support coupled constraints.
+
+\section{SMT fallback and diagnostic guarantees}
+We encode integer input ticks, rational arithmetic, floor casts, tie comparisons, and integer parity in Z3~\citep{z32008}. An expression has a statically fixed rational output denominator: addition takes an lcm, constant scaling multiplies denominator bounds, and a quantizer returns an integer times its quantum. Therefore multiplying a discrepancy by a common denominator gives an integer objective.
+
+The analyzer first asks whether any pair differs. UNSAT yields SAFE within the declared scope. SAT yields a concretely replayed witness. For exact extrema, it binary-searches the nonnegative integral family spread between an attained lower bound and a sound upper envelope. For common full erasures, propagated absolute quantization errors give an envelope; otherwise ordinary rational range intervals do. Each successful threshold query supplies a model. Completed search supplies an optimum with a replayed attaining input. A solver timeout produces UNKNOWN for detection, or SENSITIVE with unestablished maximum and valid lower/upper bounds after a witness has already been found. Neither is reported as an equivalence proof or an exact optimum.
+
+\begin{proposition}[Conditional analyzer correctness]\label{prop:sound}
+Assuming the implemented concrete and symbolic operators agree with the stated semantics, and successful solver answers are correct, every completed SAFE result implies equality of the declared variants over the input box. Every completed maximum is the attainable family spread on that box. The DP path requires the premises of Theorem~\ref{thm:dp} or Proposition~\ref{prop:positive}; the reduced SMT path requires Proposition~\ref{prop:period}.
+\end{proposition}
+\begin{proof}
+Residue reduction preserves discrepancy value sets, while the batch DP preserves their attained extrema and the zero-discrepancy test. An unreduced SMT query is the direct counterexample formula for the finite box. After a SAT query, a sound upper bound and integer objective make threshold feasibility monotone; binary search terminates at the largest feasible objective. Replaying its model establishes attainment. UNSAT on the difference formula establishes equality. Unknown queries do not justify either conclusion.
+\end{proof}
+This is an algorithmic argument under implementation and solver assumptions, not a mechanized verification of Python or Z3. The proof ledger labels mathematical results PROVED and executable enumeration as bounded sanity checks. No result is labelled MACHINE-CHECKED by a proof assistant.
+
+\section{Evaluation}
+\label{sec:evaluation}
+\input{evaluation.tex}
+
+\section{Public-rule-derived fragments}
+\label{sec:cases}
+The benchmark includes independently written fragments motivated by publicly documented rounding stages. They are deliberately small and contain explicit counterfactual policies; they are not complete legal calculators. Table~\ref{tab:cases} gives the attained spread on the grids saved in each JSON file.
+\begin{table}[ht]
+\centering\input{cases_table.tex}
+\caption{Exact discrepancy on six rule-derived fragments. Values are cents. A difference establishes sensitivity of the stated comparison, not a defect in the cited rule or deployed software.}\label{tab:cases}
+\end{table}
+
+The HMRC fragment compares line VAT rounded down to tenths of a penny, followed by final penny rounding, with final-only penny rounding~\citep{hmrc_vat}. The two-line 20\% rate and narrow amount windows are benchmark assumptions, not an assertion that every policy applies to every trader. Payroll uses the separate 6.2\% and 1.45\% employee-side rates appearing in the IRS fractions-of-cents discussion and compares them with a deliberately combined-rate calculation~\citep{irs_p15}. It ignores wage caps, Additional Medicare Tax, and reporting adjustments. Shared wages make this a coupled expression, handled by SMT rather than independent-line DP.
+
+The benefit fragments isolate the SSA's prescribed dime/dollar stages and the order of entitlement comparison~\citep{ssa_rounding}; the chosen adjustment factor, offset, and entitlement threshold are illustrative inputs, not a full statutory benefit formula. Cash settlement compares final nickel rounding with an intentionally early per-component alternative motivated by Canadian guidance to round the final bill after taxes~\citep{cra_cash}. The software fragment compares an intermediate-rounded rational calculation with deferred rounding, motivated by Brick Money's documented RationalMoney workflow~\citep{brick_money}. Its rates are independently chosen, and no external implementation is copied.
+
+\section{Related work}
+Skala's non-peer-reviewed preliminary draft studies consistent rounding of financial totals~\citep{skala2017}. It gives algorithms to choose rounded labels for a fixed totals forest, including minimax node-error optimization. Its line-versus-total motivation is directly adjacent to ours. RoundGuard instead fixes the policies and optimizes their discrepancy over permitted input grids; the different objective makes Skala's algorithms unsuitable as same-task runtime baselines.
+
+Shift-periodic nested rational ceiling expressions already appear in Williams' account of Chv\'atal functions~\citep{williams2011}. Basu et al. formalize affine Chv\'atal trees and mixed-integer representability~\citep{basu_et_al2019}. The isl library manipulates exact integer sets and quasi-affine expressions~\citep{verdoolaege2010}; Presburger functions and counting have broader structural treatments~\citep{woods2015}. RoundGuard specializes these foundations to feasible representatives for prescribed monetary policies. It does not offer a new decidability result or a general competitor to integer-set libraries.
+
+The cyclic extrema recurrence belongs to the established min/max-plus dynamic-programming pattern. Work on near-convex min-plus convolution accelerates structured knapsack instances~\citep{bringmann_cassis2023}; our residue tables need not satisfy those additional premises, and the prototype uses direct sparse convolution. Low-discrepancy sequence rounding also uses compact state graphs and optimization~\citep{sadakane2001}. It chooses rounded outputs for a fixed sequence, whereas our batch formulation fixes rounding policies and optimizes over feasible amount grids. This distinction limits the claimed application-specific contribution.
+
+Numerical analyzers such as Fluctuat, Daisy, FPTaylor, and Gappa provide sound error analysis or certificates~\citep{fluctuat2011,daisy2018,fptaylor2015,gappa2010}. Fixed-point synthesis studies implementation accuracy~\citep{fixedpoint2013}; Flocq supplies foundational arithmetic proofs~\citep{flocq2011}. Herbie searches expression rewrites using sampled accuracy estimates~\citep{herbie2015}, and robustness analyses handle discontinuous branch changes~\citep{robust2013}. These systems address richer numerical programs than our exact affine batch fragment. RoundGuard's different contract is an attained discrepancy between two prescribed discrete policies, rather than an approximation guarantee against an ideal real formula.
+
+Catala's semantics and verified compilation address translating computational law~\citep{catala2021}; the date work already treats rounding-insensitivity as a relational property~\citep{date2024}. CUTECat's rational monetary encoding and backend discrepancy findings are direct prior art for our fallback and motivation~\citep{cutecat2025}. Recent recommendations for public administrations likewise emphasize exact monetary representation and testing~\citep{codinglaws2026}. The present work adds a restricted attainable-extrema path, and provides no Catala integration. FPBench motivates auditable benchmarks for numerical tools~\citep{fpbench2017}; our JSON monetary suite is separate and is not claimed as an extension of FPBench.
+
+\section{Limitations and validity}
+The main risk to practical generalization is independence. Many payroll and benefit computations share input amounts, use piecewise bands, or constrain an invoice's grand total. Those programs use the bounded fallback, or require constructs outside this implementation. The prototype supports only one active tick variable per affine DP line and one common rounding mode, despite the theorem allowing different covariant local modes. Generic optional placements are explicitly enumerated rather than compressed by the batch theorem. Large denominators can eliminate the DP advantage; full-period enumeration is not polynomial in coefficient bit size.
+
+The evaluation is a controlled microbenchmark study on one Windows machine. Its generated amounts are not sampled transaction data, and the six public-rule-derived cases are simplified fragments. The suite demonstrates consistency against independent exact oracles, not prevalence of defects in financial software. Both SMT paths share the same encoder, so their comparison isolates domain reduction and batch structure rather than ranking independently developed solvers. Timeouts are per check, and do not create one equal total-run budget. Runtime depends on solver version, scheduling, and machine load; seeds fix inputs and search configuration but cannot fix wall time.
+
+The mathematical proofs are ordinary proofs independently reviewed for their premises. Enumeration and property tests provide additional bounded checks; they cannot substitute for a proof. Decimal oracle comparisons share the parsed tree and therefore do not independently validate the parser's entire translation. Parser rejection and known-output integration tests mitigate part of that risk. Source rules were read on the stated research date; rule changes require revisiting the fragments. No diagnostic decides legal compliance, chooses a preferred policy, or verifies the author's institutional software.
+
+\section{Conclusion}
+RoundGuard computes feasible rounding-policy discrepancies in a deliberately restricted exact monetary model. Structural periods reduce amount grids when drift cancels, while a cyclic extrema dynamic program avoids multiplying independent line domains. The analysis returns attained extrema and concrete witnesses, with explicit parity, sign, independence, and denominator conditions. The implementation and benchmark make those conditions observable and route unsupported cases to bounded SMT. Extending the useful batch path to coupled domains and validating it on larger source programs remain open work.
+
+\paragraph{Availability and assistance.}
+Code, inputs, results, proofs, and reproduction scripts are available at \url{https://github.com/beibeihk/roundguard}. AI tools assisted literature triage, implementation, and manuscript drafting. Reported computations have executable artifact records; the proofs are not proof-assistant mechanizations.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\appendix
+\section{A sharp aggregation envelope}
+\begin{lemma}\label{lem:sharp}
+For arbitrary rational operands $y_1,\ldots,y_n$ on a shared quantum $q$, the largest absolute nearest-even line/total discrepancy is $q\he(n/2)$. For FLOOR or CEILING it is $(n-1)q$.
+\end{lemma}
+\begin{proof}
+Normalize $q=1$. For floor, write $y_i=k_i+f_i$ with $0\le f_i<1$. The signed line-minus-total discrepancy is $-\lfloor\sum_i f_i\rfloor$, ranging from $-(n-1)$ to zero. Rational fractions sufficiently near one attain the lower endpoint. Ceiling follows by negation.
+
+For nearest-even set $k_i=\he(y_i)$ and $f_i=y_i-k_i\in[-1/2,1/2]$. If $|f_i|=1/2$, $k_i$ is even. Put $K=\sum_i k_i$, $F=\sum_i f_i$. The discrepancy is $K-\he(K+F)$. If $n=2h$, $|F|\le h$ and nearest rounding cannot select an integer beyond $K\pm h$. If $n=2h+1$, the strict interior $|F|<h+1/2$ gives absolute discrepancy at most $h$. At either boundary, all local residuals are the same half tie, so $K$ is even; the outer tie gives $h$ if $h$ is even and $h+1$ if $h$ is odd. This is exactly $\he(n/2)$. Choosing every operand $1/2$, or every operand $-1/2$, attains the endpoints. Rescale by $q$.
+\end{proof}
+This elementary envelope is included for comparison, not as a novelty claim. Restricted input grids can give strictly smaller attainable extrema.
+\end{document}
+
+
+
