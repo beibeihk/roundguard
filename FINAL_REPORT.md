@@ -29,9 +29,7 @@ The full command passed in a separately installed remote clone at commit `2a4acf
 107 tests passed. Both exact methods matched every exhaustive label and maximum. All 30 larger-case maxima have independent upper bounds and feasible attaining replay certificates. Three independent internal reviewers checked the proofs, citations and experiments; two major revisions corrected validation defects and improved the sufficient-state theorem. Proofs are ordinary rigorous proofs, not proof-assistant mechanizations. The paper and extracted archive compile cleanly with embedded fonts and resolved references. Novelty is a restricted application-specific formulation and sufficient-state analysis; no broad priority claim is made.
 
 ## arXiv
-**Not submitted — login required.** No submission ID or public arXiv ID has been assigned. Proposed category: cs.PL; license: arXiv perpetual, non-exclusive, matching the previous project.
+**Incomplete draft — cs.PL endorsement required; session expired.** Submission ID: **8174837**; no public arXiv ID. Edge control now works through the Kimi Browser Extension. The author confirmed the per-manuscript Submission Agreement and it was accepted. Continuing Start produced an endorsement requirement; the official request page and a fresh account check then redirected to login. The archive is prepared, but source upload, server PDF verification and final submission remain outstanding.
 
 ## Human action required
-Log in on the preserved arXiv page. After login, the prepared upload and submission workflow can continue.
-
-Automatic approval review rejected launching the existing Chrome executable, with the stated reason “blocked by policy”. The in-app login page is preserved.
+Reauthenticate on the preserved Edge arXiv login page. Agent Mail contact for endorsement is authorized; no request code has yet been obtained and no endorsement email has yet been sent.
