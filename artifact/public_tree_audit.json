@@ -1,6 +1,6 @@
 {
   "status": "PASSED",
-  "tracked_files": 190,
+  "tracked_files": 191,
   "excluded_private_downloads_and_browser_material": true,
   "credential_like_patterns": 0,
   "scope": "named private paths and common literal credential patterns; not a proof of absence of every possible secret"
