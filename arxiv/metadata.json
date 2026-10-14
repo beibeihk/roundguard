@@ -11,8 +11,13 @@
   "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
   "doi": "",
   "journal_reference": "",
-  "submission_id": "8174837",
+  "submission_id": "8226643",
   "arxiv_id": null,
   "submission_state": "incomplete_endorsement_pending",
-  "source_archive": "arxiv_submission.tar.gz"
+  "source_archive": "arxiv_submission.tar.gz",
+  "previous_submission_ids": [
+    "8174837"
+  ],
+  "draft_expiry": "2026-10-28",
+  "last_checked_date": "2026-10-14"
 }
