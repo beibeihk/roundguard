@@ -1,6 +1,6 @@
 # Submission status
 
-Checked on 2026-10-14 (Asia/Hong_Kong).
+Checked on 2026-10-17 (Asia/Hong_Kong).
 
 State: **INCOMPLETE DRAFT — cs.PL endorsement pending**. Current dedicated draft: **8226643**, expiring on **2026-10-28**. No completed submission or public arXiv ID exists; the paper has not entered moderation.
 
@@ -14,7 +14,7 @@ An audit found another local paper task referencing the historical draft 8174837
 
 The final paper, source archive, independent local build and metadata are ready. Remaining steps after actual cs.PL endorsement: complete Start, upload the source, verify compiler and main.tex, inspect the server-generated PDF, enter/check metadata and complete ordinary submission. If a draft expires, create a new dedicated draft and update records; do not reuse an unrelated draft. No category change will be used to evade endorsement.
 
-Human action currently required: **NONE**. The author reauthenticated during this check. External endorsement is the current dependency. Future genuinely personal authentication or new legal/identity requirements will be reported separately.
+Human action currently required: **Author login**. On 2026-10-17 a fresh visit to the account redirected to the login page, with neither credential automatically filled. No login was attempted. The last authenticated Start check earlier on 2026-10-17 still returned the missing-endorsement error. All 41 current Agent Mail inbox messages and empty spam/trash folders were checked, with no related reply or bounce found. The existing agreement and license authorization remains in force. This authentication request is recorded privately to avoid repeated unchanged reminders.
 
 Private mail bodies, message identifiers, endorsement codes and browser evidence remain excluded from Git. Submission completion, moderation and public announcement will be recorded separately.
 
