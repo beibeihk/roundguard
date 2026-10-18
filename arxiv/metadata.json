@@ -20,5 +20,5 @@
   ],
   "draft_expiry": "2026-10-28",
   "last_checked_date": "2026-10-18",
-  "authentication_required": false
+  "authentication_required": true
 }
