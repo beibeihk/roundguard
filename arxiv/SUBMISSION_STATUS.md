@@ -1,6 +1,6 @@
 # Submission status
 
-Checked on 2026-10-17 (Asia/Hong_Kong).
+Checked on 2026-10-18 (Asia/Hong_Kong).
 
 State: **INCOMPLETE DRAFT — cs.PL endorsement pending**. Current dedicated draft: **8226643**, expiring on **2026-10-28**. No completed submission or public arXiv ID exists; the paper has not entered moderation.
 
@@ -14,7 +14,11 @@ An audit found another local paper task referencing the historical draft 8174837
 
 The final paper, source archive, independent local build and metadata are ready. Remaining steps after actual cs.PL endorsement: complete Start, upload the source, verify compiler and main.tex, inspect the server-generated PDF, enter/check metadata and complete ordinary submission. If a draft expires, create a new dedicated draft and update records; do not reuse an unrelated draft. No category change will be used to evade endorsement.
 
-Human action currently required: **Author login**. On 2026-10-17 a fresh visit to the account redirected to the login page, with neither credential automatically filled. No login was attempted. The last authenticated Start check earlier on 2026-10-17 still returned the missing-endorsement error. All 41 current Agent Mail inbox messages and empty spam/trash folders were checked, with no related reply or bounce found. The existing agreement and license authorization remains in force. This authentication request is recorded privately to avoid repeated unchanged reminders.
+Human action currently required: **Agent Mail sender verification**. On 2026-10-18 the arXiv account was accessible again. The actual Start submission for draft 8226643 still returned the missing-endorsement error, and the official endorsement-request page reconfirmed the existing request code. The existing agreement and license authorization remains in force.
+
+The author explicitly expanded permission to contact additional appropriate endorsers on 2026-10-18. Jonathan Protzenko, Eva Darulova and Pavel Panchekha were selected after their public contact details and current official cs.PL eligibility were checked. Their cited work on Catala, Daisy, and Herbie/FPBench provides the connection to this manuscript. Three individual requests with the complete, identity-checked PDF were prepared. The first send attempt was rejected by the mail service because the sender account requires real-name verification (permanent business error; no retry). **None of these three new requests has been sent.** The official verification entry was opened for the author. Private records distinguish prepared, rejected and sent requests.
+
+After sender verification, send the prepared requests once and verify each Sent record. Future targeted batches may add at most two new eligible contacts after at least 72 hours; never send repeated requests to the same person. Stop contacting new people once positive endorsement is confirmed. No research or experimental work was rerun.
 
 Private mail bodies, message identifiers, endorsement codes and browser evidence remain excluded from Git. Submission completion, moderation and public announcement will be recorded separately.
 
