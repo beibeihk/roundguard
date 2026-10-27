@@ -13,16 +13,19 @@
   "journal_reference": "",
   "submission_id": "8226643",
   "arxiv_id": null,
-  "submission_state": "incomplete_endorsement_reported_unverified",
+  "submission_state": "submitted_on_hold",
   "source_archive": "arxiv_submission.tar.gz",
   "previous_submission_ids": [
     "8174837"
   ],
-  "draft_expiry": "2026-10-28",
-  "last_checked_date": "2026-10-24",
-  "authentication_required": true,
+  "draft_expiry": null,
+  "last_checked_date": "2026-10-27",
+  "authentication_required": false,
   "endorsement_reported": true,
   "endorsement_reported_date": "2026-10-27",
-  "endorsement_officially_verified": false,
-  "last_status_update_date": "2026-10-27"
+  "endorsement_officially_verified": true,
+  "last_status_update_date": "2026-10-27",
+  "pre_submission_draft_expiry": "2026-10-28",
+  "submission_completed": true,
+  "submission_confirmed_at_utc": "2026-10-27T06:11:38.612Z"
 }

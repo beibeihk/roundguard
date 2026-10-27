@@ -30,13 +30,16 @@ The full command passed in a separately installed remote clone at commit `2a4acf
 
 ## arXiv
 
-**Incomplete draft — endorsement reported, official verification pending.** A previously contacted researcher reported completing endorsement on October 27, 2026. All new outreach has stopped; the two candidate requests prepared on October 23 were never sent. All seven earlier requests have verified Sent records and complete PDF attachments. Private correspondence stays outside Git.
+**Submitted — on hold**, confirmed on October 27, 2026. Internal submission number: **8226643**. The actual final Submit action returned **"Article submitted"**; the expected author's account lists the exact RoundGuard title with status **"on hold."** No public arXiv ID or public paper page has been observed. Submission is complete; public announcement remains pending.
 
-The recorded dedicated draft is **8226643**, with a **2026-10-28** expiry last confirmed on October 23. Historical draft 8174837 is also referenced by another local task and was preserved. The last actual Start POST on October 23 returned the missing-endorsement error; it predates the new report. No later Start result or official endorsement approval is claimed. Source upload, server PDF verification and final submission remain outstanding. The paper has not entered moderation and has no public arXiv ID.
+Actual Start verified cs.PL authorization. The correct source archive was uploaded, and the server successfully compiled main.tex using pdflatex and TeX Live 2025. All 14 server-generated PDF pages were visually reviewed; normalized page text matches the local final manuscript on every page. Final metadata, category and license were verified. No cross-list, DOI or journal reference was added.
+
+Seven earlier endorsement requests were verified in Sent. All new outreach is stopped; the two candidate drafts prepared on October 23 were never sent. Historical draft 8174837 was preserved and not used for this submission. Private correspondence and authenticated browser/PDF evidence remain excluded from Git.
 
 ## Human action required
 
-The previously requested official arXiv login in the Edge RoundGuard group remains pending. A fresh account visit on October 26 redirected to login without autofilled credentials, and the official qualification query displayed "Login Required." Browser control was unavailable on October 27, so current authentication and official endorsement have not been checked. The existing agreement and license authorization remains in force.
+None on the currently observed page. The author already accepted the same Submission Agreement and license and expressly requested direct publication. No additional declaration or consent was fabricated.
 
 ## Follow-up
-The existing local heartbeat remains ACTIVE to verify the endorsement report through actual arXiv Start and complete submission/publication. New contact outreach is stopped. It stays quiet without a meaningful change and ends after a real public paper page and release/record updates. The endorsement report is not proof of completed submission or announcement.
+
+The existing heartbeat remains ACTIVE to check this submitted record and relevant correspondence until actual public announcement. It must not create a replacement draft, repeat Submit or resume endorsement outreach while the record is on hold. Once a real public RoundGuard page appears, update README, citation metadata, reports and the release, then stop the heartbeat. No publication date or moderation outcome is assumed.
